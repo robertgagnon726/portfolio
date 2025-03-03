@@ -16,10 +16,10 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | {{default}}', // TODO FIX ME
-    default: '{{default}}', // TODO FIX ME
+    template: '%s | {{default}}',
+    default: '{{default}}',
   },
-  description: '{{default}}', // TODO FIX ME
+  description: '{{default}}',
   icons: [
     {
       rel: 'icon',
