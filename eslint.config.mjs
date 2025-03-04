@@ -7,7 +7,8 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import configPrettier from 'eslint-config-prettier';
 import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
-import enforceStyledPrefixRule from './eslintRules/enforceStyledPrefix.js';
+import enforceStyledPrefixRule from './eslintRules/enforceStyledPrefixRule.js';
+import enforceStyledCallbackRule from './eslintRules/enforceStyledCallbackRule.js';
 
 export default [
   {
@@ -58,6 +59,7 @@ export default [
       custom: {
         rules: {
           'enforce-styled-prefix': enforceStyledPrefixRule,
+          'enforce-styled-callback': enforceStyledCallbackRule,
         },
       },
     },
@@ -84,6 +86,7 @@ export default [
       'max-lines': ['error', { max: 200, skipBlankLines: true, skipComments: true }],
 
       'custom/enforce-styled-prefix': 'error',
+      'custom/enforce-styled-callback': 'error',
     },
   },
 ];
