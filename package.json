@@ -7,7 +7,7 @@
   "scripts": {
     "compile-check": "tsc --noEmit",
     "kill": "node scripts/killPortProcesses.js",
-    "refresh-deps": "rimraf node_modules && pnpm i",
+    "refresh-deps": "rimraf pnpm-lock.yaml && rimraf node_modules && pnpm i",
     "start": "next dev",
     "build": "next build",
     "start:local": "next start",
@@ -19,7 +19,8 @@
     "test:coverage": "vitest --coverage",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e": "playwright test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "sync-intl": "node scripts/syncI18n/syncI18n.js --locales-dir i18n/messages --source-locale en-US --remove-obsolete"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -38,6 +39,7 @@
     "date-fns": "^4.1.0",
     "lodash": "^4.17.21",
     "next": "^15.2.0",
+    "next-intl": "^3.26.5",
     "next-transpile-modules": "^10.0.1",
     "notistack": "^3.0.2",
     "prettier": "^3.5.3",
@@ -70,6 +72,7 @@
     "@vitejs/plugin-react": "^4.3.4",
     "@vitest/coverage-v8": "^3.0.7",
     "chalk": "^5.4.1",
+    "commander": "^13.1.0",
     "eslint": "^9.21.0",
     "eslint-config-next": "15.2.0",
     "eslint-config-prettier": "^10.0.2",
@@ -79,6 +82,7 @@
     "globals": "^16.0.0",
     "husky": "^8.0.0",
     "jsdom": "^26.0.0",
+    "ora": "^8.2.0",
     "playwright": "^1.50.1",
     "typescript": "^5.8.2",
     "unplugin-swc": "^1.5.1",

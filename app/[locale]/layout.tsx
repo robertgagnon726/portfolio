@@ -6,7 +6,11 @@ import { CssBaseline } from '@mui/material';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { ReduxProvider } from '@Redux/ReduxProvider';
-import theme from '../src/theme';
+import theme from '../../src/theme';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '../../i18n/routing';
+import { NextIntlClientProvider } from 'next-intl';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -25,18 +29,29 @@ export async function generateMetadata(): Promise<Metadata> {
 /**
  * RootLayout component that sets up the main layout for the application.
  */
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang={locale} className={montserrat.className}>
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline enableColorScheme />
           <body style={{ margin: '0px' }} suppressHydrationWarning>
-            <ReduxProvider>{children}</ReduxProvider>
+            <NextIntlClientProvider messages={messages}>
+              <ReduxProvider>{children}</ReduxProvider>
+            </NextIntlClientProvider>
           </body>
         </ThemeProvider>
       </AppRouterCacheProvider>
