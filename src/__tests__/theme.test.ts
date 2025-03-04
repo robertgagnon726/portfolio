@@ -9,8 +9,6 @@ vi.mock('next/font/google', () => ({
   }),
 }));
 
-// TODO BG - add eslint rule to prevent relative imports
-
 describe('Theme configuration', () => {
   it('should have the correct typography configuration', () => {
     expect(theme.typography.fontFamily).toBe("'Roboto', sans-serif");
