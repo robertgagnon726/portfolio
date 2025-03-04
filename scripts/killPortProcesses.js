@@ -8,7 +8,7 @@ function killProcessOnPort(port) {
 
   if (platform === 'win32') {
     // Windows command to find and kill a process running on a specific port
-    // eslint-disable-next-line max-len
+     
     const command = `netstat -aon | findstr :${port} | find "LISTENING" | awk '{print $5}' | xargs -I {} taskkill /F /PID {}`;
     exec(command, (err, stdout, stderr) => {
       if (err) {
