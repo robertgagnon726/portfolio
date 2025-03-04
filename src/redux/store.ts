@@ -4,6 +4,7 @@ import storage from 'redux-persist/lib/storage'; // Defaults to localStorage for
 import { appReducer } from './slices/app-slice';
 import { setupListeners } from '@reduxjs/toolkit/query';
 import { FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist/es/constants';
+import { ConfigService } from '../config/ConfigService';
 
 // Configuration for Redux Persist
 const persistConfig = {
@@ -21,7 +22,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 // Configure Redux Store
 export const store = configureStore({
   reducer: persistedReducer, // Use persisted reducer
-  devTools: process.env.NODE_ENV !== 'production',
+  devTools: ConfigService.getOrThrow('NODE_ENV') !== 'production',
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
