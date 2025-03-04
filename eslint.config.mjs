@@ -7,17 +7,18 @@ import prettierPlugin from 'eslint-plugin-prettier';
 import configPrettier from 'eslint-config-prettier';
 import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
+import enforceStyledPrefixRule from './eslintRules/enforceStyledPrefix.js';
 
 export default [
   {
-    ignores: ['node_modules', 'dist'],
+    ignores: ['node_modules', '.next/**/*'],
     // optional base config
     ...js.configs.recommended,
   },
 
   {
-    files: ['**/*.js'],
-    ignores: ['node_modules', 'dist'],
+    files: ['**/*.js', '**/*.mjs'],
+    ignores: ['node_modules', '.next/**/*'],
 
     ...js.configs.recommended,
 
@@ -34,6 +35,7 @@ export default [
 
   {
     files: ['**/*.ts', '**/*.tsx'],
+    ignores: ['node_modules', '.next/**/*'],
     languageOptions: {
       // The new "languageOptions.parser" field (instead of "parser")
       parser: tsParser,
@@ -53,6 +55,11 @@ export default [
       '@next/next': pluginNext,
       react: reactPlugin,
       prettier: prettierPlugin,
+      custom: {
+        rules: {
+          'enforce-styled-prefix': enforceStyledPrefixRule,
+        },
+      },
     },
 
     settings: {
@@ -75,6 +82,8 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'max-lines': ['error', { max: 200, skipBlankLines: true, skipComments: true }],
+
+      'custom/enforce-styled-prefix': 'error',
     },
   },
 ];
