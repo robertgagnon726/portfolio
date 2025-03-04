@@ -59,6 +59,7 @@ export default [
       '@typescript-eslint/no-explicit-any': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
+      'max-lines': ['error', { max: 200, skipBlankLines: true, skipComments: true }],
     },
   },
 ];

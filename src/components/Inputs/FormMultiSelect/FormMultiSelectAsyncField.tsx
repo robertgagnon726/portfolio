@@ -1,128 +1,11 @@
 import Autocomplete, { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
-import { Controller, useFormContext, FieldValues, Path, ControllerRenderProps } from 'react-hook-form';
-import { FormControl, TextField, CircularProgress, FormHelperText } from '@mui/material';
-import Tooltip from '@mui/material/Tooltip';
-import { get } from 'lodash';
+import { FieldValues, Path, ControllerRenderProps } from 'react-hook-form';
+import { TextField, CircularProgress } from '@mui/material';
 import { SyntheticEvent, UIEvent, useCallback, useEffect, useMemo, useState } from 'react';
 import { useDebounce } from 'use-debounce';
+import { Option } from '@Components/Inputs/FormMultiSelect/FormMultiSelect';
 
-interface Option {
-  value: number | string;
-  label: string;
-}
-
-// Define the props for the component
-export interface FormMultiSelectProps<TFieldValues extends FieldValues> {
-  name: Path<TFieldValues>;
-  options?: Option[];
-  fetchOptions?: (
-    searchQuery: string,
-    page: number,
-  ) => Promise<{
-    data: Option[];
-    totalPages: number;
-  }>;
-  fetchOptionsByIds?: (ids: number[]) => Promise<{ data: Option[] }>;
-  label: string;
-  required?: boolean;
-  tooltip?: string;
-  disabled?: boolean;
-}
-
-export function FormMultiSelect<TFieldValues extends FieldValues>({
-  name,
-  options,
-  fetchOptions,
-  fetchOptionsByIds,
-  label,
-  required,
-  tooltip,
-  disabled,
-}: FormMultiSelectProps<TFieldValues>) {
-  const {
-    control,
-    formState: { errors },
-  } = useFormContext<TFieldValues>();
-
-  const errorMessage = get(errors, name)?.message;
-
-  const renderTextFieldInput = useCallback(
-    (params: AutocompleteRenderInputParams) => {
-      return <TextField {...params} label={`${label}${required ? '*' : ''}`} disabled={disabled} />;
-    },
-    [label, required, disabled],
-  );
-
-  const onChange = useCallback(
-    (field: ControllerRenderProps<TFieldValues, Path<TFieldValues>>) =>
-      (_event: SyntheticEvent, newValue: Option[]) => {
-        field.onChange(newValue.map((option) => option.value));
-      },
-    [],
-  );
-
-  const getOptionLabel = useCallback((option: Option) => option.label, []);
-
-  const controllerRenderer = useCallback(
-    ({ field }: { field: ControllerRenderProps<TFieldValues, Path<TFieldValues>> }) => {
-      if (fetchOptions && fetchOptionsByIds) {
-        return (
-          <AsyncField
-            field={field}
-            fetchOptions={fetchOptions}
-            fetchOptionsByIds={fetchOptionsByIds}
-            label={label}
-            required={required}
-            disabled={disabled}
-          />
-        );
-      } else {
-        const localOptions = options || [];
-        const selectedOptions = localOptions.filter((option) => field.value.includes(option.value));
-
-        return (
-          <Autocomplete
-            data-testid={`controlled-select-${name}`}
-            multiple
-            options={localOptions}
-            getOptionLabel={getOptionLabel}
-            onChange={onChange(field)}
-            value={selectedOptions}
-            renderInput={renderTextFieldInput}
-            disabled={disabled}
-          />
-        );
-      }
-    },
-    [
-      fetchOptions,
-      fetchOptionsByIds,
-      label,
-      required,
-      options,
-      name,
-      getOptionLabel,
-      onChange,
-      renderTextFieldInput,
-      disabled,
-    ],
-  );
-
-  return (
-    <FormControl sx={{ width: '100%' }} error={Boolean(errorMessage)}>
-      <Tooltip title={tooltip || ''} arrow enterDelay={2000} leaveDelay={200} placement="top" enterNextDelay={2000}>
-        <>
-          <Controller control={control} name={name} render={controllerRenderer} />
-          {Boolean(errorMessage) && (
-            <FormHelperText>{typeof errorMessage === 'string' ? errorMessage : undefined}</FormHelperText>
-          )}
-        </>
-      </Tooltip>
-    </FormControl>
-  );
-}
-
-interface AsyncFieldProps<TFieldValues extends FieldValues> {
+interface FormMultiSelectAsyncFieldProps<TFieldValues extends FieldValues> {
   field: ControllerRenderProps<TFieldValues, Path<TFieldValues>>;
   label: string;
   required?: boolean;
@@ -137,14 +20,14 @@ interface AsyncFieldProps<TFieldValues extends FieldValues> {
   disabled?: boolean;
 }
 
-const AsyncField = <T extends FieldValues>({
+export const FormMultiSelectAsyncField = <T extends FieldValues>({
   field,
   label,
   required,
   fetchOptions,
   fetchOptionsByIds,
   disabled,
-}: AsyncFieldProps<T>) => {
+}: FormMultiSelectAsyncFieldProps<T>) => {
   const [options, setOptions] = useState<Option[]>([]);
   const [inputValue, setInputValue] = useState('');
   const [loading, setLoading] = useState(false);
