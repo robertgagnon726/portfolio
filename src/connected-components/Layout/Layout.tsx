@@ -30,5 +30,6 @@ const StyledAppBarContainer = styled(Box)(() => ({
 const StyledMain = styled('main')(({ theme }) => ({
   flexGrow: 1,
   padding: theme.spacing(3),
+  marginTop: theme.spacing(8),
   backgroundColor: theme.palette.grey[200],
 }));

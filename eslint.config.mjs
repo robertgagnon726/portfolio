@@ -9,14 +9,29 @@ import pluginNext from '@next/eslint-plugin-next';
 import globals from 'globals';
 
 export default [
-  // 1) A general config for all files
   {
     ignores: ['node_modules', 'dist'],
     // optional base config
     ...js.configs.recommended,
   },
 
-  // 2) A specialized config for TypeScript files
+  {
+    files: ['**/*.js'],
+    ignores: ['node_modules', 'dist'],
+
+    ...js.configs.recommended,
+
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+    },
+  },
+
   {
     files: ['**/*.ts', '**/*.tsx'],
     languageOptions: {

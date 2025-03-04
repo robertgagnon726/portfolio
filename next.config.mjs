@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 import path from 'path';
 import { fileURLToPath } from 'url';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 // Define __dirname manually since it's not available in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -36,4 +37,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);
