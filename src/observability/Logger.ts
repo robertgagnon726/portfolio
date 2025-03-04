@@ -1,3 +1,4 @@
+import { ConfigService } from '../config/ConfigService';
 import { LogLevel, LogProps, TelemetryService } from './TelemetryService';
 
 export class Logger {
@@ -11,7 +12,11 @@ export class Logger {
 
   private static log(level: LogLevel, message: string, props?: LogProps) {
     const stack = this.createStackTrace();
-    this.telemetry.sendLog(level, message, stack, props);
+    if (ConfigService.getOrThrow('NEXT_PUBLIC_NODE_ENV') === 'local') {
+      console.log(`${level.toUpperCase()}: ${message}`, { ...props, stack });
+    } else {
+      this.telemetry.sendLog(level, message, stack, props);
+    }
   }
 
   public static info(message: string, props?: LogProps) {

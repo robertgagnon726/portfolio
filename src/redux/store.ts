@@ -22,7 +22,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 // Configure Redux Store
 export const store = configureStore({
   reducer: persistedReducer, // Use persisted reducer
-  devTools: ConfigService.getOrThrow('NODE_ENV') !== 'production',
+  devTools: ConfigService.getOrThrow('NEXT_PUBLIC_NODE_ENV') !== 'production',
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
