@@ -14,25 +14,13 @@ const montserrat = Montserrat({
   weight: ['400', '500', '600', '700'],
 });
 
-export const metadata: Metadata = {
-  title: {
-    template: '%s | {{default}}',
-    default: '{{default}}',
-  },
-  description: '{{default}}',
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon-dark.svg',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon-light.svg',
-      media: '(prefers-color-scheme: dark)',
-    },
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Bobby | Crafting SaaS, Startups, & Scalable Software',
+    description:
+      'Building SaaS products, scaling startups, and solving complex software challenges. Let’s turn ideas into impact with well-crafted, high-performance software.',
+  };
+}
 
 /**
  * RootLayout component that sets up the main layout for the application.
