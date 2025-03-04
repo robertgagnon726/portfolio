@@ -3,10 +3,10 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Montserrat } from 'next/font/google';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
-import { ReduxProvider } from '@/redux/ReduxProvider';
 import { Metadata } from 'next';
-import theme from '@/theme';
 import { ReactNode } from 'react';
+import { ReduxProvider } from '@Redux/ReduxProvider';
+import theme from '../src/theme';
 
 const montserrat = Montserrat({
   subsets: ['latin'],

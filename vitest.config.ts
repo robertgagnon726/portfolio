@@ -41,7 +41,20 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'), // Map "@" to the "src" directory
+      '@Utils': path.resolve(__dirname, 'src', 'utils'),
+      '@Hooks': path.resolve(__dirname, 'src', 'hooks'),
+      '@Redux': path.resolve(__dirname, 'src', 'redux'),
+      '@providers': path.resolve(__dirname, 'src', 'providers'),
+      '@Lib': path.resolve(__dirname, 'src', 'lib'),
+      '@Features': path.resolve(__dirname, 'src', 'features'),
+      '@Connected-components': path.resolve(__dirname, 'src', 'connected-components'),
+      '@Components': path.resolve(__dirname, 'src', 'components'),
+
+      '@App': path.resolve(__dirname, 'app'),
+      '@Src': path.resolve(__dirname, 'src'),
+      '@Playwright': path.resolve(__dirname, 'tests'),
+
+      '@Root': path.resolve(__dirname),
     },
   },
 });
