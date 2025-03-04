@@ -6,6 +6,8 @@ on:
 jobs:
   ci:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_NODE_ENV: production
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
