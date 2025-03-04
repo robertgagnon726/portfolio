@@ -32,8 +32,7 @@
       "@Components/*": ["./src/components/*"],
       "@App/*": ["./app/*"],
       "@Src/*": ["./src"],
-      "@Root/*": ["."],
-      "@/*": ["./src/*"]
+      "@Root/*": ["."]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types"],

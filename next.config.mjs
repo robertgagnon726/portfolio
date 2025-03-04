@@ -27,7 +27,6 @@ const nextConfig = {
       '@App': path.resolve(__dirname, 'app'),
       '@Src': path.resolve(__dirname, 'src'),
       '@Root': path.resolve(__dirname, '.'),
-      '@': path.resolve(__dirname, 'src'),
     };
 
     return config;

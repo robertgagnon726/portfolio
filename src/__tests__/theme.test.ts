@@ -1,5 +1,5 @@
-import theme from '@/theme';
 import { describe, it, expect, vi } from 'vitest';
+import theme from '../theme';
 
 vi.mock('next/font/google', () => ({
   Roboto: vi.fn().mockReturnValue({
@@ -8,6 +8,8 @@ vi.mock('next/font/google', () => ({
     },
   }),
 }));
+
+// TODO BG - add eslint rule to prevent relative imports
 
 describe('Theme configuration', () => {
   it('should have the correct typography configuration', () => {
