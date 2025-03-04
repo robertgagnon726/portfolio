@@ -7,7 +7,7 @@
   "scripts": {
     "compile-check": "tsc --noEmit",
     "kill": "node scripts/killPortProcesses.js",
-    "refresh-deps": "rimraf node_modules && npm install",
+    "refresh-deps": "rimraf node_modules && pnpm i",
     "start": "next dev",
     "build": "next build",
     "start:local": "next start",
