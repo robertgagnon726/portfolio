@@ -1,6 +1,6 @@
 import Autocomplete, { AutocompleteRenderInputParams } from '@mui/material/Autocomplete';
 import { Controller, useFormContext, FieldValues, Path, ControllerRenderProps } from 'react-hook-form';
-import { FormControl, TextField, Tooltip, FormHelperText } from '@mui/material';
+import { FormControl, TextField, Tooltip, FormHelperText, styled } from '@mui/material';
 import { get } from 'lodash';
 import { SyntheticEvent, useCallback } from 'react';
 import { Option } from '@Components/Inputs/FormMultiSelect/FormMultiSelect';
@@ -109,7 +109,7 @@ export function FormSelect<TFieldValues extends FieldValues>({
   );
 
   return (
-    <FormControl sx={{ width: '100%' }} error={Boolean(errorMessage)}>
+    <StyledFormControl error={Boolean(errorMessage)}>
       <Tooltip title={tooltip || ''} arrow enterDelay={2000} leaveDelay={200} placement="top" enterNextDelay={2000}>
         <>
           <Controller control={control} name={name} render={controllerRenderer} />
@@ -118,6 +118,10 @@ export function FormSelect<TFieldValues extends FieldValues>({
           )}
         </>
       </Tooltip>
-    </FormControl>
+    </StyledFormControl>
   );
 }
+
+const StyledFormControl = styled(FormControl)(() => ({
+  width: '100%',
+}));

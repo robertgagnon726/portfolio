@@ -1,5 +1,6 @@
 'use client';
 
+import { styled } from '@mui/material';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Step from '@mui/material/Step';
@@ -60,17 +61,9 @@ export default function HorizontalLinearStepper({
   }, [setActiveStep]);
 
   return (
-    <Box
-      sx={{
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        maxWidth: 1200,
-      }}
-    >
-      <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <Stepper activeStep={activeStep} sx={{ width: stepperWidth }}>
+    <StyledContainer>
+      <StyledStepperContainer>
+        <StyledStepper activeStep={activeStep} stepperWidth={stepperWidth}>
           {stepNames.map((label) => {
             const stepProps: { completed?: boolean } = {};
             const labelProps: {
@@ -82,25 +75,25 @@ export default function HorizontalLinearStepper({
               </Step>
             );
           })}
-        </Stepper>
-      </Box>
+        </StyledStepper>
+      </StyledStepperContainer>
 
       {activeStep === stepNames.length ? (
         <Fragment>
-          <Typography sx={{ mt: 2, mb: 1 }}>All steps completed - you&apos;re finished</Typography>
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Box sx={{ flex: '1 1 auto' }} />
+          <StyledStepsCompleted>All steps completed - you&apos;re finished</StyledStepsCompleted>
+          <StyledResetContainer>
+            <StyledSpacer />
             <Button onClick={handleReset}>Reset</Button>
-          </Box>
+          </StyledResetContainer>
         </Fragment>
       ) : (
         <Fragment>
           {stepContent}
-          <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-            <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}>
+          <StyledFooterContainer>
+            <StyledBackButton color="inherit" disabled={activeStep === 0} onClick={handleBack}>
               Back
-            </Button>
-            <Box sx={{ flex: '1 1 auto' }} />
+            </StyledBackButton>
+            <StyledSpacer />
             {activeStep !== stepNames.length - 1 ? (
               <Button onClick={handleNext} disabled={nextDisabled || loading}>
                 Next
@@ -117,9 +110,53 @@ export default function HorizontalLinearStepper({
                 </Button>
               </>
             )}
-          </Box>
+          </StyledFooterContainer>
         </Fragment>
       )}
-    </Box>
+    </StyledContainer>
   );
 }
+
+const StyledContainer = styled(Box)(() => ({
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  maxWidth: 1200,
+}));
+
+const StyledStepper = styled(Stepper, {
+  shouldForwardProp: (prop) => prop !== 'stepperWidth',
+})<{ stepperWidth: number }>(({ stepperWidth }) => ({
+  width: stepperWidth,
+}));
+
+const StyledStepperContainer = styled(Box)(() => ({
+  display: 'flex',
+  justifyContent: 'center',
+}));
+
+const StyledStepsCompleted = styled(Typography)(({ theme }) => ({
+  marginTop: theme.spacing(2),
+  marginBottom: theme.spacing(1),
+}));
+
+const StyledResetContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  paddingTop: theme.spacing(2),
+}));
+
+const StyledSpacer = styled(Box)(() => ({
+  flex: '1 1 auto',
+}));
+
+const StyledFooterContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  paddingTop: theme.spacing(2),
+}));
+
+const StyledBackButton = styled(Button)(({ theme }) => ({
+  marginRight: theme.spacing(1),
+}));
