@@ -12,6 +12,7 @@ import enforceStyledCallbackRule from './eslintRules/enforceStyledCallbackRule.j
 import noInlineSxPropRule from './eslintRules/noInlineSxPropRule.js';
 import noInlineStylePropRule from './eslintRules/noInlineStylePropRule.js';
 import noRelativeImportsRule from './eslintRules/noRelativeImportsRule.js';
+import disallowTodoCommentsRule from './eslintRules/disallowTodoCommentsRule.js';
 
 export default [
   {
@@ -67,6 +68,7 @@ export default [
           'no-inline-sx-prop': noInlineSxPropRule,
           'no-inline-style-prop': noInlineStylePropRule,
           'no-relative-imports': noRelativeImportsRule,
+          'disallow-todo-comments': disallowTodoCommentsRule,
         },
       },
     },
@@ -114,6 +116,7 @@ export default [
       'custom/no-inline-sx-prop': 'error',
       'custom/no-inline-style-prop': 'error',
       'custom/no-relative-imports': 'error',
+      'custom/disallow-todo-comments': ['error', { patterns: ['TODO', 'FIXME', 'BUG', 'HACK'] }],
     },
   },
 ];
