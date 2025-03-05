@@ -1,8 +1,5 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-
-import { Montserrat } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, StyledEngineProvider } from '@mui/material';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { ReduxProvider } from '@Redux/ReduxProvider';
@@ -10,13 +7,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@I18n/routing';
-import theme from '@Src/theme';
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  weight: ['400', '500', '600', '700'],
-});
+import Theme from '@Src/theme/Theme';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -48,16 +39,18 @@ export default async function RootLayout({
   };
 
   return (
-    <html lang={locale} className={montserrat.className}>
+    <html lang={locale}>
       <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
-          <CssBaseline enableColorScheme />
-          <body style={bodyStyle} suppressHydrationWarning>
-            <NextIntlClientProvider messages={messages}>
-              <ReduxProvider>{children}</ReduxProvider>
-            </NextIntlClientProvider>
-          </body>
-        </ThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <Theme>
+            <CssBaseline enableColorScheme />
+            <body style={bodyStyle} suppressHydrationWarning>
+              <NextIntlClientProvider messages={messages}>
+                <ReduxProvider>{children}</ReduxProvider>
+              </NextIntlClientProvider>
+            </body>
+          </Theme>
+        </StyledEngineProvider>
       </AppRouterCacheProvider>
     </html>
   );
