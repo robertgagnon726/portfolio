@@ -10,6 +10,7 @@ import globals from 'globals';
 import enforceStyledPrefixRule from './eslintRules/enforceStyledPrefixRule.js';
 import enforceStyledCallbackRule from './eslintRules/enforceStyledCallbackRule.js';
 import noInlineSxPropRule from './eslintRules/noInlineSxPropRule.js';
+import noInlineStylePropRule from './eslintRules/noInlineStylePropRule.js';
 
 export default [
   {
@@ -62,6 +63,7 @@ export default [
           'enforce-styled-prefix': enforceStyledPrefixRule,
           'enforce-styled-callback': enforceStyledCallbackRule,
           'no-inline-sx-prop': noInlineSxPropRule,
+          'no-inline-style-prop': noInlineStylePropRule,
         },
       },
     },
@@ -90,6 +92,7 @@ export default [
       'custom/enforce-styled-prefix': 'error',
       'custom/enforce-styled-callback': 'error',
       'custom/no-inline-sx-prop': 'error',
+      'custom/no-inline-style-prop': 'error',
     },
   },
 ];

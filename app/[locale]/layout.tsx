@@ -43,12 +43,16 @@ export default async function RootLayout({
 
   const messages = await getMessages();
 
+  const bodyStyle = {
+    margin: '0px',
+  };
+
   return (
     <html lang={locale} className={montserrat.className}>
       <AppRouterCacheProvider>
         <ThemeProvider theme={theme}>
           <CssBaseline enableColorScheme />
-          <body style={{ margin: '0px' }} suppressHydrationWarning>
+          <body style={bodyStyle} suppressHydrationWarning>
             <NextIntlClientProvider messages={messages}>
               <ReduxProvider>{children}</ReduxProvider>
             </NextIntlClientProvider>
