@@ -1,4 +1,4 @@
-import { Checkbox, FormControl, FormControlLabel, FormHelperText, Tooltip } from '@mui/material';
+import { Checkbox, FormControl, FormControlLabel, FormHelperText, styled, Tooltip } from '@mui/material';
 import { Controller, useFormContext, FieldValues, Path, ControllerRenderProps } from 'react-hook-form';
 import { get } from 'lodash';
 import { useCallback } from 'react';
@@ -44,7 +44,7 @@ export function FormCheckbox<TFieldValues extends FieldValues>({
   );
 
   return (
-    <FormControl error={Boolean(errorMessage)} sx={{ width: '100%' }}>
+    <StyledFormControl error={Boolean(errorMessage)}>
       <Tooltip title={tooltip || ''} arrow enterDelay={2000} leaveDelay={200} placement="top" enterNextDelay={2000}>
         <>
           <Controller control={control} name={name} render={controllerRenderer} />
@@ -53,6 +53,10 @@ export function FormCheckbox<TFieldValues extends FieldValues>({
           )}
         </>
       </Tooltip>
-    </FormControl>
+    </StyledFormControl>
   );
 }
+
+const StyledFormControl = styled(FormControl)(() => ({
+  width: '100%',
+}));

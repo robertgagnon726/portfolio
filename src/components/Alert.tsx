@@ -1,7 +1,7 @@
 'use client';
 import React, { createContext, useContext, ReactNode } from 'react';
 import { SnackbarProvider, useSnackbar, VariantType } from 'notistack';
-import { IconButton } from '@mui/material';
+import { IconButton, styled } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
 export type SetAlert = (message: string, variant: VariantType) => void;
@@ -41,9 +41,9 @@ const AlertContextProvider: React.FC<{ children: ReactNode }> = ({ children }) =
       variant,
 
       action: (key) => (
-        <IconButton size="small" onClick={() => closeSnackbar(key)} sx={{ color: 'inherit' }}>
+        <StyledIconButton size="small" onClick={() => closeSnackbar(key)}>
           <CloseIcon fontSize="small" />
-        </IconButton>
+        </StyledIconButton>
       ),
     });
   };
@@ -61,3 +61,7 @@ export const useAlert = (): AlertContextType => {
   }
   return context;
 };
+
+const StyledIconButton = styled(IconButton)(() => ({
+  color: 'inherit',
+}));
