@@ -8,12 +8,12 @@ import { MuiListSubheaderOverride } from '@Src/theme/ComponentOverrides/DataDisp
 import { MuiTablePaginationOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiTablePaginationOverride';
 
 export const DataDisplayComponents = {
-  MuiChipOverride,
-  MuiIconOverride,
-  MuiListItemIconOverride,
-  MuiListItemOverride,
-  MuiListItemTextOverride,
-  MuiListOverride,
-  MuiListSubheaderOverride,
-  MuiTablePaginationOverride,
+  ...MuiChipOverride,
+  ...MuiIconOverride,
+  ...MuiListItemIconOverride,
+  ...MuiListItemOverride,
+  ...MuiListItemTextOverride,
+  ...MuiListOverride,
+  ...MuiListSubheaderOverride,
+  ...MuiTablePaginationOverride,
 };

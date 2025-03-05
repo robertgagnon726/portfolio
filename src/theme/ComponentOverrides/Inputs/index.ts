@@ -10,14 +10,14 @@ import { MuiToggleButtonGroupOverride } from '@Src/theme/ComponentOverrides/Inpu
 import { MuiToggleButtonOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiToggleButtonOverride';
 
 export const InputsComponents = {
-  MuiButtonBaseOverrides,
-  MuiButtonOverride,
-  MuiCheckboxOverride,
-  MuiFormLabelOverride,
-  MuiIconButtonOverride,
-  MuiInputAdornmentOverride,
-  MuiInputBaseOverride,
-  MuiOutlinedInputOverride,
-  MuiToggleButtonGroupOverride,
-  MuiToggleButtonOverride,
+  ...MuiButtonBaseOverrides,
+  ...MuiButtonOverride,
+  ...MuiCheckboxOverride,
+  ...MuiFormLabelOverride,
+  ...MuiIconButtonOverride,
+  ...MuiInputAdornmentOverride,
+  ...MuiInputBaseOverride,
+  ...MuiOutlinedInputOverride,
+  ...MuiToggleButtonGroupOverride,
+  ...MuiToggleButtonOverride,
 };

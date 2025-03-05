@@ -8,12 +8,12 @@ import { MuiCardOverride } from '@Src/theme/ComponentOverrides/Surfaces/MuiCardO
 import { MuiPaperOverride } from '@Src/theme/ComponentOverrides/Surfaces/MuiPaperOverride';
 
 export const SurfacesComponents = {
-  MuiAccordionDetailsOverride,
-  MuiAccordionOverride,
-  MuiAccordionSummaryOverride,
-  MuiCardActionsOverride,
-  MuiCardContentOverride,
-  MuiCardHeaderOverride,
-  MuiCardOverride,
-  MuiPaperOverride,
+  ...MuiAccordionDetailsOverride,
+  ...MuiAccordionOverride,
+  ...MuiAccordionSummaryOverride,
+  ...MuiCardActionsOverride,
+  ...MuiCardContentOverride,
+  ...MuiCardHeaderOverride,
+  ...MuiCardOverride,
+  ...MuiPaperOverride,
 };

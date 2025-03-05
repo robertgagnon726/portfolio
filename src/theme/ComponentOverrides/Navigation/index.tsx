@@ -11,15 +11,15 @@ import { MuiTabOverride } from '@Src/theme/ComponentOverrides/Navigation/MuiTabO
 import { MuiTabsOverride } from '@Src/theme/ComponentOverrides/Navigation/MuiTabsOverride';
 
 export const NavigationComponents = {
-  MuiDrawerOverride,
-  MuiLinkOverride,
-  MuiMenuItemOverride,
-  MuiMenuOverride,
-  MuiPaginationItemOverride,
-  MuiSelectOverride,
-  MuiStepConnectorOverride,
-  MuiStepIconOverride,
-  MuiStepLabelOverride,
-  MuiTabOverride,
-  MuiTabsOverride,
+  ...MuiDrawerOverride,
+  ...MuiLinkOverride,
+  ...MuiMenuItemOverride,
+  ...MuiMenuOverride,
+  ...MuiPaginationItemOverride,
+  ...MuiSelectOverride,
+  ...MuiStepConnectorOverride,
+  ...MuiStepIconOverride,
+  ...MuiStepLabelOverride,
+  ...MuiTabOverride,
+  ...MuiTabsOverride,
 };

@@ -3,7 +3,7 @@ import { MuiDialogOverride } from '@Src/theme/ComponentOverrides/Feedback/MuiDia
 import { MuiLinearProgressOverride } from '@Src/theme/ComponentOverrides/Feedback/MuiLinearProgressOverride';
 
 export const FeedbackComponents = {
-  MuiAlertOverride,
-  MuiDialogOverride,
-  MuiLinearProgressOverride,
+  ...MuiAlertOverride,
+  ...MuiDialogOverride,
+  ...MuiLinearProgressOverride,
 };
