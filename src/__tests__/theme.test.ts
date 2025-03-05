@@ -1,5 +1,5 @@
+import theme from '@Src/theme';
 import { describe, it, expect, vi } from 'vitest';
-import theme from '../theme';
 
 vi.mock('next/font/google', () => ({
   Roboto: vi.fn().mockReturnValue({

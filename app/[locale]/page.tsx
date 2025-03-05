@@ -1,5 +1,5 @@
 import { Layout } from '@Connected-components/Layout/Layout';
-import { useTypedTranslations } from '../../i18n/useTypedTranslations';
+import { useTypedTranslations } from '@I18n/useTypedTranslations';
 
 function AppHome() {
   const t = useTypedTranslations('HomePage');

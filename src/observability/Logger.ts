@@ -1,5 +1,5 @@
-import { ConfigService } from '../config/ConfigService';
-import { LogLevel, LogProps, TelemetryService } from './TelemetryService';
+import { ConfigService } from '@Src/config/ConfigService';
+import { LogLevel, LogProps, TelemetryService } from '@Src/observability/TelemetryService';
 
 export class Logger {
   private static telemetry = new TelemetryService();
