@@ -12,8 +12,8 @@ import {
 } from '@mui/material';
 import { InferType } from 'yup';
 import React, { useCallback } from 'react';
-import { Form } from './Form';
-import { AnySchema, OnFieldChange, useFormLogic, WatchField } from './useFormLogic';
+import { AnySchema, OnFieldChange, useFormLogic, WatchField } from '@Components/forms/useFormLogic';
+import { Form } from '@Components/forms/Form';
 
 interface FormDialogProps<T extends AnySchema> {
   open?: boolean;

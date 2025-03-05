@@ -6,11 +6,11 @@ import { CssBaseline } from '@mui/material';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { ReduxProvider } from '@Redux/ReduxProvider';
-import theme from '../../src/theme';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { routing } from '../../i18n/routing';
 import { NextIntlClientProvider } from 'next-intl';
+import { routing } from '@I18n/routing';
+import theme from '@Src/theme';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
