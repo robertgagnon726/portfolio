@@ -4,8 +4,12 @@ import { fileURLToPath } from 'url';
 import { program } from 'commander';
 import ora from 'ora';
 import chalk from 'chalk';
-import { syncKeys } from './syncKeys.js';
 import { generateTsInterfaces } from './generateTsInterfaces.js';
+import { syncPoEditorSourceLocale } from './poEditor/syncPoEditor.js';
+import dotenv from 'dotenv';
+import { pullLocaleFromPoEditor } from './poEditor/pullLocaleFromPoEditor.js';
+
+dotenv.config({ path: '.env.local' });
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -14,42 +18,36 @@ async function main() {
   program
     .name('sync-i18n')
     .description('Synchronize i18n JSON files from a source locale and generate TS types.')
-    .option('-r, --remove-obsolete', 'Remove keys not in the source locale')
     .option('-d, --locales-dir <path>', 'Path to the locales directory', 'locales')
-    .option('-s, --source-locale <locale>', 'Source locale JSON base name', 'en-US')
+    .option('-s, --source-locale <locale>', 'Source locale JSON base name', 'en-us')
     .option('-o, --output-file <path>', 'Path for the generated TS types', 'i18n/types.ts')
     .parse(process.argv);
 
-  const { removeObsolete, localesDir, sourceLocale, outputFile } = program.opts();
+  const { localesDir, sourceLocale, outputFile } = program.opts();
 
   const spinner = ora('Syncing i18n files...').start();
+  const poEditoryApiKey = process.env.PO_EDITOR_API_KEY;
+  const poEditorProjectId = process.env.PO_EDITOR_PROJECT_ID;
 
   try {
     // Resolve the locales folder path
     const dirPath = path.resolve(__dirname, '..', '..', localesDir);
 
-    // Read the source JSON (e.g. en-US.json)
+    spinner.text = 'Pushing source to POEditor...';
     const sourcePath = path.join(dirPath, `${sourceLocale}.json`);
-    if (!fs.existsSync(sourcePath)) {
-      throw new Error(`Source file "${sourcePath}" does not exist`);
+    const fileData = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
+
+    await syncPoEditorSourceLocale(poEditoryApiKey, poEditorProjectId, 'en-us', fileData);
+
+    spinner.text = 'Pulling translations from POEditor...';
+    const targetLangs = ['es'];
+    for (const lang of targetLangs) {
+      const localFileName = mapPoEditorLangToLocal(lang);
+      const filePath = path.join(dirPath, localFileName);
+      await pullLocaleFromPoEditor(poEditoryApiKey, poEditorProjectId, lang, filePath);
     }
 
     const sourceData = JSON.parse(fs.readFileSync(sourcePath, 'utf8'));
-
-    // Gather all other JSON files in the directory
-    const localeFiles = fs
-      .readdirSync(dirPath)
-      .filter((file) => file.endsWith('.json') && file !== `${sourceLocale}.json`);
-
-    for (const fileName of localeFiles) {
-      const filePath = path.join(dirPath, fileName);
-      const targetData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-
-      const syncedData = syncKeys(sourceData, targetData, removeObsolete);
-      fs.writeFileSync(filePath, JSON.stringify(syncedData, null, 2));
-
-      console.log(chalk.green(`✓ Synced ${fileName}`));
-    }
 
     spinner.text = 'Generating TS interfaces...';
 
@@ -60,6 +58,14 @@ async function main() {
     spinner.fail(chalk.red(`Error: ${err.message}`));
     process.exit(1);
   }
+}
+
+// Possibly define a helper to map "fr" -> "fr-FR.json", "en" -> "en-us.json", etc.
+function mapPoEditorLangToLocal(lang) {
+  if (lang === 'es') return 'es.json';
+  if (lang === 'en') return 'en-us.json';
+  // fallback
+  return `${lang}.json`;
 }
 
 // Invoke main

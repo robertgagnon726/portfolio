@@ -16,7 +16,7 @@ function buildTranslationMessagesInterface(rootObj) {
 }
 
 /**
- * Generate all TS interfaces from en-US.json (or whichever is the source),
+ * Generate all TS interfaces from en-us.json (or whichever is the source),
  * then write them out to 'types.ts' (by default).
  */
 export function generateTsInterfaces(jsonData, outputFile) {

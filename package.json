@@ -20,7 +20,7 @@
     "test:e2e:ui": "playwright test --ui",
     "test:e2e": "playwright test",
     "prepare": "husky install",
-    "sync-intl": "node scripts/syncI18n/syncI18n.js --locales-dir i18n/messages --source-locale en-US --remove-obsolete"
+    "sync-intl": "node scripts/syncI18n/syncI18n.js --locales-dir i18n/messages --source-locale en-us"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -73,6 +73,7 @@
     "@vitest/coverage-v8": "^3.0.7",
     "chalk": "^5.4.1",
     "commander": "^13.1.0",
+    "dotenv": "^16.4.7",
     "eslint": "^9.21.0",
     "eslint-config-next": "15.2.0",
     "eslint-config-prettier": "^10.0.2",
