@@ -11,6 +11,19 @@
     "subtitle": "Leading through innovation by unblocking teams, sharpening efficiency, fostering collaboration, and delivering tangible results with maintainable solutions that last.",
     "connect": "Connect on LinkedIn"
   },
+  "Awards": {
+    "title": "Awards",
+    "subtitle": "Recognitions & Achievements from My Professional Journey",
+
+    "award1Title": "Top Contributor Award",
+    "award1Description": "Recognized among the top 10% of contributors in a 2,000+ member product team.",
+
+    "award2Title": "MVP (Q2)",
+    "award2Description": "One of three team members selected for outstanding impact during Q2.",
+
+    "award3Title": "MVP (Q4)",
+    "award3Description": "One of three team members recognized for exceptional contributions in Q4."
+  },
   "EngineeringPhilosophy": {
     "title": "Engineering Philosophy",
     "subtitle": "Engineering with empathy, kindness, and thoughtful automation—because building software isn't just about shipping features, it's about uplifting the people who create them.",

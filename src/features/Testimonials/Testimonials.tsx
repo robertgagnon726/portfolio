@@ -7,10 +7,10 @@ import CardContent from '@mui/material/CardContent';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid2';
 import { styled, useTheme } from '@mui/material';
 import { useTypedTranslations } from '@I18n/useTypedTranslations';
+import { Section } from '@Components/Section';
 
 const testimonials = [
   {
@@ -86,15 +86,7 @@ export default function Testimonials() {
   const t = useTypedTranslations('Testimonials');
 
   return (
-    <StyledContainer id="testimonials">
-      <StyledHeaderContainer>
-        <Typography component="h2" variant="h4" gutterBottom color="textPrimary">
-          {t('title')}
-        </Typography>
-        <Typography variant="body1" color="textSecondary">
-          {t('subtitle')}
-        </Typography>
-      </StyledHeaderContainer>
+    <Section sectionId="testimonials" title={t('title')} subtitle={t('subtitle')}>
       <Grid container spacing={2}>
         {testimonials.map((testimonial, index) => (
           <StyledGrid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
@@ -112,33 +104,9 @@ export default function Testimonials() {
           </StyledGrid>
         ))}
       </Grid>
-    </StyledContainer>
+    </Section>
   );
 }
-
-const StyledContainer = styled(Container)(({ theme }) => ({
-  paddingTop: theme.spacing(4),
-  paddingBottom: theme.spacing(8),
-  position: 'relative',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  gap: theme.spacing(3),
-  [theme.breakpoints.up('sm')]: {
-    paddingTop: theme.spacing(12),
-    paddingBottom: theme.spacing(16),
-    gap: theme.spacing(6),
-  },
-}));
-
-const StyledHeaderContainer = styled(Box)(({ theme }) => ({
-  width: '100%',
-  textAlign: 'left',
-  [theme.breakpoints.up('md')]: {
-    width: '60%',
-    textAlign: 'center',
-  },
-}));
 
 const StyledGrid = styled(Grid)(() => ({
   display: 'flex',

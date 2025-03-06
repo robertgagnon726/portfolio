@@ -1,5 +1,16 @@
 // AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY
 
+interface AwardsMessages {
+  title: string;
+  subtitle: string;
+  award1Title: string;
+  award1Description: string;
+  award2Title: string;
+  award2Description: string;
+  award3Title: string;
+  award3Description: string;
+}
+
 interface CommonMessages {
   philosophy: string;
   testimonials: string;
@@ -54,6 +65,7 @@ export interface TranslationMessages {
   HomePage: HomePageMessages;
   Testimonials: TestimonialsMessages;
   Hero: HeroMessages;
+  Awards: AwardsMessages;
   EngineeringPhilosophy: EngineeringPhilosophyMessages;
   Common: CommonMessages;
 }
