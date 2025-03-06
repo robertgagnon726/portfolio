@@ -1,9 +1,14 @@
 import { Layout } from '@Connected-components/Layout/Layout';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
+import Hero from '@Features/Hero/Hero';
+import Testimonials from '@Features/Testimonials/Testimonials';
 
 function AppHome() {
-  const t = useTypedTranslations('HomePage');
-  return <Layout>{t('title')}</Layout>;
+  return (
+    <Layout>
+      <Hero />
+      <Testimonials />
+    </Layout>
+  );
 }
 
 export default AppHome;
