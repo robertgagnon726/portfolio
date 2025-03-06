@@ -46,6 +46,43 @@ interface EngineeringPhilosophyMessages {
   kindnessDescription: string;
 }
 
+interface ExperienceMessages {
+  title: string;
+  subtitle: string;
+  tagRemote: string;
+  tagFullTime: string;
+  tagVeryPartTime: string;
+  item1Timframe: string;
+  item1CurrentPosition: string;
+  item1Highlight1: string;
+  item1Highlight2: string;
+  item1Highlight3: string;
+  item1Highlight4: string;
+  item1Highlight5: string;
+  item1Highlight6: string;
+  year2024: string;
+  year2023: string;
+  seniorSoftwareEngineer: string;
+  item1Promotion1Highlight: string;
+  item1Promotion2Highlight: string;
+  item2Timeframe: string;
+  item2Position: string;
+  item2Highlight1: string;
+  item2Highlight2: string;
+  item2Highlight3: string;
+  item2Highlight4: string;
+  item2Highlight5: string;
+  item2Highlight6: string;
+  item2Highlight7: string;
+  item2Highlight8: string;
+  item3Timeframe: string;
+  item3Position: string;
+  item3Company: string;
+  item3Highlight1: string;
+  item3Highlight2: string;
+  item3Highlight3: string;
+}
+
 interface HeroMessages {
   subtitle: string;
   connect: string;
@@ -67,5 +104,6 @@ export interface TranslationMessages {
   Hero: HeroMessages;
   Awards: AwardsMessages;
   EngineeringPhilosophy: EngineeringPhilosophyMessages;
+  Experience: ExperienceMessages;
   Common: CommonMessages;
 }

@@ -52,6 +52,48 @@
     "kindnessTitle": "Kindness in Code Reviews",
     "kindnessDescription": "Offer friendly feedback, not criticism. Code reviews are about collective growth, not personal attacks."
   },
+  "Experience": {
+    "title": "Work Experience",
+    "subtitle": "Professional journey and career progression across leading technology companies.",
+
+    "tagRemote": "Remote",
+    "tagFullTime": "Full-time",
+    "tagVeryPartTime": "Very Part-time",
+
+    "item1Timframe": "2021 - Present",
+    "item1CurrentPosition": "Staff Software Engineer",
+    "item1Highlight1": "Led the effort in introducing and migrating a 400,000+ line codebase to Typescript in order to reduce user reported defects.",
+    "item1Highlight2": "Created a media upload algorithm that increased the single upload size limit from 200 MB to 15 GB. Speed was also improved by chunking and uploading files directly to Azure Blob Storage. This enabled users to upload the most media items per day in company history.",
+    "item1Highlight3": "Implemented numerous features to enhance the user experience of multiple account types and roles within our multi-tenant SaaS between both our React web app and our React Native mobile application.",
+    "item1Highlight4": "Created Opendorse's first private npm repository to share reusable components and utilities across multiple projects.",
+    "item1Highlight5": "Mentored and pair programmed with engineers to help expand both domain knowledge and best practices.",
+    "item1Highlight6": "Served as the team captain to my product team. Extra responsibilities included: regularly meeting with product and design to review technical feasibility of new features, setting the pace and standard for the rest of the team, and tasking out epics to ensure stories are ready for backlog refinement.",
+
+    "year2024": "2024",
+    "year2023": "2023",
+
+    "seniorSoftwareEngineer": "Senior Software Engineer",
+    "item1Promotion1Highlight": "Led larger technical initiatives, drove technical direction, stood up business critical systems in record times.",
+    "item1Promotion2Highlight": "Led technical initiatives, drove technical direction, and stood up business critical systems.",
+
+    "item2Timeframe": "2020 - 2021",
+    "item2Position": "Associate Software Engineer",
+    "item2Highlight1": "Operated as a member of the Asset Protection and Shared Services team which utilized a combination of Kanban and Scrum methodologies. The technology stack for new applications consisted of JavaScript, React, Material UI, Redux, Nodejs, Express, Java, Spring, Mongo, and Postgres.",
+    "item2Highlight2": "Collaborated with our Scrum Master, Product Manager, Solutions Manager, and stakeholders to deliver value every sprint.",
+    "item2Highlight3": "Worked with our business partners and vendors to integrate SAAS solutions with Lowe's environment while adhering to change management policies.",
+    "item2Highlight4": "Lead team effort in identifying areas of improvement for management, set yearly action items, and organized monthly meetings with leadership to track progress and gather feedback.",
+    "item2Highlight5": "Thoroughly documented applications and systems to allow non-application SME's to perform SOP's and to onboard new engineers to the applications in a more efficient manner.",
+    "item2Highlight6": "Pessimistically tested new features through a combination of Behavior-Driven Development and Test-Driven Development. Frameworks used to test applications included Cypress, Jest, Mocha, Enzyme, JUnit, Mockito, and Cucumber.",
+    "item2Highlight7": "Regularly met with a subset of team members in order to plan quarterly team outings.",
+    "item2Highlight8": "Worked with a timezone diverse crew, ranging from the West Coast to Bangalore, India.",
+
+    "item3Timeframe": "2017 - Present",
+    "item3Position": "Software Engineer",
+    "item3Company": "Self-Employed",
+    "item3Highlight1": "Built marketing sites for small businesses.",
+    "item3Highlight2": "CMS migrations and modernization.",
+    "item3Highlight3": "Architecture consulting."
+  },
   "Common": {
     "philosophy": "Philosophy",
     "testimonials": "Testimonials",
