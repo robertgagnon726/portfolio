@@ -43,5 +43,15 @@
     "mentorshipDescription": "El éxito de un mentor radica en ver a otros prosperar. Permita que sus compañeros hablen, lo desafíen y se apropien de su trabajo.",
     "kindnessTitle": "La amabilidad en las revisiones de código",
     "kindnessDescription": "Ofrezca comentarios amistosos, no críticas. Las revisiones de código tienen como objetivo el crecimiento colectivo, no los ataques personales."
+  },
+  "Awards": {
+    "title": "Premios",
+    "subtitle": "Reconocimientos y logros de mi trayectoria profesional",
+    "award1Title": "Premio al Mejor Colaborador",
+    "award1Description": "Reconocido entre el 10% de los mejores contribuyentes en un equipo de producto de más de 2000 miembros.",
+    "award2Title": "Jugador más valioso (2.º trimestre)",
+    "award2Description": "Uno de los tres miembros del equipo seleccionados por su impacto sobresaliente durante el segundo trimestre.",
+    "award3Title": "Jugador más valioso (cuarto trimestre)",
+    "award3Description": "Uno de los tres miembros del equipo reconocidos por sus contribuciones excepcionales en el cuarto trimestre."
   }
 }
