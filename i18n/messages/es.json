@@ -23,5 +23,25 @@
   "Hero": {
     "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
     "connect": "Conéctate en LinkedIn"
+  },
+  "EngineeringPhilosophy": {
+    "title": "Filosofía de la ingeniería",
+    "subtitle": "Ingeniería con empatía, amabilidad y automatización reflexiva, porque desarrollar software no se trata solo de entregar funciones, se trata de ayudar a las personas que las crean.",
+    "radicalEmpathyTitle": "Empatía radical y seguridad psicológica",
+    "radicalEmpathyDescription": "Comparto abiertamente para fomentar la confianza; las personas se sienten seguras al hacer preguntas, plantear inquietudes y colaborar profundamente.",
+    "developerExperienceTitle": "La experiencia del desarrollador ante todo",
+    "developerExperienceDescription": "Las herramientas eficientes y los flujos de trabajo fluidos evitan la pérdida de tiempo, aumentan la moral y liberan a los ingenieros para que se concentren en el impacto.",
+    "ownershipWithGenerosityTitle": "Propiedad con generosidad",
+    "ownershipWithGenerosityDescription": "Cuando algo falla, lo arreglamos juntos, sin acusaciones mutuas. Compartir el mérito y las lecciones aprendidas fortalece a todo el equipo.",
+    "technicalForesightTitle": "Prospectiva técnica y arquitectura",
+    "technicalForesightDescription": "Las barreras de protección bien pensadas y un diseño flexible permiten el crecimiento sin sumergirnos en la deuda tecnológica del mañana.",
+    "relentlessAutomationTitle": "Automatización, estándares y calidad implacables",
+    "relentlessAutomationDescription": "Automatice tareas repetitivas y aplique estándares en los procesos de CI/CD: deje que las máquinas hagan el trabajo aburrido para que los humanos puedan innovar.",
+    "transparentCommunicationTitle": "Comunicación transparente y exceso de información compartida",
+    "transparentCommunicationDescription": "Las actualizaciones frecuentes y abiertas mantienen a todos alineados. Una mayor claridad desde el principio evita simulacros de incendio innecesarios en el futuro.",
+    "mentorshipTitle": "Mentoría y multiplicación del impacto",
+    "mentorshipDescription": "El éxito de un mentor radica en ver a otros prosperar. Permita que sus compañeros hablen, lo desafíen y se apropien de su trabajo.",
+    "kindnessTitle": "La amabilidad en las revisiones de código",
+    "kindnessDescription": "Ofrezca comentarios amistosos, no críticas. Las revisiones de código tienen como objetivo el crecimiento colectivo, no los ataques personales."
   }
 }
