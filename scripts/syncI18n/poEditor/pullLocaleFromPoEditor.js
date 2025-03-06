@@ -1,5 +1,7 @@
 import axios from 'axios';
 import fs from 'fs';
+import _ from 'lodash';
+const { set } = _;
 
 /**
  * Download the target locale from POEditor and write it to local JSON.
@@ -33,9 +35,16 @@ export async function pullLocaleFromPoEditor(apiToken, projectId, language, file
     });
 
     // 3) Write out to local file
-    fs.writeFileSync(filePath, JSON.stringify(translations, null, 2), 'utf8');
+    const unflattened = unflattenMessages(translations);
+    fs.writeFileSync(filePath, JSON.stringify(unflattened, null, 2), 'utf8');
     console.log(`Pulled translations for ${language} -> ${filePath}`);
   } catch (err) {
     throw new Error(`Error pulling locale from POEditor: ${err.message || err}`);
   }
+}
+
+function unflattenMessages(flatObject) {
+  return Object.entries(flatObject).reduce((acc, [key, value]) => {
+    return set(acc, key, value);
+  }, {});
 }

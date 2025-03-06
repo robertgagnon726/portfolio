@@ -12,8 +12,10 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorSchemeIconDropdown from '@Src/theme/ColorSchemeIconDropdown';
+import { useTypedTranslations } from '@I18n/useTypedTranslations';
 
 export default function BGAppBar() {
+  const t = useTypedTranslations('Common');
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -22,39 +24,39 @@ export default function BGAppBar() {
 
   const navButtons = [
     {
-      label: 'Philosophy',
+      label: t('philosophy'),
       href: '#',
     },
     {
-      label: 'Testimonials',
+      label: t('testimonials'),
       href: '#',
     },
     {
-      label: 'Awards',
+      label: t('awards'),
       href: '#',
     },
     {
-      label: 'Stack',
+      label: t('stack'),
       href: '#',
     },
     {
-      label: 'Interests',
+      label: t('interests'),
       href: '#',
     },
     {
-      label: 'Highlights',
+      label: t('highlights'),
       href: '#',
     },
     {
-      label: 'Experience',
+      label: t('experience'),
       href: '#',
     },
     {
-      label: 'Services',
+      label: t('services'),
       href: '#',
     },
     {
-      label: 'Blog',
+      label: t('blog'),
       href: '#',
     },
   ];
@@ -74,13 +76,13 @@ export default function BGAppBar() {
           </StyledNavItemsContainer>
           <StyledCTAContainer>
             <Button color="primary" variant="contained" size="small">
-              Contact
+              {t('contact')}
             </Button>
             <ColorSchemeIconDropdown />
           </StyledCTAContainer>
           <StyledMenuContainer>
             <ColorSchemeIconDropdown size="medium" />
-            <IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
+            <IconButton aria-label={t('menuButton')} onClick={toggleDrawer(true)}>
               <MenuIcon />
             </IconButton>
             <Drawer
@@ -106,7 +108,7 @@ export default function BGAppBar() {
                 <StyledDivider />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
-                    Contact
+                    {t('contact')}
                   </Button>
                 </MenuItem>
               </StyledDrawerContentContainer>

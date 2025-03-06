@@ -1,4 +1,27 @@
 {
-  "HomePage.title": "¡¡¡Hola Mundo!!!",
-  "HomePage.about": "Vaya a la página Acerca de nuevamente"
+  "HomePage": {
+    "title": "¡¡¡Hola Mundo!!!",
+    "about": "Vaya a la página Acerca de nuevamente"
+  },
+  "Common": {
+    "philosophy": "Filosofía",
+    "testimonials": "Testimonios",
+    "awards": "Premios",
+    "stack": "Pila",
+    "interests": "Intereses",
+    "highlights": "Reflejos",
+    "experience": "Experiencia",
+    "services": "Servicios",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "menuButton": "Botón de menú"
+  },
+  "Testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto."
+  },
+  "Hero": {
+    "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
+    "connect": "Conéctate en LinkedIn"
+  }
 }
