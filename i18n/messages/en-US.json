@@ -2,5 +2,26 @@
   "HomePage": {
     "title": "Hello world",
     "about": "Go to the about page again"
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "subtitle": "Read what my past colleagues and mentors say about working with me—discover how I bring dedication, creativity, and collaboration to every project."
+  },
+  "Hero": {
+    "subtitle": "Leading through innovation by unblocking teams, sharpening efficiency, fostering collaboration, and delivering tangible results with maintainable solutions that last.",
+    "connect": "Connect on LinkedIn"
+  },
+  "Common": {
+    "philosophy": "Philosophy",
+    "testimonials": "Testimonials",
+    "awards": "Awards",
+    "stack": "Stack",
+    "interests": "Interests",
+    "highlights": "Highlights",
+    "experience": "Experience",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "menuButton": "Menu button"
   }
 }
