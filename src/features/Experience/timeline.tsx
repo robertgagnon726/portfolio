@@ -70,12 +70,12 @@ export const getExperienceTimeline = (t: UseTranslations<'Experience'>): Timelin
     ],
     promotions: [
       {
-        title: t('seniorSoftwareEngineer'),
+        title: t('item1CurrentPosition'),
         year: t('year2024'),
         highlights: t('item1Promotion1Highlight'),
       },
       {
-        title: 'Senior Software Engineer',
+        title: t('seniorSoftwareEngineer'),
         year: t('year2023'),
         highlights: t('item1Promotion2Highlight'),
       },

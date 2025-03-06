@@ -93,6 +93,23 @@ interface HomePageMessages {
   about: string;
 }
 
+interface PersonalInterestsMessages {
+  title: string;
+  subtitle: string;
+  gamingTitle: string;
+  gamingDescription: string;
+  golfTitle: string;
+  golfDescription: string;
+  poolPartiesTitle: string;
+  poolPartiesDescription: string;
+  roadTripsTitle: string;
+  roadTripsDescription: string;
+  comedyTitle: string;
+  comedyDescription: string;
+  cinemaAndTVTitle: string;
+  cinemaAndTVDescription: string;
+}
+
 interface TestimonialsMessages {
   title: string;
   subtitle: string;
@@ -105,5 +122,6 @@ export interface TranslationMessages {
   Awards: AwardsMessages;
   EngineeringPhilosophy: EngineeringPhilosophyMessages;
   Experience: ExperienceMessages;
+  PersonalInterests: PersonalInterestsMessages;
   Common: CommonMessages;
 }

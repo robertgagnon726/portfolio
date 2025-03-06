@@ -94,6 +94,28 @@
     "item3Highlight2": "CMS migrations and modernization.",
     "item3Highlight3": "Architecture consulting."
   },
+  "PersonalInterests": {
+    "title": "Personal Interests",
+    "subtitle": "When I'm not coding, you can find me pursuing these passions.",
+
+    "gamingTitle": "Gaming",
+    "gamingDescription": "Passionate about automation games and EA FC. Some of my favorite games are Timberborn, Satisfactory, The Crust, Captain of Industry, and Frostpunk.",
+
+    "golfTitle": "Golf",
+    "golfDescription": "I enjoy playing golf to the point where I have a simulator at home so I can play year-round.",
+
+    "poolPartiesTitle": "Pool Parties",
+    "poolPartiesDescription": "Love hosting summer gatherings and creating memorable experiences with friends and family.",
+
+    "roadTripsTitle": "Road Trips",
+    "roadTripsDescription": "Exploring new places, creating memories, and enjoying the journey.",
+
+    "comedyTitle": "Comedy",
+    "comedyDescription": "Both shows and standup. My favorite show is Silicon Valley and my favorite comedian is Kumail Nanjiani.",
+
+    "cinemaAndTVTitle": "Cinema & TV",
+    "cinemaAndTVDescription": "A sucker for a great TV show. Some of my favorites are Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki, and Hawkeye."
+  },
   "Common": {
     "philosophy": "Philosophy",
     "testimonials": "Testimonials",
