@@ -11,6 +11,34 @@
     "subtitle": "Leading through innovation by unblocking teams, sharpening efficiency, fostering collaboration, and delivering tangible results with maintainable solutions that last.",
     "connect": "Connect on LinkedIn"
   },
+  "EngineeringPhilosophy": {
+    "title": "Engineering Philosophy",
+    "subtitle": "Engineering with empathy, kindness, and thoughtful automation—because building software isn't just about shipping features, it's about uplifting the people who create them.",
+
+    "radicalEmpathyTitle": "Radical Empathy & Psychological Safety",
+    "radicalEmpathyDescription": "I share openly to foster trust; people feel safe asking questions, raising concerns, and collaborating deeply.",
+
+    "developerExperienceTitle": "Developer Experience Above All",
+    "developerExperienceDescription": "Efficient tools and smooth workflows prevent wasted time, boost morale, and free engineers to focus on impact.",
+
+    "ownershipWithGenerosityTitle": "Ownership with Generosity",
+    "ownershipWithGenerosityDescription": "When something breaks, we fix it together—no finger-pointing. Sharing credit and lessons learned empowers the entire team.",
+
+    "technicalForesightTitle": "Technical Foresight & Architecture",
+    "technicalForesightDescription": "Thoughtful guardrails and flexible design enable growth without burying ourselves in tomorrow’s tech debt.",
+
+    "relentlessAutomationTitle": "Relentless Automation, Standards, & Quality",
+    "relentlessAutomationDescription": "Automate repetitive tasks and enforce standards in CI/CD pipelines—let machines do the boring stuff, so humans can innovate.",
+
+    "transparentCommunicationTitle": "Transparent Communication & Oversharing",
+    "transparentCommunicationDescription": "Frequent, open updates keep everyone aligned. More clarity early on prevents unnecessary fire drills down the line.",
+
+    "mentorshipTitle": "Mentorship & Multiplying Impact",
+    "mentorshipDescription": "A mentor’s success lies in watching others thrive. Empower peers to speak up, challenge you, and own their craft.",
+
+    "kindnessTitle": "Kindness in Code Reviews",
+    "kindnessDescription": "Offer friendly feedback, not criticism. Code reviews are about collective growth, not personal attacks."
+  },
   "Common": {
     "philosophy": "Philosophy",
     "testimonials": "Testimonials",

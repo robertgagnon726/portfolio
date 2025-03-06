@@ -14,6 +14,27 @@ interface CommonMessages {
   menuButton: string;
 }
 
+interface EngineeringPhilosophyMessages {
+  title: string;
+  subtitle: string;
+  radicalEmpathyTitle: string;
+  radicalEmpathyDescription: string;
+  developerExperienceTitle: string;
+  developerExperienceDescription: string;
+  ownershipWithGenerosityTitle: string;
+  ownershipWithGenerosityDescription: string;
+  technicalForesightTitle: string;
+  technicalForesightDescription: string;
+  relentlessAutomationTitle: string;
+  relentlessAutomationDescription: string;
+  transparentCommunicationTitle: string;
+  transparentCommunicationDescription: string;
+  mentorshipTitle: string;
+  mentorshipDescription: string;
+  kindnessTitle: string;
+  kindnessDescription: string;
+}
+
 interface HeroMessages {
   subtitle: string;
   connect: string;
@@ -33,5 +54,6 @@ export interface TranslationMessages {
   HomePage: HomePageMessages;
   Testimonials: TestimonialsMessages;
   Hero: HeroMessages;
+  EngineeringPhilosophy: EngineeringPhilosophyMessages;
   Common: CommonMessages;
 }
