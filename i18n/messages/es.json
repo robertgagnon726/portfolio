@@ -89,5 +89,21 @@
     "item3Highlight3": "Consultoría de arquitectura.",
     "year2024": "2024",
     "year2023": "2023"
+  },
+  "PersonalInterests": {
+    "title": "Intereses personales",
+    "subtitle": "Cuando no estoy codificando, puedes encontrarme persiguiendo estas pasiones.",
+    "gamingTitle": "Juego de azar",
+    "gamingDescription": "Apasionado por los juegos de automatización y EA FC. Algunos de mis juegos favoritos son Timberborn, Satisfactory, The Crust, Captain of Industry y Frostpunk.",
+    "golfTitle": "Golf",
+    "golfDescription": "Disfruto tanto jugando al golf que tengo un simulador en casa para poder jugar todo el año.",
+    "poolPartiesTitle": "Fiestas en la piscina",
+    "poolPartiesDescription": "Me encanta organizar reuniones de verano y crear experiencias memorables con amigos y familiares.",
+    "roadTripsTitle": "Viajes por carretera",
+    "roadTripsDescription": "Explorar nuevos lugares, crear recuerdos y disfrutar el viaje.",
+    "comedyTitle": "Comedia",
+    "comedyDescription": "Tanto los programas como los monólogos. Mi programa favorito es Silicon Valley y mi comediante favorito es Kumail Nanjiani.",
+    "cinemaAndTVTitle": "Cine y TV",
+    "cinemaAndTVDescription": "Soy un fanático de los buenos programas de televisión. Algunos de mis favoritos son Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki y Hawkeye."
   }
 }
