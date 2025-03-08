@@ -4,14 +4,15 @@ import EngineeringPhilosophy from '@Features/EngineeringPhilosophy/EngineeringPh
 import Experience from '@Features/Experience/Experience';
 import Hero from '@Features/Hero/Hero';
 import PersonalInterests from '@Features/PersonalInterests/PersonalInterests';
-import Testimonials from '@Features/Testimonials/Testimonials';
+import PreferredTechStack from '@Features/PreferredTechStack/PreferredTechStack';
+import Referrals from '@Features/Referrals/Referrals';
 import { Divider } from '@mui/material';
 
 function AppHome() {
   return (
     <Layout>
       <Hero />
-      <Testimonials />
+      <Referrals />
       <Divider />
       <EngineeringPhilosophy />
       <Divider />
@@ -20,6 +21,8 @@ function AppHome() {
       <Experience />
       <Divider />
       <PersonalInterests />
+      <Divider />
+      <PreferredTechStack />
     </Layout>
   );
 }

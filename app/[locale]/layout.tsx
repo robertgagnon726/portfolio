@@ -1,5 +1,5 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { CssBaseline, StyledEngineProvider } from '@mui/material';
+import { CssBaseline, GlobalStyles, StyledEngineProvider } from '@mui/material';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { ReduxProvider } from '@Redux/ReduxProvider';
@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import { NextIntlClientProvider } from 'next-intl';
 import { routing } from '@I18n/routing';
 import Theme from '@Src/theme/Theme';
+import { Interpolation, type Theme as MuiTheme } from '@mui/material';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
@@ -43,6 +44,7 @@ export default async function RootLayout({
       <AppRouterCacheProvider>
         <StyledEngineProvider injectFirst>
           <Theme>
+            <GlobalStyles styles={globalStyles} />
             <CssBaseline enableColorScheme />
             <body style={bodyStyle} suppressHydrationWarning>
               <NextIntlClientProvider messages={messages}>
@@ -55,3 +57,9 @@ export default async function RootLayout({
     </html>
   );
 }
+
+const globalStyles: Interpolation<MuiTheme> = {
+  html: {
+    scrollBehavior: 'smooth',
+  },
+};

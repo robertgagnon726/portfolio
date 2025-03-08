@@ -42,7 +42,7 @@ export default function PersonalInterests() {
   ];
 
   return (
-    <Section sectionId="experience" title={t('title')} subtitle={t('subtitle')} containerGap={0}>
+    <Section sectionId="personal-interests" title={t('title')} subtitle={t('subtitle')} containerGap={0}>
       <StyledContainer container spacing={2}>
         {interests.map((interest) => (
           <StyledCardContainer size={{ xs: 12, sm: 6, md: 4 }} key={interest.title}>

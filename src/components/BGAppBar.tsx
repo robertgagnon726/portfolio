@@ -25,39 +25,39 @@ export default function BGAppBar() {
   const navButtons = [
     {
       label: t('philosophy'),
-      href: '#',
+      href: '#philosophy',
     },
     {
-      label: t('testimonials'),
-      href: '#',
+      label: t('referrals'),
+      href: '#referrals',
     },
     {
       label: t('awards'),
-      href: '#',
+      href: '#awards',
     },
     {
       label: t('stack'),
-      href: '#',
+      href: '#preferred-tech-stack',
     },
     {
       label: t('interests'),
-      href: '#',
+      href: '#personal-interests',
     },
     {
       label: t('highlights'),
-      href: '#',
+      href: '#career-highlights',
     },
     {
       label: t('experience'),
-      href: '#',
+      href: '#experience',
     },
     {
       label: t('services'),
-      href: '#',
+      href: '#services',
     },
     {
       label: t('blog'),
-      href: '#',
+      href: '#blog',
     },
   ];
 
@@ -68,7 +68,7 @@ export default function BGAppBar() {
           <StyledNavItemsContainer>
             <StyledNavItemsInnerContainer>
               {navButtons.map((button) => (
-                <Button key={button.label} variant="text" color="info" size="small">
+                <Button key={button.label} variant="text" color="info" size="small" component="a" href={button.href}>
                   {button.label}
                 </Button>
               ))}
@@ -103,7 +103,9 @@ export default function BGAppBar() {
                 </StyledCloseButtonContainer>
 
                 {navButtons.map((button) => (
-                  <MenuItem key={button.label}>{button.label}</MenuItem>
+                  <MenuItem key={button.label} component="a" href={button.href} onClick={toggleDrawer(false)}>
+                    {button.label}
+                  </MenuItem>
                 ))}
                 <StyledDivider />
                 <MenuItem>
