@@ -13,7 +13,7 @@ interface AwardsMessages {
 
 interface CommonMessages {
   philosophy: string;
-  testimonials: string;
+  referrals: string;
   awards: string;
   stack: string;
   interests: string;
@@ -110,18 +110,36 @@ interface PersonalInterestsMessages {
   cinemaAndTVDescription: string;
 }
 
-interface TestimonialsMessages {
+interface PreferredTechStackMessages {
+  title: string;
+  subtitle: string;
+  reactTitle: string;
+  reactDescription: string;
+  nextjsTitle: string;
+  nextjsDescription: string;
+  nestjsTitle: string;
+  nestjsDescription: string;
+  typescriptTitle: string;
+  typescriptDescription: string;
+  ormTitle: string;
+  ormDescription: string;
+  cloudTitle: string;
+  cloudDescription: string;
+}
+
+interface ReferralsMessages {
   title: string;
   subtitle: string;
 }
 
 export interface TranslationMessages {
   HomePage: HomePageMessages;
-  Testimonials: TestimonialsMessages;
+  Referrals: ReferralsMessages;
   Hero: HeroMessages;
   Awards: AwardsMessages;
   EngineeringPhilosophy: EngineeringPhilosophyMessages;
   Experience: ExperienceMessages;
   PersonalInterests: PersonalInterestsMessages;
+  PreferredTechStack: PreferredTechStackMessages;
   Common: CommonMessages;
 }

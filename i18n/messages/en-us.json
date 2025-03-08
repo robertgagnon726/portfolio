@@ -3,7 +3,7 @@
     "title": "Hello world",
     "about": "Go to the about page again"
   },
-  "Testimonials": {
+  "Referrals": {
     "title": "Testimonials",
     "subtitle": "Read what my past colleagues and mentors say about working with me—discover how I bring dedication, creativity, and collaboration to every project."
   },
@@ -116,9 +116,31 @@
     "cinemaAndTVTitle": "Cinema & TV",
     "cinemaAndTVDescription": "A sucker for a great TV show. Some of my favorites are Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki, and Hawkeye."
   },
+  "PreferredTechStack": {
+    "title": "Preferred Tech Stack",
+    "subtitle": "Technologies I've worked with and prefer to use in my projects.",
+
+    "reactTitle": "React",
+    "reactDescription": "I've used both vanilla and Angular. I enjoy the opinionation of Angular, but I like React allows the option to be opinionated or not.",
+
+    "nextjsTitle": "Next.js",
+    "nextjsDescription": "Next.js is just a great tool with so many out of the box features. Vercel is a nice to have as well.",
+
+    "nestjsTitle": "NestJS",
+    "nestjsDescription": "I have used Express, Java/Spring, and C#/Dotnet. There's so much value in using the same language across the stack, and NestJS really bridges the IOC gap that other languages provide.",
+
+    "typescriptTitle": "TypeScript",
+    "typescriptDescription": "I think I'd be hardpressed to find someone that's used TypeScript, but prefers JavaScript. It has it's flaws but it much better than weakly typing with JSDoc.",
+
+    "ormTitle": "ORM",
+    "ormDescription": "There's a place for ORMs vs sprocs, but I think ORMs are the way to go for most applications. I enjoy the startup life of building features quickly, not so much the shave x ms off this endpoint to save compute life. I can do both, but I'm happiest with the former.",
+
+    "cloudTitle": "Cloud",
+    "cloudDescription": "I've worked with AWS, Azure, and GCP. Each has their own quirks. What I don't enjoy working with is on-prem. I like the idea and makes sense at scale, but the developer experience of on-prem is often far below that of cloud."
+  },
   "Common": {
     "philosophy": "Philosophy",
-    "testimonials": "Testimonials",
+    "referrals": "Referrals",
     "awards": "Awards",
     "stack": "Stack",
     "interests": "Interests",

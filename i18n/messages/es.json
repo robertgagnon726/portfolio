@@ -5,7 +5,6 @@
   },
   "Common": {
     "philosophy": "Filosofía",
-    "testimonials": "Testimonios",
     "awards": "Premios",
     "stack": "Pila",
     "interests": "Intereses",
@@ -14,11 +13,8 @@
     "services": "Servicios",
     "blog": "Blog",
     "contact": "Contacto",
-    "menuButton": "Botón de menú"
-  },
-  "Testimonials": {
-    "title": "Testimonios",
-    "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto."
+    "menuButton": "Botón de menú",
+    "referrals": "Referencias"
   },
   "Hero": {
     "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
@@ -105,5 +101,25 @@
     "comedyDescription": "Tanto los programas como los monólogos. Mi programa favorito es Silicon Valley y mi comediante favorito es Kumail Nanjiani.",
     "cinemaAndTVTitle": "Cine y TV",
     "cinemaAndTVDescription": "Soy un fanático de los buenos programas de televisión. Algunos de mis favoritos son Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki y Hawkeye."
+  },
+  "PreferredTechStack": {
+    "title": "Pila de tecnología preferida",
+    "subtitle": "Tecnologías con las que he trabajado y prefiero utilizar en mis proyectos.",
+    "reactTitle": "Reaccionar",
+    "reactDescription": "He utilizado tanto la versión básica como Angular. Me gusta la capacidad de opinar de Angular, pero me gusta que React permita la opción de opinar o no.",
+    "nextjsTitle": "Siguiente.js",
+    "nextjsDescription": "Next.js es una herramienta excelente con muchas funciones listas para usar. Vercel también es una buena opción.",
+    "nestjsTitle": "NestJS",
+    "nestjsDescription": "He utilizado Express, Java/Spring y C#/Dotnet. Hay mucho valor en utilizar el mismo lenguaje en toda la pila, y NestJS realmente cierra la brecha de IOC que otros lenguajes proporcionan.",
+    "typescriptTitle": "Mecanografiado",
+    "typescriptDescription": "Creo que me resultaría difícil encontrar a alguien que haya usado TypeScript, pero que prefiera JavaScript. Tiene sus defectos, pero es mucho mejor que la tipificación débil con JSDoc.",
+    "ormTitle": "ORM",
+    "ormDescription": "Hay un lugar para los ORM frente a los sproc, pero creo que los ORM son el camino a seguir para la mayoría de las aplicaciones. Disfruto de la vida inicial de crear funciones rápidamente, no tanto de quitarle x ms a este punto final para ahorrar tiempo de procesamiento. Puedo hacer ambas cosas, pero estoy más contento con la primera.",
+    "cloudTitle": "Nube",
+    "cloudDescription": "He trabajado con AWS, Azure y GCP. Cada uno tiene sus propias peculiaridades. Lo que no me gusta es trabajar en entornos locales. Me gusta la idea y tiene sentido a gran escala, pero la experiencia de los desarrolladores en entornos locales suele ser muy inferior a la de la nube."
+  },
+  "Referrals": {
+    "title": "Testimonios",
+    "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto."
   }
 }

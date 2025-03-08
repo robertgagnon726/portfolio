@@ -12,7 +12,7 @@ import { styled, useTheme } from '@mui/material';
 import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 
-const testimonials = [
+const referrals = [
   {
     avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
     name: 'Remy Sharp',
@@ -80,24 +80,24 @@ const logoStyle = {
   opacity: 0.3,
 };
 
-export default function Testimonials() {
+export default function Referrals() {
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
-  const t = useTypedTranslations('Testimonials');
+  const t = useTypedTranslations('Referrals');
 
   return (
-    <Section sectionId="testimonials" title={t('title')} subtitle={t('subtitle')}>
+    <Section sectionId="referrals" title={t('title')} subtitle={t('subtitle')}>
       <Grid container spacing={2}>
-        {testimonials.map((testimonial, index) => (
+        {referrals.map((referral, index) => (
           <StyledGrid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
             <StyledCard variant="outlined">
               <CardContent>
                 <Typography variant="body1" gutterBottom color="textSecondary">
-                  {testimonial.testimonial}
+                  {referral.testimonial}
                 </Typography>
               </CardContent>
               <StyledCardHeaderContainer>
-                <CardHeader avatar={testimonial.avatar} title={testimonial.name} subheader={testimonial.occupation} />
+                <CardHeader avatar={referral.avatar} title={referral.name} subheader={referral.occupation} />
                 <img src={logos[index]} alt={`Logo ${index + 1}`} style={logoStyle} />
               </StyledCardHeaderContainer>
             </StyledCard>
