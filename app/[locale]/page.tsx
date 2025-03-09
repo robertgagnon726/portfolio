@@ -6,6 +6,7 @@ import Hero from '@Features/Hero/Hero';
 import PersonalInterests from '@Features/PersonalInterests/PersonalInterests';
 import PreferredTechStack from '@Features/PreferredTechStack/PreferredTechStack';
 import Referrals from '@Features/Referrals/Referrals';
+import TechISpeak from '@Features/TechISpeak/TechISpeak';
 import { Divider } from '@mui/material';
 
 function AppHome() {
@@ -23,6 +24,8 @@ function AppHome() {
       <PersonalInterests />
       <Divider />
       <PreferredTechStack />
+      <Divider />
+      <TechISpeak />
     </Layout>
   );
 }

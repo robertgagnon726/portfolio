@@ -59,6 +59,10 @@ export default function BGAppBar() {
       label: t('blog'),
       href: '#blog',
     },
+    {
+      label: t('techISpeak'),
+      href: '#tech-i-speak',
+    },
   ];
 
   return (

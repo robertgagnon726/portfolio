@@ -14,7 +14,8 @@
     "blog": "Blog",
     "contact": "Contacto",
     "menuButton": "Botón de menú",
-    "referrals": "Referencias"
+    "referrals": "Referencias",
+    "techISpeak": "Hablo tecnicamente"
   },
   "Hero": {
     "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
@@ -121,5 +122,20 @@
   "Referrals": {
     "title": "Testimonios",
     "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto."
+  },
+  "TechISpeak": {
+    "title": "Hablo tecnicamente",
+    "subtitle": "Tecnologías con las que he trabajado y de las que puedo hablar.",
+    "searchInputPlaceholder": "Buscar tecnologías y servicios...",
+    "languagesTitle": "Idiomas y tiempos de ejecución",
+    "frontendFrameworksTitle": "Bibliotecas y marcos de trabajo frontend",
+    "backendFrameworksTitle": "Marcos de back-end ",
+    "databaseTitle": "Bases de datos y ORM",
+    "cloudTitle": "Plataformas en la nube y alojamiento",
+    "devOpsTitle": "DevOps y CI/CD",
+    "monitoringTitle": "Monitoreo y análisis",
+    "communicationTitle": "Comunicación",
+    "testingTitle": "Pruebas y control de calidad",
+    "buildTitle": "Construcción y herramientas"
   }
 }
