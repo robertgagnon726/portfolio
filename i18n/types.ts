@@ -21,6 +21,7 @@ interface CommonMessages {
   experience: string;
   services: string;
   blog: string;
+  techISpeak: string;
   contact: string;
   menuButton: string;
 }
@@ -132,6 +133,22 @@ interface ReferralsMessages {
   subtitle: string;
 }
 
+interface TechISpeakMessages {
+  title: string;
+  subtitle: string;
+  searchInputPlaceholder: string;
+  languagesTitle: string;
+  frontendFrameworksTitle: string;
+  backendFrameworksTitle: string;
+  databaseTitle: string;
+  cloudTitle: string;
+  devOpsTitle: string;
+  monitoringTitle: string;
+  communicationTitle: string;
+  testingTitle: string;
+  buildTitle: string;
+}
+
 export interface TranslationMessages {
   HomePage: HomePageMessages;
   Referrals: ReferralsMessages;
@@ -141,5 +158,6 @@ export interface TranslationMessages {
   Experience: ExperienceMessages;
   PersonalInterests: PersonalInterestsMessages;
   PreferredTechStack: PreferredTechStackMessages;
+  TechISpeak: TechISpeakMessages;
   Common: CommonMessages;
 }

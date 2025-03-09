@@ -138,6 +138,21 @@
     "cloudTitle": "Cloud",
     "cloudDescription": "I've worked with AWS, Azure, and GCP. Each has their own quirks. What I don't enjoy working with is on-prem. I like the idea and makes sense at scale, but the developer experience of on-prem is often far below that of cloud."
   },
+  "TechISpeak": {
+    "title": "Tech I Speak",
+    "subtitle": "Technologies I've worked with and can speak to.",
+    "searchInputPlaceholder": "Search technologies & services...",
+    "languagesTitle": "Languages & Runtimes",
+    "frontendFrameworksTitle": "Frontend Frameworks & Libraries",
+    "backendFrameworksTitle": "Backend Frameworks ",
+    "databaseTitle": "Databases & ORM",
+    "cloudTitle": "Cloud Platforms & Hosting",
+    "devOpsTitle": "DevOps & CI/CD",
+    "monitoringTitle": "Monitoring & Analytics",
+    "communicationTitle": "Communication",
+    "testingTitle": "Testing & QA",
+    "buildTitle": "Build & Tooling"
+  },
   "Common": {
     "philosophy": "Philosophy",
     "referrals": "Referrals",
@@ -148,6 +163,7 @@
     "experience": "Experience",
     "services": "Services",
     "blog": "Blog",
+    "techISpeak": "Tech I Speak",
     "contact": "Contact",
     "menuButton": "Menu button"
   }
