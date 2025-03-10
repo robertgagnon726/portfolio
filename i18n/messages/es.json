@@ -137,5 +137,34 @@
     "communicationTitle": "Comunicación",
     "testingTitle": "Pruebas y control de calidad",
     "buildTitle": "Construcción y herramientas"
+  },
+  "Contact": {
+    "title": "Vamos a conectarnos",
+    "subtitle": "Siempre me complace establecer contactos y colaborar. ¡No dudes en contactarme!",
+    "firstNameLabel": "Nombre de pila",
+    "lastNameLabel": "Apellido",
+    "emailLabel": "Correo electrónico",
+    "subjectLabel": "Sujeto",
+    "messageLabel": "Mensaje",
+    "sendMessage": "Enviar mensaje",
+    "connectOnLinkedIn": "Conéctate en LinkedIn",
+    "valFirstNameMin": "El nombre debe tener al menos {min} caracteres",
+    "valFirstNameMax": "El nombre no puede tener más de {max} caracteres",
+    "valFirstNameRequired": "El nombre es obligatorio",
+    "valLastNameMin": "El apellido debe tener al menos {min} caracteres",
+    "valLastNameMax": "El apellido no puede tener más de {max} caracteres",
+    "valLastNameRequired": "El apellido es obligatorio",
+    "valEmailMax": "El correo electrónico no puede tener más de {max} caracteres",
+    "valEmailInvalid": "Debe ser un correo electrónico válido",
+    "valEmailRequired": "Se requiere correo electrónico",
+    "valSubjectMin": "El asunto debe tener al menos {min} caracteres",
+    "valSubjectMax": "El asunto no puede tener más de {max} caracteres",
+    "valSubjectRequired": "El asunto es obligatorio",
+    "valMessageMin": "El mensaje debe tener al menos {min} caracteres",
+    "valMessageMax": "El mensaje no puede tener más de {max} caracteres",
+    "valMessageRequired": "El mensaje es obligatorio"
+  },
+  "Alert": {
+    "messageSent": "Mensaje enviado exitosamente"
   }
 }

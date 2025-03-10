@@ -48,7 +48,7 @@ export default function Hero() {
               color="primary"
               size="small"
               component="a"
-              href="https://www.linkedin.com/in/bobby-gagnon-b669b8102"
+              href="#contact"
               target="_blank"
               rel="noopener noreferrer"
             >

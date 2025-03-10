@@ -9,7 +9,7 @@
   },
   "Hero": {
     "subtitle": "Leading through innovation by unblocking teams, sharpening efficiency, fostering collaboration, and delivering tangible results with maintainable solutions that last.",
-    "connect": "Connect on LinkedIn"
+    "connect": "Connect"
   },
   "Awards": {
     "title": "Awards",
@@ -152,6 +152,35 @@
     "communicationTitle": "Communication",
     "testingTitle": "Testing & QA",
     "buildTitle": "Build & Tooling"
+  },
+  "Contact": {
+    "title": "Let's Connect",
+    "subtitle": "I'm always happy to network and collaborate. Feel free to reach out!",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "emailLabel": "Email",
+    "subjectLabel": "Subject",
+    "messageLabel": "Message",
+    "sendMessage": "Send Message",
+    "connectOnLinkedIn": "Connect on LinkedIn",
+    "valFirstNameMin": "First Name must be at least {min} characters",
+    "valFirstNameMax": "First Name cannot be more than {max} characters",
+    "valFirstNameRequired": "First Name is required",
+    "valLastNameMin": "Last Name must be at least {min} characters",
+    "valLastNameMax": "Last Name cannot be more than {max} characters",
+    "valLastNameRequired": "Last Name is required",
+    "valEmailMax": "Email cannot be more than {max} characters",
+    "valEmailInvalid": "Must be a valid email",
+    "valEmailRequired": "Email is required",
+    "valSubjectMin": "Subject must be at least {min} characters",
+    "valSubjectMax": "Subject cannot be more than {max} characters",
+    "valSubjectRequired": "Subject is required",
+    "valMessageMin": "Message must be at least {min} characters",
+    "valMessageMax": "Message cannot be more than {max} characters",
+    "valMessageRequired": "Message is required"
+  },
+  "Alert": {
+    "messageSent": "Message sent successfully"
   },
   "Common": {
     "philosophy": "Philosophy",

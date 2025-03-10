@@ -1,6 +1,10 @@
 // AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY
 
-interface AwardsMessages {
+export interface AlertMessages {
+  messageSent: string;
+}
+
+export interface AwardsMessages {
   title: string;
   subtitle: string;
   award1Title: string;
@@ -11,7 +15,7 @@ interface AwardsMessages {
   award3Description: string;
 }
 
-interface CommonMessages {
+export interface CommonMessages {
   philosophy: string;
   referrals: string;
   awards: string;
@@ -26,7 +30,34 @@ interface CommonMessages {
   menuButton: string;
 }
 
-interface EngineeringPhilosophyMessages {
+export interface ContactMessages {
+  title: string;
+  subtitle: string;
+  firstNameLabel: string;
+  lastNameLabel: string;
+  emailLabel: string;
+  subjectLabel: string;
+  messageLabel: string;
+  sendMessage: string;
+  connectOnLinkedIn: string;
+  valFirstNameMin: string;
+  valFirstNameMax: string;
+  valFirstNameRequired: string;
+  valLastNameMin: string;
+  valLastNameMax: string;
+  valLastNameRequired: string;
+  valEmailMax: string;
+  valEmailInvalid: string;
+  valEmailRequired: string;
+  valSubjectMin: string;
+  valSubjectMax: string;
+  valSubjectRequired: string;
+  valMessageMin: string;
+  valMessageMax: string;
+  valMessageRequired: string;
+}
+
+export interface EngineeringPhilosophyMessages {
   title: string;
   subtitle: string;
   radicalEmpathyTitle: string;
@@ -47,7 +78,7 @@ interface EngineeringPhilosophyMessages {
   kindnessDescription: string;
 }
 
-interface ExperienceMessages {
+export interface ExperienceMessages {
   title: string;
   subtitle: string;
   tagRemote: string;
@@ -84,17 +115,17 @@ interface ExperienceMessages {
   item3Highlight3: string;
 }
 
-interface HeroMessages {
+export interface HeroMessages {
   subtitle: string;
   connect: string;
 }
 
-interface HomePageMessages {
+export interface HomePageMessages {
   title: string;
   about: string;
 }
 
-interface PersonalInterestsMessages {
+export interface PersonalInterestsMessages {
   title: string;
   subtitle: string;
   gamingTitle: string;
@@ -111,7 +142,7 @@ interface PersonalInterestsMessages {
   cinemaAndTVDescription: string;
 }
 
-interface PreferredTechStackMessages {
+export interface PreferredTechStackMessages {
   title: string;
   subtitle: string;
   reactTitle: string;
@@ -128,12 +159,12 @@ interface PreferredTechStackMessages {
   cloudDescription: string;
 }
 
-interface ReferralsMessages {
+export interface ReferralsMessages {
   title: string;
   subtitle: string;
 }
 
-interface TechISpeakMessages {
+export interface TechISpeakMessages {
   title: string;
   subtitle: string;
   searchInputPlaceholder: string;
@@ -159,5 +190,7 @@ export interface TranslationMessages {
   PersonalInterests: PersonalInterestsMessages;
   PreferredTechStack: PreferredTechStackMessages;
   TechISpeak: TechISpeakMessages;
+  Contact: ContactMessages;
+  Alert: AlertMessages;
   Common: CommonMessages;
 }

@@ -1,5 +1,6 @@
 import { Layout } from '@Connected-components/Layout/Layout';
 import Awards from '@Features/Awards/Awards';
+import Contact from '@Features/Contact/Contact';
 import EngineeringPhilosophy from '@Features/EngineeringPhilosophy/EngineeringPhilosophy';
 import Experience from '@Features/Experience/Experience';
 import Hero from '@Features/Hero/Hero';
@@ -26,6 +27,8 @@ function AppHome() {
       <PreferredTechStack />
       <Divider />
       <TechISpeak />
+      <Divider />
+      <Contact />
     </Layout>
   );
 }

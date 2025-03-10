@@ -17,7 +17,7 @@ export function traverseTree(obj, keyPath = [], interfaces = new Map()) {
     }
   }
 
-  let interfaceDef = `interface ${currentInterfaceName} {\n`;
+  let interfaceDef = `export interface ${currentInterfaceName} {\n`;
   for (const [fieldName, fieldType] of Object.entries(fields)) {
     interfaceDef += `  ${fieldName}: ${fieldType};\n`;
   }
