@@ -13,6 +13,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorSchemeIconDropdown from '@Src/theme/ColorSchemeIconDropdown';
 import { useTypedTranslations } from '@I18n/useTypedTranslations';
+import LanguageSwitcher from '@Components/LanguageSwitcher';
 
 export default function BGAppBar() {
   const t = useTypedTranslations('Common');
@@ -79,6 +80,7 @@ export default function BGAppBar() {
             </StyledNavItemsInnerContainer>
           </StyledNavItemsContainer>
           <StyledCTAContainer>
+            <LanguageSwitcher />
             <Button color="primary" variant="contained" size="small">
               {t('contact')}
             </Button>
@@ -112,6 +114,7 @@ export default function BGAppBar() {
                   </MenuItem>
                 ))}
                 <StyledDivider />
+                <LanguageSwitcher />
                 <MenuItem>
                   <Button color="primary" variant="contained" fullWidth>
                     {t('contact')}

@@ -125,6 +125,11 @@ export interface HomePageMessages {
   about: string;
 }
 
+export interface LanguageSwitcherMessages {
+  english: string;
+  spanish: string;
+}
+
 export interface PersonalInterestsMessages {
   title: string;
   subtitle: string;
@@ -192,5 +197,6 @@ export interface TranslationMessages {
   TechISpeak: TechISpeakMessages;
   Contact: ContactMessages;
   Alert: AlertMessages;
+  LanguageSwitcher: LanguageSwitcherMessages;
   Common: CommonMessages;
 }
