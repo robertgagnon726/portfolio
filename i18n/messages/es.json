@@ -166,5 +166,9 @@
   },
   "Alert": {
     "messageSent": "Mensaje enviado exitosamente"
+  },
+  "LanguageSwitcher": {
+    "english": "Inglés",
+    "spanish": "Español"
   }
 }

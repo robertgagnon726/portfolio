@@ -182,6 +182,10 @@
   "Alert": {
     "messageSent": "Message sent successfully"
   },
+  "LanguageSwitcher": {
+    "english": "English",
+    "spanish": "Spanish"
+  },
   "Common": {
     "philosophy": "Philosophy",
     "referrals": "Referrals",
