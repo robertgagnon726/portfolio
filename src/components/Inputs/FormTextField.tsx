@@ -12,7 +12,7 @@ import {
 
 interface FormTextFieldProps<TFieldValues extends FieldValues> extends Omit<TextFieldProps, 'name' | 'error'> {
   name: Path<TFieldValues>;
-  label: string;
+  label?: string;
   startAdornment?: React.ReactNode; // Add this prop for start adornments
   tooltip?: string;
   // Primarily added to make testing easier
@@ -90,7 +90,7 @@ export function FormTextField<TFieldValues extends FieldValues>({
             {...field}
             {...textFieldProps}
             value={inputValue}
-            label={`${label}${required ? '*' : ''}`}
+            label={label && `${label}${required ? '*' : ''}`}
             error={Boolean(fieldState.error)}
             helperText={fieldState.error ? fieldState.error.message : null}
             fullWidth

@@ -5,7 +5,6 @@ import { MuiFormLabelOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiFo
 import { MuiIconButtonOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiIconButtonOverride';
 import { MuiInputAdornmentOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiInputAdornmentOverride';
 import { MuiInputBaseOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiInputBaseOverride';
-import { MuiOutlinedInputOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiOutlinedInputOverride';
 import { MuiToggleButtonGroupOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiToggleButtonGroupOverride';
 import { MuiToggleButtonOverride } from '@Src/theme/ComponentOverrides/Inputs/MuiToggleButtonOverride';
 
@@ -17,7 +16,6 @@ export const InputsComponents = {
   ...MuiIconButtonOverride,
   ...MuiInputAdornmentOverride,
   ...MuiInputBaseOverride,
-  ...MuiOutlinedInputOverride,
   ...MuiToggleButtonGroupOverride,
   ...MuiToggleButtonOverride,
 };
