@@ -9,8 +9,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 import { styled, useTheme } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
+import { useTranslations } from 'next-intl';
 
 const referrals = [
   {
@@ -83,7 +83,7 @@ const logoStyle = {
 export default function Referrals() {
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
-  const t = useTypedTranslations('Referrals');
+  const t = useTranslations('Referrals');
 
   return (
     <Section sectionId="referrals" title={t('title')} subtitle={t('subtitle')}>

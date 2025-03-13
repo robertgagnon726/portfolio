@@ -170,5 +170,9 @@
   "LanguageSwitcher": {
     "english": "Inglés",
     "spanish": "Español"
+  },
+  "BlogHome": {
+    "title": "Blog",
+    "subtitle": "Reflexiones, tutoriales y conocimientos sobre ingeniería de software."
   }
 }

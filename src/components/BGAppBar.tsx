@@ -12,11 +12,12 @@ import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorSchemeIconDropdown from '@Src/theme/ColorSchemeIconDropdown';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import LanguageSwitcher from '@Components/LanguageSwitcher';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function BGAppBar() {
-  const t = useTypedTranslations('Common');
+  const t = useTranslations('Common');
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -25,44 +26,36 @@ export default function BGAppBar() {
 
   const navButtons = [
     {
-      label: t('philosophy'),
-      href: '#philosophy',
+      label: t('referrals'),
+      href: '/#referrals',
     },
     {
-      label: t('referrals'),
-      href: '#referrals',
+      label: t('philosophy'),
+      href: '/#philosophy',
     },
     {
       label: t('awards'),
-      href: '#awards',
-    },
-    {
-      label: t('stack'),
-      href: '#preferred-tech-stack',
-    },
-    {
-      label: t('interests'),
-      href: '#personal-interests',
-    },
-    {
-      label: t('highlights'),
-      href: '#career-highlights',
+      href: '/#awards',
     },
     {
       label: t('experience'),
-      href: '#experience',
+      href: '/#experience',
     },
     {
-      label: t('services'),
-      href: '#services',
+      label: t('interests'),
+      href: '/#personal-interests',
     },
     {
-      label: t('blog'),
-      href: '#blog',
+      label: t('stack'),
+      href: '/#preferred-tech-stack',
     },
     {
       label: t('techISpeak'),
-      href: '#tech-i-speak',
+      href: '/#tech-i-speak',
+    },
+    {
+      label: t('blog'),
+      href: '/blog',
     },
   ];
 
@@ -73,7 +66,7 @@ export default function BGAppBar() {
           <StyledNavItemsContainer>
             <StyledNavItemsInnerContainer>
               {navButtons.map((button) => (
-                <Button key={button.label} variant="text" color="info" size="small" component="a" href={button.href}>
+                <Button key={button.label} variant="text" color="info" size="small" component={Link} href={button.href}>
                   {button.label}
                 </Button>
               ))}

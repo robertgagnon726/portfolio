@@ -3,10 +3,8 @@ import { CssBaseline, GlobalStyles, StyledEngineProvider } from '@mui/material';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { ReduxProvider } from '@Redux/ReduxProvider';
-import { getMessages } from 'next-intl/server';
-import { notFound } from 'next/navigation';
+import { getLocale, getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
-import { routing } from '@I18n/routing';
 import Theme from '@Src/theme/Theme';
 import { Interpolation, type Theme as MuiTheme } from '@mui/material';
 
@@ -23,16 +21,10 @@ export async function generateMetadata(): Promise<Metadata> {
  */
 export default async function RootLayout({
   children,
-  params,
 }: Readonly<{
   children: ReactNode;
-  params: Promise<{ locale: string }>;
 }>) {
-  const { locale } = await params;
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
-
+  const locale = await getLocale();
   const messages = await getMessages();
 
   const bodyStyle = {

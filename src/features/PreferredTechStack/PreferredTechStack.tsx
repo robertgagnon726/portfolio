@@ -1,7 +1,6 @@
 'use client';
 
 import { Card, CardContent, Grid2, Stack, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { ReactLogo } from '@Src/icons/ReactLogo';
 import { NextjsLogo } from '@Src/icons/NextjsLogo';
@@ -9,9 +8,10 @@ import { NestJSLogo } from '@Src/icons/NestJSLogo';
 import { TypeScriptLogo } from '@Src/icons/TypeScriptLogo';
 import { ORMLogo } from '@Src/icons/ORMLogo';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import { useTranslations } from 'next-intl';
 
 export default function PreferredTechStack() {
-  const t = useTypedTranslations('PreferredTechStack');
+  const t = useTranslations('PreferredTechStack');
 
   const techs = [
     {

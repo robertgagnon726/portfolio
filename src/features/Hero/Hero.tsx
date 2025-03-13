@@ -1,15 +1,15 @@
 'use client';
 
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import Box from '@mui/material/Box';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
-  const t = useTypedTranslations('Hero');
+  const t = useTranslations('Hero');
   return (
     <Box
       id="hero"

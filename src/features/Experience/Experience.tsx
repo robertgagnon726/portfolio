@@ -2,16 +2,16 @@
 
 import Stack from '@mui/material/Stack';
 import { Box, Card, CardContent, Chip, Divider, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { CompanyHighlights } from '@Features/Experience/CompanyHighlights';
 import { CompanyPromotions } from '@Features/Experience/CompanyPromotions';
 import { MultiChips } from '@Components/MultiChips/MultiChips';
 import { getExperienceTimeline } from '@Features/Experience/timeline';
 import { useMemo } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Experience() {
-  const t = useTypedTranslations('Experience');
+  const t = useTranslations('Experience');
 
   const timelineItems = useMemo(() => getExperienceTimeline(t), [t]);
 

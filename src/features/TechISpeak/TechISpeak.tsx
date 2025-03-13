@@ -1,14 +1,14 @@
 'use client';
 
 import { Card, CardContent, Chip, Grid2, InputAdornment, Stack, styled, TextField, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { Search } from '@mui/icons-material';
 import { useState } from 'react';
 import { getTechList } from '@Features/TechISpeak/techList';
+import { useTranslations } from 'next-intl';
 
 export default function TechISpeak() {
-  const t = useTypedTranslations('TechISpeak');
+  const t = useTranslations('TechISpeak');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredTechs = getTechList(t)

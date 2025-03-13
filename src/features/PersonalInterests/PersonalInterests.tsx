@@ -1,12 +1,12 @@
 'use client';
 
 import { Card, CardContent, Grid2, Stack, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { GamesOutlined, GolfCourse, Movie, Pool, RvHookup, TheaterComedy } from '@mui/icons-material';
+import { useTranslations } from 'next-intl';
 
 export default function PersonalInterests() {
-  const t = useTypedTranslations('PersonalInterests');
+  const t = useTranslations('PersonalInterests');
 
   const interests = [
     {

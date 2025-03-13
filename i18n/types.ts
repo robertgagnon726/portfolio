@@ -15,6 +15,11 @@ export interface AwardsMessages {
   award3Description: string;
 }
 
+export interface BlogHomeMessages {
+  title: string;
+  subtitle: string;
+}
+
 export interface CommonMessages {
   philosophy: string;
   referrals: string;
@@ -196,6 +201,7 @@ export interface TranslationMessages {
   PreferredTechStack: PreferredTechStackMessages;
   TechISpeak: TechISpeakMessages;
   Contact: ContactMessages;
+  BlogHome: BlogHomeMessages;
   Alert: AlertMessages;
   LanguageSwitcher: LanguageSwitcherMessages;
   Common: CommonMessages;

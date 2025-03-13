@@ -7,15 +7,15 @@ import Stack, { StackProps } from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
 import { styled } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { LowesLogo } from '@Src/icons/LowesLogo';
 import { OpendorseLogo } from '@Src/icons/OpendorseLogo';
 import { CSSObject } from '@emotion/styled';
 import { EmojiEvents, MilitaryTech } from '@mui/icons-material';
 import { Section } from '@Components/Section';
+import { useTranslations } from 'next-intl';
 
 export default function Awards() {
-  const t = useTypedTranslations('Awards');
+  const t = useTranslations('Awards');
 
   const items = [
     {

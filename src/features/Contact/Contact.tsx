@@ -2,13 +2,13 @@
 
 import Grid from '@mui/material/Grid2';
 import { Button, Stack, styled } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { LinkedIn } from '@mui/icons-material';
 import { ContactForm } from '@Features/Contact/ContactForm';
+import { useTranslations } from 'next-intl';
 
 export default function Contact() {
-  const t = useTypedTranslations('Contact');
+  const t = useTranslations('Contact');
 
   return (
     <Section sectionId="contact" title={t('title')} subtitle={t('subtitle')}>
