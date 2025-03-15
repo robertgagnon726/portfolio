@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Card from '@mui/material/Card';
@@ -8,101 +7,123 @@ import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
-import { styled, useTheme } from '@mui/material';
+import { Button, Collapse, Divider, Link, Stack, styled } from '@mui/material';
 import { Section } from '@Components/Section';
 import { useTranslations } from 'next-intl';
+import { v4 } from 'uuid';
+import { useState } from 'react';
+import { ChevronDownIcon, ChevronUpIcon } from '@sanity/icons';
+import { InViewFadeTransition } from '@Components/InViewTransition';
 
 const referrals = [
   {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />,
-    name: 'Remy Sharp',
-    occupation: 'Senior Engineer',
-    testimonial:
-      "I absolutely love how versatile this product is! Whether I'm tackling work projects or indulging in my favorite hobbies, it seamlessly adapts to my changing needs. Its intuitive design has truly enhanced my daily routine, making tasks more efficient and enjoyable.",
+    avatar: <Avatar alt="Ethan Horne" src="/images/ethan-horne.jpeg" />,
+    name: 'Ethan Horne',
+    occupation: 'Senior Product Analyst & Growth Marketer',
+    paragraphs: [
+      "I've had the privilege of working alongside Bobby, and I can confidently say he is one of the best teammates I have ever had. His commitment to excellence is unmatched. He takes extreme ownership of every project he touches, ensuring not just success but continuous improvement.",
+      'Bobby strikes the perfect balance between working hard and keeping things fun. He is one of the most productive engineers I have worked with, yet he also brings an energy that makes collaboration enjoyable. Beyond his technical skills, Bobby genuinely cares about his work and his coworkers, always looking for ways to support the team.',
+      'He is also constantly exploring new technologies to enhance efficiency and elevate our product. His curiosity and drive make him an invaluable asset to any team.',
+    ],
+    company: {
+      name: 'Opendorse',
+      url: 'https://biz.opendorse.com/',
+    },
   },
   {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" />,
-    name: 'Travis Howard',
-    occupation: 'Lead Product Designer',
-    testimonial:
-      "One of the standout features of this product is the exceptional customer support. In my experience, the team behind this product has been quick to respond and incredibly helpful. It's reassuring to know that they stand firmly behind their product.",
+    avatar: <Avatar alt="Adam Rothenberger" src="/images/adam-rothenberger.jpeg" />,
+    name: 'Adam Rothenberger',
+    occupation: 'Software Quality Assurance Engineer',
+    paragraphs: [
+      'Bobby is an exceptional software engineer, and I learned a great deal from his expertise and problem-solving abilities. As the QA Engineer on his team, I often worked closely with him to troubleshoot and resolve issues.',
+      'From day one, Bobby’s technical skills were evident. He not only developed complex systems but also took the time to ensure those systems were built with scalability, performance, and maintainability in mind. His attention to detail and ability to write clean, efficient code made him an invaluable asset to our team.',
+      "What truly stood out about Bobby was his collaborative nature. He was always open to feedback, quick to address concerns, and incredibly patient when helping me understand the technical intricacies of the features we were testing. Bobby's ability to communicate complex technical concepts in a clear and approachable manner made him a pleasure to work with, especially when debugging or fine-tuning code.",
+      'Beyond his technical acumen, Bobby’s positive attitude and professionalism were infectious. He consistently contributed to a positive team dynamic and worked tirelessly to meet deadlines while maintaining high-quality standards. His leadership and ability to mentor junior engineers were also noteworthy, as he guided the team with both technical knowledge and a supportive attitude.',
+      'I have no doubt that Bobby will continue to excel in his career at Opendorse, and I would highly recommend him to anyone seeking a skilled, dependable, and innovative software engineer. It was an absolute privilege to work alongside him, and I look forward to seeing all that he accomplishes in the future.',
+    ],
+    company: { name: 'Innovative Systems', url: 'https://www.innovsys.com/' },
   },
   {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" />,
-    name: 'Cindy Baker',
-    occupation: 'CTO',
-    testimonial:
-      'The level of simplicity and user-friendliness in this product has significantly simplified my life. I appreciate the creators for delivering a solution that not only meets but exceeds user expectations.',
-  },
-  {
-    avatar: <Avatar alt="Remy Sharp" src="/static/images/avatar/4.jpg" />,
-    name: 'Julia Stewart',
-    occupation: 'Senior Engineer',
-    testimonial:
-      "I appreciate the attention to detail in the design of this product. The small touches make a big difference, and it's evident that the creators focused on delivering a premium experience.",
-  },
-  {
-    avatar: <Avatar alt="Travis Howard" src="/static/images/avatar/5.jpg" />,
-    name: 'John Smith',
-    occupation: 'Product Designer',
-    testimonial:
-      "I've tried other similar products, but this one stands out for its innovative features. It's clear that the makers put a lot of thought into creating a solution that truly addresses user needs.",
-  },
-  {
-    avatar: <Avatar alt="Cindy Baker" src="/static/images/avatar/6.jpg" />,
-    name: 'Daniel Wolf',
-    occupation: 'CDO',
-    testimonial:
-      "The quality of this product exceeded my expectations. It's durable, well-designed, and built to last. Definitely worth the investment!",
+    avatar: <Avatar alt="Santiago Murtaugh" src="/images/santiago-murtaugh.jpeg" />,
+    name: 'Santiago Murtaugh',
+    occupation: 'Director of Engineering',
+    paragraphs: [
+      'Bobby is the rare combination of talent, hard work, and a desire to grow.',
+      'He tackled hard and complex problems for our team, produced a high amount of work every single sprint without sacrificing quality, and challenged himself to grow in and out of work by learning new technologies and working on personal projects.',
+      'Bobby will thrive in an environment with high expectations where he will be continuously challenged to to grow.',
+    ],
+    company: {
+      name: 'Medalogix',
+      url: 'https://medalogix.com/',
+    },
   },
 ];
-
-const whiteLogos = [
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628e8573c43893fe0ace_Sydney-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d520d0517ae8e8ddf13_Bern-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f46794c159024c1af6d44_Montreal-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e891fa22f89efd7477a_TerraLight.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a09d1f6337b1dfed14ab_colorado-white.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5caa77bf7d69fb78792e_Ankara-white.svg',
-];
-
-const darkLogos = [
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560628889c3bdf1129952dc_Sydney-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f4d4d8b829a89976a419c_Bern-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f467502f091ccb929529d_Montreal-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e911fa22f2203d7514c_TerraDark.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/6560a0990f3717787fd49245_colorado-black.svg',
-  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg',
-];
-
-const logoStyle = {
-  width: '64px',
-  opacity: 0.3,
-};
 
 export default function Referrals() {
-  const theme = useTheme();
-  const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
   const t = useTranslations('Referrals');
+
+  const [expandedStates, setExpandedStates] = useState(referrals.map(() => false));
+
+  const toggleExpand = (index: number) => {
+    setExpandedStates((prev) => prev.map((val, i) => (i === index ? !val : val)));
+  };
 
   return (
     <Section sectionId="referrals" title={t('title')} subtitle={t('subtitle')}>
       <Grid container spacing={2}>
-        {referrals.map((referral, index) => (
-          <StyledGrid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-            <StyledCard variant="outlined">
-              <CardContent>
-                <Typography variant="body1" gutterBottom color="textSecondary">
-                  {referral.testimonial}
-                </Typography>
-              </CardContent>
-              <StyledCardHeaderContainer>
-                <CardHeader avatar={referral.avatar} title={referral.name} subheader={referral.occupation} />
-                <img src={logos[index]} alt={`Logo ${index + 1}`} style={logoStyle} />
-              </StyledCardHeaderContainer>
-            </StyledCard>
-          </StyledGrid>
-        ))}
+        {referrals.map((referral, index) => {
+          const isExpanded = expandedStates[index];
+          const firstParagraphs = referral.paragraphs.slice(0, 2);
+          const collapsibleParagraphs = referral.paragraphs.slice(2);
+
+          return (
+            <StyledGrid size={{ xs: 12, sm: 6 }} key={index}>
+              <InViewFadeTransition>
+                <StyledCard variant="outlined">
+                  <CardContent>
+                    <Stack spacing={2}>
+                      {firstParagraphs.map((paragraph) => (
+                        <Typography key={v4()} variant="body1" gutterBottom color="textSecondary">
+                          {paragraph}
+                        </Typography>
+                      ))}
+                    </Stack>
+                    <Collapse in={isExpanded} timeout="auto" unmountOnExit>
+                      <StyledCollapseContainer spacing={2}>
+                        {collapsibleParagraphs.map((paragraph) => (
+                          <Typography key={v4()} variant="body1" gutterBottom color="textSecondary">
+                            {paragraph}
+                          </Typography>
+                        ))}
+                      </StyledCollapseContainer>
+                    </Collapse>
+                    {referral.paragraphs.length > 2 && (
+                      <StyledExpandButton
+                        onClick={() => toggleExpand(index)}
+                        variant="text"
+                        size="small"
+                        endIcon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                      >
+                        {isExpanded ? 'View Less' : 'View More'}
+                      </StyledExpandButton>
+                    )}
+                  </CardContent>
+                  <Stack spacing={2}>
+                    <Divider />
+                    <StyledCardHeaderContainer>
+                      <CardHeader avatar={referral.avatar} title={referral.name} subheader={referral.occupation} />
+                      <Link href={referral.company.url} target="_blank" rel="noopener noreferrer" underline="none">
+                        <Typography variant="body1" gutterBottom color="textSecondary">
+                          {referral.company.name}
+                        </Typography>
+                      </Link>
+                    </StyledCardHeaderContainer>
+                  </Stack>
+                </StyledCard>
+              </InViewFadeTransition>
+            </StyledGrid>
+          );
+        })}
       </Grid>
     </Section>
   );
@@ -123,4 +144,16 @@ const StyledCardHeaderContainer = styled(Box)(() => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
+  alignItems: 'center',
+}));
+
+const StyledCollapseContainer = styled(Stack)(({ theme }) => ({
+  marginTop: theme.spacing(1),
+}));
+
+const StyledExpandButton = styled(Button)(({ theme }) => ({
+  paddingLeft: theme.spacing(0),
+  '&:hover': {
+    backgroundColor: 'initial',
+  },
 }));

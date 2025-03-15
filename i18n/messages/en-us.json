@@ -1,56 +1,52 @@
 {
-  "HomePage": {
-    "title": "Hello world",
-    "about": "Go to the about page again"
-  },
   "Referrals": {
-    "title": "Referrals",
-    "subtitle": "Read what my past colleagues and mentors say about working with me—discover how I bring dedication, creativity, and collaboration to every project."
+    "title": "What Others Say About Me",
+    "subtitle": "Discover how my colleagues and mentors describe working with me—insights into my dedication, creativity, and ability to drive impactful collaboration."
   },
   "Hero": {
-    "subtitle": "Leading through innovation by unblocking teams, sharpening efficiency, fostering collaboration, and delivering tangible results with maintainable solutions that last.",
+    "subtitle": "Driving innovation by removing roadblocks, optimizing efficiency, and fostering collaboration to deliver lasting, maintainable solutions.",
     "connect": "Connect"
   },
   "Awards": {
     "title": "Awards",
-    "subtitle": "Recognitions & Achievements from My Professional Journey",
+    "subtitle": "Recognitions & Achievements from My Career",
 
-    "award1Title": "Top Contributor Award",
-    "award1Description": "Recognized among the top 10% of contributors in a 2,000+ member product team.",
+    "award1Title": "2021 | Top Contributor Award",
+    "award1Description": "Recognized for significant contributions among a 2,000+ member product team.",
 
-    "award2Title": "MVP (Q2)",
-    "award2Description": "One of three team members selected for outstanding impact during Q2.",
+    "award2Title": "2023 | MVP (Q2)",
+    "award2Description": "Acknowledged for outstanding impact and contributions during Q2.",
 
-    "award3Title": "MVP (Q4)",
-    "award3Description": "One of three team members recognized for exceptional contributions in Q4."
+    "award3Title": "2024 | MVP (Q4)",
+    "award3Description": "Recognized for exceptional contributions and performance in Q4."
   },
   "EngineeringPhilosophy": {
-    "title": "Engineering Philosophy",
-    "subtitle": "Engineering with empathy, kindness, and thoughtful automation—because building software isn't just about shipping features, it's about uplifting the people who create them.",
+    "title": "My Engineering Philosophy",
+    "subtitle": "Engineering with empathy, efficiency, and thoughtful automation—because great software isn't just about shipping features; it's about empowering the people who build them.",
 
     "radicalEmpathyTitle": "Radical Empathy & Psychological Safety",
-    "radicalEmpathyDescription": "I share openly to foster trust; people feel safe asking questions, raising concerns, and collaborating deeply.",
+    "radicalEmpathyDescription": "I foster trust through open communication, making it safe to ask questions, raise concerns, and collaborate deeply.",
 
     "developerExperienceTitle": "Developer Experience Above All",
-    "developerExperienceDescription": "Efficient tools and smooth workflows prevent wasted time, boost morale, and free engineers to focus on impact.",
+    "developerExperienceDescription": "Efficient tools and workflows minimize wasted time, boost morale, and let engineers focus on meaningful work.",
 
     "ownershipWithGenerosityTitle": "Ownership with Generosity",
-    "ownershipWithGenerosityDescription": "When something breaks, we fix it together—no finger-pointing. Sharing credit and lessons learned empowers the entire team.",
+    "ownershipWithGenerosityDescription": "When something breaks, we fix it together—no finger-pointing. Sharing credit and lessons strengthens the whole team.",
 
     "technicalForesightTitle": "Technical Foresight & Architecture",
-    "technicalForesightDescription": "Thoughtful guardrails and flexible design enable growth without burying ourselves in tomorrow’s tech debt.",
+    "technicalForesightDescription": "Well-designed guardrails and flexible architecture allow growth without accumulating tomorrow's tech debt.",
 
     "relentlessAutomationTitle": "Relentless Automation, Standards, & Quality",
-    "relentlessAutomationDescription": "Automate repetitive tasks and enforce standards in CI/CD pipelines—let machines do the boring stuff, so humans can innovate.",
+    "relentlessAutomationDescription": "Automate the boring, enforce standards in CI/CD pipelines, and let humans innovate where it matters most.",
 
     "transparentCommunicationTitle": "Transparent Communication & Oversharing",
-    "transparentCommunicationDescription": "Frequent, open updates keep everyone aligned. More clarity early on prevents unnecessary fire drills down the line.",
+    "transparentCommunicationDescription": "Frequent, open updates keep teams aligned. More clarity upfront prevents fire drills later.",
 
     "mentorshipTitle": "Mentorship & Multiplying Impact",
-    "mentorshipDescription": "A mentor’s success lies in watching others thrive. Empower peers to speak up, challenge you, and own their craft.",
+    "mentorshipDescription": "A mentor's success is measured by their mentees' growth. Empower peers to speak up, challenge ideas, and own their craft.",
 
     "kindnessTitle": "Kindness in Code Reviews",
-    "kindnessDescription": "Offer friendly feedback, not criticism. Code reviews are about collective growth, not personal attacks."
+    "kindnessDescription": "Feedback should guide, not criticize. Code reviews are for team growth, not personal attacks."
   },
   "Experience": {
     "title": "Work Experience",
@@ -62,81 +58,92 @@
 
     "item1Timframe": "2021 - Present",
     "item1CurrentPosition": "Staff Software Engineer",
-    "item1Highlight1": "Led the effort in introducing and migrating a 400,000+ line codebase to Typescript in order to reduce user reported defects.",
-    "item1Highlight2": "Created a media upload algorithm that increased the single upload size limit from 200 MB to 15 GB. Speed was also improved by chunking and uploading files directly to Azure Blob Storage. This enabled users to upload the most media items per day in company history.",
-    "item1Highlight3": "Implemented numerous features to enhance the user experience of multiple account types and roles within our multi-tenant SaaS between both our React web app and our React Native mobile application.",
-    "item1Highlight4": "Created Opendorse's first private npm repository to share reusable components and utilities across multiple projects.",
-    "item1Highlight5": "Mentored and pair programmed with engineers to help expand both domain knowledge and best practices.",
-    "item1Highlight6": "Served as the team captain to my product team. Extra responsibilities included: regularly meeting with product and design to review technical feasibility of new features, setting the pace and standard for the rest of the team, and tasking out epics to ensure stories are ready for backlog refinement.",
+    "item1Highlight1": "Migrated a 400,000+ line codebase to TypeScript, significantly reducing user-reported defects.",
+    "item1Highlight2": "Developed a high-performance media upload algorithm, increasing the single file size limit from 200 MB → 15 GB and optimizing Azure Blob Storage uploads. The solution worked so well that it led to a surge in user adoption, setting a company record for media ingestion—so much so that it caused unexpected media cost concerns.",
+    "item1Highlight3": "Enhanced UX across a multi-tenant SaaS platform, improving account type functionalities in both React web & React Native applications.",
+    "item1Highlight4": "Mentored and pair-programmed with engineers to strengthen domain expertise and best practices.",
+    "item1Highlight5": "Served as team captain, collaborating with Product & Design to evaluate technical feasibility and refine backlog processes.",
 
     "year2024": "2024",
     "year2023": "2023",
 
     "seniorSoftwareEngineer": "Senior Software Engineer",
-    "item1Promotion1Highlight": "Led larger technical initiatives, drove technical direction, stood up business critical systems in record times.",
-    "item1Promotion2Highlight": "Led technical initiatives, drove technical direction, and stood up business critical systems.",
+    "staffPromotionHighlight1": "Led a tiger team to ship Opendorse Team Builder within 6 weeks, achieving a positive ROI within 1 month (initial estimates projected 3+ months)",
+    "staffPromotionHighlight2": "Developed the Opendorse Design System, a shared private npm package with design tokens & components, accelerating feature development while ensuring consistency.",
+    "staffPromotionHighlight3": "Created Opendorse Client Utils, a private npm package with reusable utility functions for React & React Native, reducing code duplication and tech debt.",
+    "staffPromotionHighlight4": "Facilitated guild leadership, aligning teams and resolving blockers to improve collaboration.",
+    "staffPromotionHighlight5": "Championed workflow experimentation, driving improvements in team velocity and code quality.",
+
+    "seniorPromotionHighlight1": "Delivered 91 story points in Q4 2023, exceeding the team average of 47.9, while maintaining high code quality.",
+    "seniorPromotionHighlight2": "Collaborated with Design, Product, and Engineering to refine features and epics before broader team implementation.",
+    "seniorPromotionHighlight3": "Led mobile guild initiatives, coordinating tech debt resolution across React Native teams.",
 
     "item2Timeframe": "2020 - 2021",
     "item2Position": "Associate Software Engineer",
-    "item2Highlight1": "Operated as a member of the Asset Protection and Shared Services team which utilized a combination of Kanban and Scrum methodologies. The technology stack for new applications consisted of JavaScript, React, Material UI, Redux, Nodejs, Express, Java, Spring, Mongo, and Postgres.",
-    "item2Highlight2": "Collaborated with our Scrum Master, Product Manager, Solutions Manager, and stakeholders to deliver value every sprint.",
-    "item2Highlight3": "Worked with our business partners and vendors to integrate SAAS solutions with Lowe's environment while adhering to change management policies.",
-    "item2Highlight4": "Lead team effort in identifying areas of improvement for management, set yearly action items, and organized monthly meetings with leadership to track progress and gather feedback.",
-    "item2Highlight5": "Thoroughly documented applications and systems to allow non-application SME's to perform SOP's and to onboard new engineers to the applications in a more efficient manner.",
-    "item2Highlight6": "Pessimistically tested new features through a combination of Behavior-Driven Development and Test-Driven Development. Frameworks used to test applications included Cypress, Jest, Mocha, Enzyme, JUnit, Mockito, and Cucumber.",
-    "item2Highlight7": "Regularly met with a subset of team members in order to plan quarterly team outings.",
-    "item2Highlight8": "Worked with a timezone diverse crew, ranging from the West Coast to Bangalore, India.",
+    "lowesHighlight1": "Developed and maintained applications using JavaScript, React, Material UI, Redux, Node.js, Express, Java, Spring, MongoDB, and Postgres.",
+    "lowesHighlight2": "Collaborated with Scrum Master, Product Manager, and stakeholders to deliver high-impact features every sprint.",
+    "lowesHighlight3": "Integrated SaaS solutions into Lowe's environment while ensuring compliance with change management policies.",
+    "lowesHighlight4": "Optimized documentation for onboarding and non-technical SMEs, reducing training time and improving efficiency.",
+    "lowesHighlight5": "Implemented comprehensive testing strategies (BDD & TDD) using Cypress, Jest, Mocha, Enzyme, JUnit, Mockito, and Cucumber, improving test coverage and system reliability.",
+    "lowesHighlight6": "Effectively worked across time zones, leveraging async collaboration tools to ensure seamless communication.",
 
     "item3Timeframe": "2017 - Present",
     "item3Position": "Software Engineer",
     "item3Company": "Self-Employed",
-    "item3Highlight1": "Built marketing sites for small businesses.",
-    "item3Highlight2": "CMS migrations and modernization.",
-    "item3Highlight3": "Architecture consulting."
+    "item3Highlight1": "Built & maintained marketing sites for small businesses, focusing on performance and maintainability.",
+    "item3Highlight2": "Led CMS migrations & modernization, helping companies transition from older platforms to scalable, modern solutions.",
+    "item3Highlight3": "Tech Stack Modernization - Assisted teams in transitioning from legacy PHP/WordPress setups to React/Next.js-based CMS solutions for improved performance and developer experience.",
+    "item3Highlight4": "SEO & Accessibility Improvements - Implemented SEO and a11y best practices to enhance web discoverability and inclusivity."
   },
   "PersonalInterests": {
-    "title": "Personal Interests",
-    "subtitle": "When I'm not coding, you can find me pursuing these passions.",
+    "title": "Beyond Code: My Personal Interests",
+    "subtitle": "When I'm not coding, you'll find me diving into these passions.",
 
     "gamingTitle": "Gaming",
-    "gamingDescription": "Passionate about automation games and EA FC. Some of my favorite games are Timberborn, Satisfactory, The Crust, Captain of Industry, and Frostpunk.",
+    "gamingDescription": "Passionate about automation games and EA FC. Some of my favorites include Timberborn, Satisfactory, The Crust, Captain of Industry, and Frostpunk.",
 
     "golfTitle": "Golf",
-    "golfDescription": "I enjoy playing golf to the point where I have a simulator at home so I can play year-round.",
+    "golfDescription": "I love golf so much that I set up a simulator at home—now I can play year-round.",
 
     "poolPartiesTitle": "Pool Parties",
-    "poolPartiesDescription": "Love hosting summer gatherings and creating memorable experiences with friends and family.",
+    "poolPartiesDescription": "Hosting summer gatherings and creating memorable experiences with friends and family is my kind of fun.",
 
     "roadTripsTitle": "Road Trips",
-    "roadTripsDescription": "Exploring new places, creating memories, and enjoying the journey.",
+    "roadTripsDescription": "Exploring new places, making memories, and enjoying the journey—nothing beats a good road trip.",
 
     "comedyTitle": "Comedy",
-    "comedyDescription": "Both shows and standup. My favorite show is Silicon Valley and my favorite comedian is Kumail Nanjiani.",
+    "comedyDescription": "From stand-up to sitcoms, I love a good laugh. My favorite show is Silicon Valley, and some of my favorite comedian are Kumail Nanjiani, Michasel Blaustein, Shane Gillis, Andrew Santino, and Mark Normand.",
 
     "cinemaAndTVTitle": "Cinema & TV",
-    "cinemaAndTVDescription": "A sucker for a great TV show. Some of my favorites are Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki, and Hawkeye."
+    "cinemaAndTVDescription": "A sucker for a great show. Some favorites: Breaking Bad, The Office, Severance, Silo, Ted Lasso, Game of Thrones, Loki, and Hawkeye."
   },
   "PreferredTechStack": {
-    "title": "Preferred Tech Stack",
-    "subtitle": "Technologies I've worked with and prefer to use in my projects.",
+    "title": "Tech Stack I Love Working With",
+    "subtitle": "Technologies I prefer and frequently use in my projects.",
 
     "reactTitle": "React",
-    "reactDescription": "I've used both vanilla and Angular. I enjoy the opinionation of Angular, but I like React allows the option to be opinionated or not.",
+    "reactDescription": "I enjoy React for its flexibility—whether building simple components or architecting complex applications, it adapts to the project's needs. Its component-based approach and rich ecosystem make it one of my favorite front-end tools.",
 
     "nextjsTitle": "Next.js",
-    "nextjsDescription": "Next.js is just a great tool with so many out of the box features. Vercel is a nice to have as well.",
+    "nextjsDescription": "Next.js is an incredible tool with powerful out-of-the-box features. The built-in optimizations and Vercel integration make it a strong choice for modern applications.",
+
+    "angularTitle": "Angular",
+    "angularDescription": "As my career has progressed, I've found myself gravitating toward opinionated frameworks like Angular. Its structured approach, dependency injection, and built-in state management make it a solid choice for enterprise-grade applications.",
 
     "nestjsTitle": "NestJS",
-    "nestjsDescription": "I have used Express, Java/Spring, and C#/Dotnet. There's so much value in using the same language across the stack, and NestJS really bridges the IOC gap that other languages provide.",
+    "nestjsDescription": "I've used Express, Java/Spring, and C#/Dotnet, and NestJS really stands out. It bridges the Inversion of Control (IoC) gap while keeping everything in TypeScript, making full-stack development seamless.",
+
+    "dotnetCoreTitle": ".NET Core",
+    "dotnetCoreDescription": ".NET Core is a powerhouse for backend development. Its performance, flexibility, and strong C# ecosystem make it one of my go-to choices for building scalable, maintainable APIs. Microsoft's modern improvements have made .NET more developer-friendly than ever.",
 
     "typescriptTitle": "TypeScript",
-    "typescriptDescription": "I think I'd be hardpressed to find someone that's used TypeScript, but prefers JavaScript. It has it's flaws but it much better than weakly typing with JSDoc.",
+    "typescriptDescription": "Once you use TypeScript, it's hard to go back. It provides strong typing without getting in the way, making large codebases more maintainable and reducing runtime errors.",
 
-    "ormTitle": "ORM",
-    "ormDescription": "There's a place for ORMs vs sprocs, but I think ORMs are the way to go for most applications. I enjoy the startup life of building features quickly, not so much the shave x ms off this endpoint to save compute life. I can do both, but I'm happiest with the former.",
+    "ormTitle": "ORMs",
+    "ormDescription": "I see the ORM vs. sprocs debate, but for most applications, ORMs are the way to go. I enjoy the fast-paced world of feature development more than shaving microseconds off queries. That said, I can work with both approaches.",
 
     "cloudTitle": "Cloud",
-    "cloudDescription": "I've worked with AWS, Azure, and GCP. Each has their own quirks. What I don't enjoy working with is on-prem. I like the idea and makes sense at scale, but the developer experience of on-prem is often far below that of cloud."
+    "cloudDescription": "I’ve worked with AWS, Azure, and GCP—each has its quirks. What I don't enjoy? On-prem. While it makes sense at scale, the developer experience is usually far worse than working in the cloud."
   },
   "TechISpeak": {
     "title": "Tech I Speak",
@@ -149,9 +156,14 @@
     "cloudTitle": "Cloud Platforms & Hosting",
     "devOpsTitle": "DevOps & CI/CD",
     "monitoringTitle": "Monitoring & Analytics",
-    "communicationTitle": "Communication",
+    "communicationAndPaymentsTitle": "Communication & Payments",
     "testingTitle": "Testing & QA",
-    "buildTitle": "Build & Tooling"
+    "buildTitle": "Build & Tooling",
+    "paymentsAndSigningTitle": "Payments & Signing",
+    "mediaHandlingTitle": "Media Handling & Processing",
+    "awsTitle": "AWS",
+    "azureTitle": "Azure",
+    "gcpTitle": "GCP"
   },
   "Contact": {
     "title": "Let's Connect",

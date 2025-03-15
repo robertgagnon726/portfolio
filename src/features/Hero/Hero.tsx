@@ -1,5 +1,6 @@
 'use client';
 
+import { InViewFadeTransition } from '@Components/InViewTransition';
 import Box from '@mui/material/Box';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -24,39 +25,58 @@ export default function Hero() {
       })}
     >
       <StyledContainer>
-        <StyledContainerStack spacing={2} useFlexGap>
-          <StyledTitle variant="h1">
-            Bobby&nbsp;
-            <Typography
-              component="span"
-              variant="h1"
-              sx={(theme) => ({
-                fontSize: 'inherit',
-                color: 'primary.main',
-                ...theme.applyStyles('dark', {
-                  color: 'primary.light',
-                }),
-              })}
-            >
-              Gagnon
-            </Typography>
-          </StyledTitle>
-          <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
-          <StyledCTAStack direction={{ xs: 'column', sm: 'row' }} spacing={1} useFlexGap>
-            <StyledContactButton
-              variant="contained"
-              color="primary"
-              size="small"
-              component="a"
-              href="#contact"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t('connect')}
-            </StyledContactButton>
-          </StyledCTAStack>
-        </StyledContainerStack>
-        <StyledBox id="image" />
+        <InViewFadeTransition
+          threshold={0.1}
+          slotProps={{
+            container: {
+              sx: {
+                width: '100%',
+              },
+            },
+            innerContainer: {
+              sx: {
+                flexDirection: 'column',
+                alignItems: 'center',
+                width: '100%',
+              },
+            },
+          }}
+          transitionProps={{ timeout: 500 }}
+        >
+          <StyledContainerStack spacing={2} useFlexGap>
+            <StyledTitle variant="h1">
+              Bobby&nbsp;
+              <Typography
+                component="span"
+                variant="h1"
+                sx={(theme) => ({
+                  fontSize: 'inherit',
+                  color: 'primary.main',
+                  ...theme.applyStyles('dark', {
+                    color: 'primary.light',
+                  }),
+                })}
+              >
+                Gagnon
+              </Typography>
+            </StyledTitle>
+            <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
+            <StyledCTAStack direction={{ xs: 'column', sm: 'row' }} spacing={1} useFlexGap>
+              <StyledContactButton
+                variant="contained"
+                color="primary"
+                size="small"
+                component="a"
+                href="#contact"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t('connect')}
+              </StyledContactButton>
+            </StyledCTAStack>
+          </StyledContainerStack>
+          <StyledBox id="image" />
+        </InViewFadeTransition>
       </StyledContainer>
     </Box>
   );
