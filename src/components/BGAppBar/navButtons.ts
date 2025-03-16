@@ -3,12 +3,12 @@ import { UseTranslations } from '@I18n/useTypedTranslations';
 export const getNavButtons = (t: UseTranslations<'Common'>) => {
   return [
     {
-      label: t('referrals'),
-      href: '/#referrals',
-    },
-    {
       label: t('philosophy'),
       href: '/#philosophy',
+    },
+    {
+      label: t('referrals'),
+      href: '/#referrals',
     },
     {
       label: t('awards'),

@@ -71,7 +71,7 @@ export default function EngineeringPhilosophy() {
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
             <InViewFadeTransition threshold={0.5}>
               <StyledStack direction="column" component={Card} spacing={1} useFlexGap>
-                <StyledIconContainer>{item.icon}</StyledIconContainer>
+                <Box>{item.icon}</Box>
                 <div>
                   <Typography gutterBottom fontWeight={500}>
                     {item.title}
@@ -96,10 +96,6 @@ const StyledStack = styled(Stack)<StackProps>(({ theme }) => ({
     backgroundColor: theme.palette.grey[800],
     borderColor: 'hsla(220, 25%, 25%, 0.3)',
   }),
-}));
-
-const StyledIconContainer = styled(Box)(() => ({
-  opacity: '50%',
 }));
 
 const StyledItemDescription = styled(Typography)(({ theme }) => ({

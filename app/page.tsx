@@ -15,9 +15,9 @@ function AppHome() {
   return (
     <Layout>
       <Hero />
-      <Referrals />
       <Divider />
       <EngineeringPhilosophy />
+      <Referrals />
       <Divider />
       <Awards />
       <Divider />

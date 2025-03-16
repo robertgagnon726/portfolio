@@ -5,6 +5,7 @@ import { MuiListItemOverride } from '@Src/theme/ComponentOverrides/DataDisplay/M
 import { MuiListItemTextOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiListItemTextOverride';
 import { MuiListOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiListOverride';
 import { MuiListSubheaderOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiListSubheaderOverride';
+import { MuiSvgIconOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiSvgIconOverride';
 import { MuiTablePaginationOverride } from '@Src/theme/ComponentOverrides/DataDisplay/MuiTablePaginationOverride';
 
 export const DataDisplayComponents = {
@@ -16,4 +17,5 @@ export const DataDisplayComponents = {
   ...MuiListOverride,
   ...MuiListSubheaderOverride,
   ...MuiTablePaginationOverride,
+  ...MuiSvgIconOverride,
 };

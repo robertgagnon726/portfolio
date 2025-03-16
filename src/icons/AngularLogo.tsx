@@ -1,21 +1,32 @@
 import { SvgIcon, useTheme } from '@mui/material';
+import { brand } from '@Src/theme/themePrimitives/themePrimitives';
+import { useMemo } from 'react';
 
 export function AngularLogo({ ...props }) {
   const theme = useTheme();
+
+  const fillColor1 = useMemo(() => {
+    return theme.palette.mode === 'dark' ? brand[400] : brand[300];
+  }, []);
+
+  const fillColor2 = useMemo(() => {
+    return theme.palette.mode === 'dark' ? brand[500] : brand[400];
+  }, []);
+
   return (
     <SvgIcon {...props} viewBox="0 0 128 128">
       <g id="surface1">
         <path
           stroke="none"
           fillRule="nonzero"
-          fill={theme.palette.grey[100]}
+          fill={fillColor1}
           fillOpacity="1"
           d="M 64 15.359375 L 16.332031 32.359375 L 23.601562 95.386719 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "
         />
         <path
           stroke="none"
           fillRule="nonzero"
-          fill={theme.palette.grey[200]}
+          fill={fillColor2}
           fillOpacity="1"
           d="M 64 15.359375 L 64 26.726562 L 64 26.675781 L 64 117.761719 L 104.398438 95.386719 L 111.667969 32.359375 Z M 64 15.359375 "
         />

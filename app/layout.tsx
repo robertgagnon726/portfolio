@@ -12,7 +12,10 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: 'Bobby | Crafting SaaS, Startups, & Scalable Software',
     description:
-      'Building SaaS products, scaling startups, and solving complex software challenges. Let’s turn ideas into impact with well-crafted, high-performance software.',
+      "Building SaaS products, scaling startups, and solving complex software challenges. Let's turn ideas into impact with well-crafted, high-performance software.",
+    icons: {
+      icon: '/favicon.svg',
+    },
   };
 }
 

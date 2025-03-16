@@ -20,7 +20,6 @@ interface TimelineItem {
 const logoStyle: CSSObject = {
   height: 32,
   width: 'auto',
-  opacity: 0.3,
 };
 
 export const getExperienceTimeline = (t: UseTranslations<'Experience'>): TimelineItem[] => [
