@@ -13,13 +13,14 @@ async function getSinglePost(slug: string) {
 }
 
 interface PostPageProps {
-  params: {
-    slug: string;
-  };
+  params: tParams;
 }
 
+type tParams = Promise<{ slug: string }>;
+
 export default async function PostPage({ params }: PostPageProps) {
-  const post = await getSinglePost(params.slug);
+  const { slug } = await params;
+  const post = await getSinglePost(slug);
 
   if (!post) {
     notFound();

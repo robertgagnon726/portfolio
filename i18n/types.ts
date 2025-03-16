@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 // AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY
 
 export interface AlertMessages {
@@ -33,6 +34,7 @@ export interface CommonMessages {
   techISpeak: string;
   contact: string;
   menuButton: string;
+  projects: string;
 }
 
 export interface ContactMessages {
@@ -172,6 +174,11 @@ export interface PreferredTechStackMessages {
   cloudDescription: string;
 }
 
+export interface ProjectsMessages {
+  title: string;
+  subtitle: string;
+}
+
 export interface ReferralsMessages {
   title: string;
   subtitle: string;
@@ -209,6 +216,7 @@ export interface TranslationMessages {
   TechISpeak: TechISpeakMessages;
   Contact: ContactMessages;
   BlogHome: BlogHomeMessages;
+  Projects: ProjectsMessages;
   Alert: AlertMessages;
   LanguageSwitcher: LanguageSwitcherMessages;
   Common: CommonMessages;

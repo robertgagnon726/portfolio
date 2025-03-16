@@ -11,7 +11,8 @@
     "contact": "Contacto",
     "menuButton": "Botón de menú",
     "referrals": "Referencias",
-    "techISpeak": "Hablo tecnicamente"
+    "techISpeak": "Hablo tecnicamente",
+    "projects": ""
   },
   "Hero": {
     "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
@@ -183,5 +184,9 @@
   "BlogHome": {
     "title": "Blog",
     "subtitle": "Reflexiones, tutoriales y conocimientos sobre ingeniería de software."
+  },
+  "Projects": {
+    "title": "",
+    "subtitle": ""
   }
 }

@@ -195,6 +195,10 @@
     "title": "Blog",
     "subtitle": "Thoughts, tutorials, and insights about software engineering"
   },
+  "Projects": {
+    "title": "Featured Projects",
+    "subtitle": "Explore my portfolio of projects that showcase my skills and creativity."
+  },
   "Alert": {
     "messageSent": "Message sent successfully"
   },
@@ -214,6 +218,7 @@
     "blog": "Blog",
     "techISpeak": "Tech I Speak",
     "contact": "Contact",
-    "menuButton": "Menu button"
+    "menuButton": "Menu button",
+    "projects": "Projects"
   }
 }

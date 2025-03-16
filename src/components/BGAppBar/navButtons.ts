@@ -31,6 +31,10 @@ export const getNavButtons = (t: UseTranslations<'Common'>) => {
       href: '/#tech-i-speak',
     },
     {
+      label: t('projects'),
+      href: '/#projects',
+    },
+    {
       label: t('blog'),
       href: '/blog',
     },

@@ -6,6 +6,7 @@ import Experience from '@Features/Experience/Experience';
 import Hero from '@Features/Hero/Hero';
 import PersonalInterests from '@Features/PersonalInterests/PersonalInterests';
 import PreferredTechStack from '@Features/PreferredTechStack/PreferredTechStack';
+import Projects from '@Features/Projects/Projects';
 import Referrals from '@Features/Referrals/Referrals';
 import TechISpeak from '@Features/TechISpeak/TechISpeak';
 import { Divider } from '@mui/material';
@@ -27,6 +28,8 @@ function AppHome() {
       <PreferredTechStack />
       <Divider />
       <TechISpeak />
+      <Divider />
+      <Projects />
       <Divider />
       <Contact />
     </Layout>
