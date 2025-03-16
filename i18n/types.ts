@@ -37,6 +37,11 @@ export interface CommonMessages {
   projects: string;
 }
 
+export interface ComponentsMessages {
+  viewMore: string;
+  viewLess: string;
+}
+
 export interface ContactMessages {
   title: string;
   subtitle: string;
@@ -177,11 +182,45 @@ export interface PreferredTechStackMessages {
 export interface ProjectsMessages {
   title: string;
   subtitle: string;
+  theAgilePokerTitle: string;
+  theAgilePokerDescription: string;
+  chronicommWebTitle: string;
+  chronicommWebDescription: string;
+  chronicommMobileTitle: string;
+  chronicommMobileDescription: string;
+  aicodegenDescription: string;
+  reactNativeFullscreenAnimationsDescription: string;
+  terraOSTitle: string;
+  terraOSDescription: string;
+  opendorsePlatformTitle: string;
+  opendorsePlatformDescription: string;
+  opendorseMobileTitle: string;
+  opendorseMobileDescription: string;
+  opendorseTeamBuilderTitle: string;
+  opendorseTeamBuilderDescription: string;
+  lowesManifestTitle: string;
+  lowesManifestDescription: string;
+  lowesAPFacialRecognitionTitle: string;
+  lowesAPFacialRecognitionDescription: string;
 }
 
 export interface ReferralsMessages {
   title: string;
   subtitle: string;
+  ethanTitle: string;
+  ethanReferral1: string;
+  ethanReferral2: string;
+  ethanReferral3: string;
+  adamTitle: string;
+  adamReferral1: string;
+  adamReferral2: string;
+  adamReferral3: string;
+  adamReferral4: string;
+  adamReferral5: string;
+  santiTitle: string;
+  santiReferral1: string;
+  santiReferral2: string;
+  santiReferral3: string;
 }
 
 export interface TechISpeakMessages {
@@ -219,5 +258,6 @@ export interface TranslationMessages {
   Projects: ProjectsMessages;
   Alert: AlertMessages;
   LanguageSwitcher: LanguageSwitcherMessages;
+  Components: ComponentsMessages;
   Common: CommonMessages;
 }

@@ -3,15 +3,17 @@
 import { Box, Card, CardContent, CardMedia, Chip, Grid2, styled, Tab, Tabs, Typography } from '@mui/material';
 import { Section } from '@Components/Section';
 import { useTranslations } from 'next-intl';
-import { ReactNode, SyntheticEvent, useState } from 'react';
+import { ReactNode, SyntheticEvent, useMemo, useState } from 'react';
 import { InViewFadeTransition } from '@Components/InViewTransition';
 import { v4 } from 'uuid';
-import { Project, projects } from '@Features/Projects/projectsData';
+import { Project, getProjects } from '@Features/Projects/projectsData';
 import { AnimatePresence, motion } from 'framer-motion';
 import { MediaCarousel } from '@Components/MediaCarousel/MediaCarousel';
 
 export default function Projects() {
   const t = useTranslations('Projects');
+
+  const projects = useMemo(() => getProjects(t), [t]);
 
   const [value, setValue] = useState(0);
   const [openImages, setOpenImages] = useState<string[]>([]);

@@ -11,6 +11,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Hero() {
   const t = useTranslations('Hero');
+  const tCommon = useTranslations('Common');
   return (
     <Box
       id="hero"
@@ -71,7 +72,7 @@ export default function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {t('connect')}
+                {tCommon('contact')}
               </StyledContactButton>
             </StyledCTAStack>
           </StyledContainerStack>

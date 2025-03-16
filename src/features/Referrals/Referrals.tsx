@@ -11,20 +11,17 @@ import { Button, Collapse, Divider, Link, Stack, styled } from '@mui/material';
 import { Section } from '@Components/Section';
 import { useTranslations } from 'next-intl';
 import { v4 } from 'uuid';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ChevronDownIcon, ChevronUpIcon } from '@sanity/icons';
 import { InViewFadeTransition } from '@Components/InViewTransition';
+import { UseTranslations } from '@I18n/useTypedTranslations';
 
-const referrals = [
+export const getReferrals = (t: UseTranslations<'Referrals'>) => [
   {
     avatar: <Avatar alt="Ethan Horne" src="/images/ethan-horne.jpeg" />,
     name: 'Ethan Horne',
-    occupation: 'Senior Product Analyst & Growth Marketer',
-    paragraphs: [
-      "I've had the privilege of working alongside Bobby, and I can confidently say he is one of the best teammates I have ever had. His commitment to excellence is unmatched. He takes extreme ownership of every project he touches, ensuring not just success but continuous improvement.",
-      'Bobby strikes the perfect balance between working hard and keeping things fun. He is one of the most productive engineers I have worked with, yet he also brings an energy that makes collaboration enjoyable. Beyond his technical skills, Bobby genuinely cares about his work and his coworkers, always looking for ways to support the team.',
-      'He is also constantly exploring new technologies to enhance efficiency and elevate our product. His curiosity and drive make him an invaluable asset to any team.',
-    ],
+    occupation: t('ethanTitle'),
+    paragraphs: [t('ethanReferral1'), t('ethanReferral2'), t('ethanReferral3')],
     company: {
       name: 'Opendorse',
       url: 'https://biz.opendorse.com/',
@@ -33,25 +30,15 @@ const referrals = [
   {
     avatar: <Avatar alt="Adam Rothenberger" src="/images/adam-rothenberger.jpeg" />,
     name: 'Adam Rothenberger',
-    occupation: 'Software Quality Assurance Engineer',
-    paragraphs: [
-      'Bobby is an exceptional software engineer, and I learned a great deal from his expertise and problem-solving abilities. As the QA Engineer on his team, I often worked closely with him to troubleshoot and resolve issues.',
-      'From day one, Bobby’s technical skills were evident. He not only developed complex systems but also took the time to ensure those systems were built with scalability, performance, and maintainability in mind. His attention to detail and ability to write clean, efficient code made him an invaluable asset to our team.',
-      "What truly stood out about Bobby was his collaborative nature. He was always open to feedback, quick to address concerns, and incredibly patient when helping me understand the technical intricacies of the features we were testing. Bobby's ability to communicate complex technical concepts in a clear and approachable manner made him a pleasure to work with, especially when debugging or fine-tuning code.",
-      'Beyond his technical acumen, Bobby’s positive attitude and professionalism were infectious. He consistently contributed to a positive team dynamic and worked tirelessly to meet deadlines while maintaining high-quality standards. His leadership and ability to mentor junior engineers were also noteworthy, as he guided the team with both technical knowledge and a supportive attitude.',
-      'I have no doubt that Bobby will continue to excel in his career at Opendorse, and I would highly recommend him to anyone seeking a skilled, dependable, and innovative software engineer. It was an absolute privilege to work alongside him, and I look forward to seeing all that he accomplishes in the future.',
-    ],
+    occupation: t('adamTitle'),
+    paragraphs: [t('adamReferral1'), t('adamReferral2'), t('adamReferral3'), t('adamReferral4'), t('adamReferral5')],
     company: { name: 'Innovative Systems', url: 'https://www.innovsys.com/' },
   },
   {
     avatar: <Avatar alt="Santiago Murtaugh" src="/images/santiago-murtaugh.jpeg" />,
     name: 'Santiago Murtaugh',
-    occupation: 'Director of Engineering',
-    paragraphs: [
-      'Bobby is the rare combination of talent, hard work, and a desire to grow.',
-      'He tackled hard and complex problems for our team, produced a high amount of work every single sprint without sacrificing quality, and challenged himself to grow in and out of work by learning new technologies and working on personal projects.',
-      'Bobby will thrive in an environment with high expectations where he will be continuously challenged to to grow.',
-    ],
+    occupation: t('santiTitle'),
+    paragraphs: [t('santiReferral1'), t('santiReferral2'), t('santiReferral3')],
     company: {
       name: 'Medalogix',
       url: 'https://medalogix.com/',
@@ -61,6 +48,9 @@ const referrals = [
 
 export default function Referrals() {
   const t = useTranslations('Referrals');
+  const tComponents = useTranslations('Components');
+
+  const referrals = useMemo(() => getReferrals(t), [t]);
 
   const [expandedStates, setExpandedStates] = useState(referrals.map(() => false));
 
@@ -104,7 +94,7 @@ export default function Referrals() {
                         size="small"
                         endIcon={isExpanded ? <ChevronUpIcon /> : <ChevronDownIcon />}
                       >
-                        {isExpanded ? 'View Less' : 'View More'}
+                        {isExpanded ? tComponents('viewLess') : tComponents('viewMore')}
                       </StyledExpandButton>
                     )}
                   </CardContent>
