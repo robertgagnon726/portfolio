@@ -55,7 +55,7 @@ export default function Awards() {
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
             <InViewFadeTransition threshold={0.5}>
               <StyledStack direction="column" component={Card} spacing={1} useFlexGap>
-                <StyledIconContainer>{item.icon}</StyledIconContainer>
+                <Box>{item.icon}</Box>
                 <Stack flex={1}>
                   <Typography gutterBottom fontWeight={500}>
                     {item.title}
@@ -88,10 +88,6 @@ const StyledStack = styled(Stack)<StackProps>(({ theme }) => ({
   }),
 }));
 
-const StyledIconContainer = styled(Box)(() => ({
-  opacity: '50%',
-}));
-
 const StyledItemDescription = styled(Typography)(({ theme }) => ({
   color: theme.palette.grey[400],
 }));
@@ -99,5 +95,4 @@ const StyledItemDescription = styled(Typography)(({ theme }) => ({
 const logoStyle: CSSObject = {
   height: 32,
   width: 'auto',
-  opacity: 0.3,
 };

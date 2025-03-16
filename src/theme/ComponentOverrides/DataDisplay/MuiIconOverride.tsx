@@ -6,7 +6,7 @@ export const MuiIconOverride: Components<Theme> = {
       fontSize: 'small',
     },
     styleOverrides: {
-      root: {
+      root: () => ({
         variants: [
           {
             props: {
@@ -17,7 +17,7 @@ export const MuiIconOverride: Components<Theme> = {
             },
           },
         ],
-      },
+      }),
     },
   },
 };

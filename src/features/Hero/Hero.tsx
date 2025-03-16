@@ -17,36 +17,39 @@ export default function Hero() {
       id="hero"
       sx={(theme) => ({
         width: '100%',
+        height: '100vh',
         backgroundRepeat: 'no-repeat',
+        alignItems: 'center',
 
-        backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)',
+        backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -20%, ${theme.palette.primary.light}, transparent)`,
         ...theme.applyStyles('dark', {
-          backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
+          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% -20%, ${theme.palette.primary.dark}, transparent)`,
         }),
       })}
     >
       <StyledContainer>
-        <InViewFadeTransition
-          threshold={0.1}
-          slotProps={{
-            container: {
-              sx: {
-                width: '100%',
+        <StyledContainerStack spacing={2} useFlexGap>
+          <InViewFadeTransition
+            threshold={0.1}
+            slotProps={{
+              container: {
+                sx: {
+                  width: '100%',
+                  height: '100%',
+                },
               },
-            },
-            innerContainer: {
-              sx: {
-                flexDirection: 'column',
-                alignItems: 'center',
-                width: '100%',
+              innerContainer: {
+                sx: {
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  width: '100%',
+                },
               },
-            },
-          }}
-          transitionProps={{ timeout: 500 }}
-        >
-          <StyledContainerStack spacing={2} useFlexGap>
+            }}
+            transitionProps={{ timeout: 500 }}
+          >
             <StyledTitle variant="h1">
-              Bobby&nbsp;
+              {`Hello, I'm Bobby`}&nbsp;
               <Typography
                 component="span"
                 variant="h1"
@@ -60,59 +63,37 @@ export default function Hero() {
               >
                 Gagnon
               </Typography>
+              .
             </StyledTitle>
-            <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
-            <StyledCTAStack direction={{ xs: 'column', sm: 'row' }} spacing={1} useFlexGap>
-              <StyledContactButton
-                variant="contained"
-                color="primary"
-                size="small"
-                component="a"
-                href="#contact"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {tCommon('contact')}
-              </StyledContactButton>
-            </StyledCTAStack>
-          </StyledContainerStack>
-          <StyledBox id="image" />
-        </InViewFadeTransition>
+          </InViewFadeTransition>
+          <StyledTitle variant="h2">{`I'm a full-stack software engineer.`}</StyledTitle>
+          <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
+          <StyledCTAStack direction={{ xs: 'column', sm: 'row' }} spacing={1} useFlexGap>
+            <StyledContactButton
+              variant="contained"
+              color="primary"
+              size="small"
+              component="a"
+              href="#contact"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {tCommon('contact')}
+            </StyledContactButton>
+          </StyledCTAStack>
+        </StyledContainerStack>
       </StyledContainer>
     </Box>
   );
 }
-
-const StyledBox = styled('div')(({ theme }) => ({
-  alignSelf: 'center',
-  width: '100%',
-  height: 400,
-  marginTop: theme.spacing(8),
-  borderRadius: theme.shape.borderRadius,
-  outline: '6px solid',
-  outlineColor: 'hsla(220, 25%, 80%, 0.2)',
-  border: '1px solid',
-  borderColor: theme.palette.grey[200],
-  boxShadow: '0 0 12px 8px hsla(220, 25%, 80%, 0.2)',
-  backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/screenshots/material-ui/getting-started/templates/dashboard.jpg)`,
-  backgroundSize: 'cover',
-  [theme.breakpoints.up('sm')]: {
-    marginTop: theme.spacing(10),
-    height: 700,
-  },
-  ...theme.applyStyles('dark', {
-    boxShadow: '0 0 24px 12px hsla(210, 100%, 25%, 0.2)',
-    backgroundImage: `url(${process.env.TEMPLATE_IMAGE_URL || 'https://mui.com'}/static/screenshots/material-ui/getting-started/templates/dashboard-dark.jpg)`,
-    outlineColor: 'hsla(220, 20%, 42%, 0.1)',
-    borderColor: theme.palette.grey[700],
-  }),
-}));
 
 const StyledContainer = styled(Container)(({ theme }) => ({
   paddingTop: theme.spacing(14),
   paddingBottom: theme.spacing(8),
   display: 'flex',
   flexDirection: 'column',
+  height: '100%',
+  justifyContent: 'center',
   alignItems: 'center',
   [theme.breakpoints.up('sm')]: {
     paddingTop: theme.spacing(20),
@@ -124,7 +105,6 @@ const StyledTitle = styled(Typography)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  fontSize: 'clamp(3rem, 10vw, 3.5rem)',
 
   [theme.breakpoints.up('sm')]: {
     flexDirection: 'row',

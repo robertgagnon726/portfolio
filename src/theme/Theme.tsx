@@ -50,7 +50,7 @@ export default function Theme(props: ThemeProps) {
     return <Fragment>{children}</Fragment>;
   }
   return (
-    <ThemeProvider theme={theme} disableTransitionOnChange>
+    <ThemeProvider theme={theme} disableTransitionOnChange defaultMode="dark">
       {children}
     </ThemeProvider>
   );

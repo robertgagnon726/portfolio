@@ -32,16 +32,16 @@ export const defaultTheme = createTheme();
 export const customShadows: Shadows = [...defaultTheme.shadows];
 
 export const brand = {
-  50: 'hsl(210, 100%, 95%)',
-  100: 'hsl(210, 100%, 92%)',
-  200: 'hsl(210, 100%, 80%)',
-  300: 'hsl(210, 100%, 65%)',
-  400: 'hsl(210, 98%, 48%)',
-  500: 'hsl(210, 98%, 42%)',
-  600: 'hsl(210, 98%, 55%)',
-  700: 'hsl(210, 100%, 35%)',
-  800: 'hsl(210, 100%, 16%)',
-  900: 'hsl(210, 100%, 21%)',
+  50: 'hsl(130, 100%, 97%)', // Very light green
+  100: 'hsl(130, 95%, 90%)', // Light green
+  200: 'hsl(130, 90%, 75%)', // Soft green
+  300: 'hsl(130, 85%, 60%)', // Brighter green
+  400: 'hsl(130, 80%, 50%)', // Matrix green
+  500: 'hsl(130, 100%, 42%)', // Vibrant green
+  600: 'hsl(130, 100%, 35%)', // Deep green
+  700: 'hsl(130, 100%, 25%)', // Darker green
+  800: 'hsl(130, 100%, 12%)', // Almost black
+  900: 'hsl(130, 100%, 8%)', // Deepest black green
 };
 
 export const gray = {
