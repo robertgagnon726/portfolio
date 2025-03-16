@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
     "allowJs": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
@@ -20,20 +21,20 @@
       }
     ],
     "paths": {
-      "@Playwright/*": ["./tests/*"],
-      "@Generated/*": ["./src/generated/*"],
-      "@Utils/*": ["./src/utils/*"],
-      "@Redux/*": ["./src/redux/*"],
-      "@Providers/*": ["./src/providers/*"],
-      "@Lib/*": ["./src/lib/*"],
-      "@Hooks/*": ["./src/hooks/*"],
-      "@Features/*": ["./src/features/*"],
-      "@Connected-components/*": ["./src/connected-components/*"],
-      "@Components/*": ["./src/components/*"],
-      "@App/*": ["./app/*"],
-      "@Src/*": ["./src"],
-      "@Root/*": ["."],
-      "@/*": ["./src/*"]
+      "@Playwright/*": ["tests/*"],
+      "@Generated/*": ["src/generated/*"],
+      "@Utils/*": ["src/utils/*"],
+      "@Redux/*": ["src/redux/*"],
+      "@Providers/*": ["src/providers/*"],
+      "@Lib/*": ["src/lib/*"],
+      "@Hooks/*": ["src/hooks/*"],
+      "@Features/*": ["src/features/*"],
+      "@Connected-components/*": ["src/connected-components/*"],
+      "@Components/*": ["src/components/*"],
+      "@App/*": ["app/*"],
+      "@Src/*": ["src/*"],
+      "@I18n/*": ["i18n/*"],
+      "@Root/*": ["*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "types"],

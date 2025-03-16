@@ -1,4 +1,5 @@
 // Form.tsx
+import { styled } from '@mui/material';
 import React from 'react';
 import { FormProvider, UseFormReturn } from 'react-hook-form';
 import { AnySchema, InferType } from 'yup';
@@ -20,10 +21,15 @@ export const Form = <T extends AnySchema>({
 }: FormProps<T>) => (
   <FormProvider {...methods}>
     <form onSubmit={methods.handleSubmit(onFormSubmit)}>
-      <fieldset disabled={disabled} style={{ border: 'none', padding: 0 }}>
+      <StyledFieldset disabled={disabled}>
         {renderFormContent?.()}
         {actions}
-      </fieldset>
+      </StyledFieldset>
     </form>
   </FormProvider>
 );
+
+const StyledFieldset = styled('fieldset')(() => ({
+  border: 'none',
+  padding: 0,
+}));

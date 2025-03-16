@@ -8,11 +8,12 @@ import {
   Fade,
   Box,
   DialogContentText,
+  styled,
 } from '@mui/material';
 import { InferType } from 'yup';
 import React, { useCallback } from 'react';
-import { Form } from './Form';
-import { AnySchema, OnFieldChange, useFormLogic, WatchField } from './useFormLogic';
+import { AnySchema, OnFieldChange, useFormLogic, WatchField } from '@Components/forms/useFormLogic';
+import { Form } from '@Components/forms/Form';
 
 interface FormDialogProps<T extends AnySchema> {
   open?: boolean;
@@ -49,7 +50,7 @@ export const FormDialog = <T extends AnySchema>({
   const formContent = (
     <>
       <Fade in={submitLoading} unmountOnExit>
-        <LinearProgress sx={{ width: '100%' }} color="success" />
+        <StyledLinearProgress color="success" />
       </Fade>
       {title && <DialogTitle>{title}</DialogTitle>}
       <DialogContent>
@@ -86,3 +87,7 @@ export const FormDialog = <T extends AnySchema>({
     </Dialog>
   );
 };
+
+const StyledLinearProgress = styled(LinearProgress)(() => ({
+  width: '100%',
+}));

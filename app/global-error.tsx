@@ -1,11 +1,12 @@
 'use client';
 
+import { Logger } from '@Src/observability/Logger';
 import NextError from 'next/error';
 import { useEffect } from 'react';
 
 export default function GlobalError({ error }: { error: Error & { digest?: string } }) {
   useEffect(() => {
-    // TODO log exceptions to service here
+    Logger.error(error, 'Global error');
   }, [error]);
 
   return (

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+ 
 import '@testing-library/jest-dom';
 import chalk from 'chalk';
 import { beforeEach, afterEach, expect } from 'vitest';

@@ -1,7 +1,7 @@
 import { TextFieldProps, InputAdornment } from '@mui/material';
 import { Controller, ControllerRenderProps, FieldError, FieldValues, Path, useFormContext } from 'react-hook-form';
 import { ChangeEvent, FocusEvent, KeyboardEvent, useCallback } from 'react';
-import { CurrencyTextField } from '@/components/Inputs/CurrencyTextField';
+import { CurrencyTextField } from '@Components/Inputs/CurrencyTextField';
 
 type BaseCurrencyFieldProps = {
   tooltip?: string;

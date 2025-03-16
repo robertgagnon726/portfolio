@@ -54,7 +54,13 @@ describe('useFormLogic', () => {
       result.current.methods.setValue('name', 'New Name');
     });
 
-    expect(onFieldChange).toHaveBeenCalledWith('New Name');
+    expect(onFieldChange).toHaveBeenCalledWith({
+      changedField: 'name',
+      changedValue: 'New Name',
+      watchedValues: {
+        name: 'New Name',
+      },
+    });
   });
 
   it('resets the form when defaultValues change', () => {

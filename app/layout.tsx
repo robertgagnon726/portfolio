@@ -1,57 +1,57 @@
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-
-import { Montserrat } from 'next/font/google';
-import { ThemeProvider } from '@mui/material/styles';
-import { CssBaseline } from '@mui/material';
-import { ReduxProvider } from '@/redux/ReduxProvider';
+import { CssBaseline, GlobalStyles, StyledEngineProvider } from '@mui/material';
 import { Metadata } from 'next';
-import theme from '@/theme';
 import { ReactNode } from 'react';
+import { ReduxProvider } from '@Redux/ReduxProvider';
+import { getLocale, getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from 'next-intl';
+import Theme from '@Src/theme/Theme';
+import { Interpolation, type Theme as MuiTheme } from '@mui/material';
 
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  style: ['normal', 'italic'],
-  weight: ['400', '500', '600', '700'],
-});
-
-export const metadata: Metadata = {
-  title: {
-    template: '%s | {{default}}', // TODO FIX ME
-    default: '{{default}}', // TODO FIX ME
-  },
-  description: '{{default}}', // TODO FIX ME
-  icons: [
-    {
-      rel: 'icon',
-      url: '/favicon-dark.svg',
-      media: '(prefers-color-scheme: light)',
-    },
-    {
-      rel: 'icon',
-      url: '/favicon-light.svg',
-      media: '(prefers-color-scheme: dark)',
-    },
-  ],
-};
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Bobby | Crafting SaaS, Startups, & Scalable Software',
+    description:
+      'Building SaaS products, scaling startups, and solving complex software challenges. Let’s turn ideas into impact with well-crafted, high-performance software.',
+  };
+}
 
 /**
  * RootLayout component that sets up the main layout for the application.
  */
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
+  const bodyStyle = {
+    margin: '0px',
+  };
+
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang={locale}>
       <AppRouterCacheProvider>
-        <ThemeProvider theme={theme}>
-          <CssBaseline enableColorScheme />
-          <body style={{ margin: '0px' }} suppressHydrationWarning>
-            <ReduxProvider>{children}</ReduxProvider>
-          </body>
-        </ThemeProvider>
+        <StyledEngineProvider injectFirst>
+          <Theme>
+            <GlobalStyles styles={globalStyles} />
+            <CssBaseline enableColorScheme />
+            <body style={bodyStyle} suppressHydrationWarning>
+              <NextIntlClientProvider messages={messages}>
+                <ReduxProvider>{children}</ReduxProvider>
+              </NextIntlClientProvider>
+            </body>
+          </Theme>
+        </StyledEngineProvider>
       </AppRouterCacheProvider>
     </html>
   );
 }
+
+const globalStyles: Interpolation<MuiTheme> = {
+  html: {
+    scrollBehavior: 'smooth',
+  },
+};
