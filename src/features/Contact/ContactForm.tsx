@@ -3,13 +3,13 @@ import { useAlert } from '@Components/Alert';
 import { Form } from '@Components/forms/Form';
 import { FormTextField } from '@Components/Inputs/FormTextField';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Button, Card, CardContent, Grid2, Stack } from '@mui/material';
+import { useTranslations } from 'next-intl';
 import { useForm } from 'react-hook-form';
 import { InferType, object, string } from 'yup';
 
 export function useContactValidation() {
-  const t = useTypedTranslations('Contact');
+  const t = useTranslations('Contact');
 
   return {
     firstNameMin: t('valFirstNameMin', { min: 2 }),
@@ -70,8 +70,8 @@ export type ContactFormValues = InferType<ContactSchema>;
 export const ContactForm = () => {
   const alert = useAlert();
   const validation = useContactValidation();
-  const contactT = useTypedTranslations('Contact');
-  const alertT = useTypedTranslations('Alert');
+  const contactT = useTranslations('Contact');
+  const alertT = useTranslations('Alert');
 
   const defaultValues: ContactFormValues = {
     firstName: '',

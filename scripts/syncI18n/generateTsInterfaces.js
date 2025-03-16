@@ -30,7 +30,7 @@ export function generateTsInterfaces(jsonData, outputFile) {
   // Combine all sub-interfaces into one big string
   // Sort them to get a stable output
   const sortedNames = [...interfacesMap.keys()].sort();
-  let code = '// AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY\n\n';
+  let code = '/* eslint-disable max-lines */\n// AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY\n\n';
   for (const name of sortedNames) {
     code += interfacesMap.get(name);
   }

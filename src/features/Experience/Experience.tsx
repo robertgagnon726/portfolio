@@ -2,16 +2,17 @@
 
 import Stack from '@mui/material/Stack';
 import { Box, Card, CardContent, Chip, Divider, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { CompanyHighlights } from '@Features/Experience/CompanyHighlights';
 import { CompanyPromotions } from '@Features/Experience/CompanyPromotions';
 import { MultiChips } from '@Components/MultiChips/MultiChips';
 import { getExperienceTimeline } from '@Features/Experience/timeline';
 import { useMemo } from 'react';
+import { useTranslations } from 'next-intl';
+import { InViewFadeTransition } from '@Components/InViewTransition';
 
 export default function Experience() {
-  const t = useTypedTranslations('Experience');
+  const t = useTranslations('Experience');
 
   const timelineItems = useMemo(() => getExperienceTimeline(t), [t]);
 
@@ -21,34 +22,36 @@ export default function Experience() {
         {timelineItems.map((item, index) => {
           return (
             <Box key={`${item.currentPosition}-${item.company}`} width={'100%'} justifyContent="center">
-              <Stack alignItems="center">
-                <StyledChip label={item.timeframe} />
-                <StyledDivider orientation="vertical" />
-                <StyledCard>
-                  <StyledCardContent>
-                    <Stack direction="row" justifyContent={'space-between'}>
-                      <Stack direction="row" alignItems="center" flexGrow={1} gap={2}>
-                        <StyledIconCard>{item.compnanyIcon}</StyledIconCard>
-                        <Stack>
-                          <Typography variant="h5">{item.currentPosition}</Typography>
-                          <Typography variant="subtitle2" color="textSecondary">
-                            {item.company}
-                          </Typography>
+              <InViewFadeTransition threshold={0.5}>
+                <Stack alignItems="center">
+                  <StyledChip label={item.timeframe} />
+                  <StyledDivider orientation="vertical" />
+                  <StyledCard>
+                    <StyledCardContent>
+                      <Stack direction="row" justifyContent={'space-between'}>
+                        <Stack direction="row" alignItems="center" flexGrow={1} gap={2}>
+                          <StyledIconCard>{item.compnanyIcon}</StyledIconCard>
+                          <Stack>
+                            <Typography variant="h5">{item.currentPosition}</Typography>
+                            <Typography variant="subtitle2" color="textSecondary">
+                              {item.company}
+                            </Typography>
+                          </Stack>
+                        </Stack>
+                        <Stack direction="row" spacing={1}>
+                          {item.tags.map((tag) => (
+                            <Chip key={tag} label={tag} />
+                          ))}
                         </Stack>
                       </Stack>
-                      <Stack direction="row" spacing={1}>
-                        {item.tags.map((tag) => (
-                          <Chip key={tag} label={tag} />
-                        ))}
-                      </Stack>
-                    </Stack>
-                    <CompanyPromotions promotions={item.promotions} />
-                    <MultiChips labels={item.technologies} />
-                    <CompanyHighlights highlights={item.highlights} />
-                  </StyledCardContent>
-                </StyledCard>
-                {index < timelineItems.length - 1 && <StyledTopTimelineDivider orientation="vertical" />}
-              </Stack>
+                      <CompanyPromotions promotions={item.promotions} />
+                      <MultiChips labels={item.technologies} />
+                      <CompanyHighlights highlights={item.highlights} />
+                    </StyledCardContent>
+                  </StyledCard>
+                  {index < timelineItems.length - 1 && <StyledTopTimelineDivider orientation="vertical" />}
+                </Stack>
+              </InViewFadeTransition>
             </Box>
           );
         })}

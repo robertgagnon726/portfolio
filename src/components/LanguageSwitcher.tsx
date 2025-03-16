@@ -1,20 +1,18 @@
 'use client';
 
-import { usePathname, useRouter } from '@I18n/navigation';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
+import { Locale } from '@I18n/config';
+import { setUserLocale } from '@I18n/locale';
 import { MenuItem, FormControl, Select, SelectChangeEvent, styled } from '@mui/material';
-import { useLocale } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function LanguageSwitcher() {
-  const router = useRouter();
-  const pathname = usePathname();
   const locale = useLocale();
-  const t = useTypedTranslations('LanguageSwitcher');
+  const t = useTranslations('LanguageSwitcher');
 
   const handleChange = (event: SelectChangeEvent<string>) => {
-    const newLocale = event.target.value;
+    const newLocale = event.target.value as Locale;
 
-    router.push(pathname, { locale: newLocale });
+    setUserLocale(newLocale);
   };
 
   return (

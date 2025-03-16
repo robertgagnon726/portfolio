@@ -1,8 +1,4 @@
 {
-  "HomePage": {
-    "title": "¡¡¡Hola Mundo!!!",
-    "about": "Vaya a la página Acerca de nuevamente"
-  },
   "Common": {
     "philosophy": "Filosofía",
     "awards": "Premios",
@@ -15,7 +11,8 @@
     "contact": "Contacto",
     "menuButton": "Botón de menú",
     "referrals": "Referencias",
-    "techISpeak": "Hablo tecnicamente"
+    "techISpeak": "Hablo tecnicamente",
+    "projects": "Proyectos"
   },
   "Hero": {
     "subtitle": "Liderando a través de la innovación desbloqueando equipos, agudizando la eficiencia, fomentando la colaboración y entregando resultados tangibles con soluciones sostenibles y duraderas.",
@@ -64,20 +61,9 @@
     "item1Highlight3": "Implementamos numerosas funciones para mejorar la experiencia del usuario de múltiples tipos de cuentas y roles dentro de nuestro SaaS multiinquilino entre nuestra aplicación web React y nuestra aplicación móvil React Native.",
     "item1Highlight4": "Creó el primer repositorio npm privado de Opendorse para compartir componentes y utilidades reutilizables entre múltiples proyectos.",
     "item1Highlight5": "Mentoría y programación en pareja con ingenieros para ayudar a expandir tanto el conocimiento del dominio como las mejores prácticas.",
-    "item1Highlight6": "Fui el capitán del equipo de productos. Las responsabilidades adicionales incluían: reunirme periódicamente con el equipo de productos y diseño para revisar la viabilidad técnica de las nuevas funciones, marcar el ritmo y el estándar para el resto del equipo y asignar tareas para garantizar que las historias estén listas para el refinamiento de la lista de tareas pendientes.",
     "seniorSoftwareEngineer": "Ingeniero de software sénior",
-    "item1Promotion1Highlight": "Lideró iniciativas técnicas de gran envergadura, impulsó la dirección técnica y puso en marcha sistemas críticos para el negocio en tiempos récord.",
-    "item1Promotion2Highlight": "Lideró iniciativas técnicas, impulsó la dirección técnica y puso en marcha sistemas críticos para el negocio.",
     "item2Timeframe": "2020 - 2021",
     "item2Position": "Ingeniero de software asociado",
-    "item2Highlight1": "Trabajó como miembro del equipo de Protección de Activos y Servicios Compartidos, que utilizó una combinación de metodologías Kanban y Scrum. La pila de tecnología para las nuevas aplicaciones consistía en JavaScript, React, Material UI, Redux, Nodejs, Express, Java, Spring, Mongo y Postgres.",
-    "item2Highlight2": "Colaboró con nuestro Scrum Master, Gerente de Producto, Gerente de Soluciones y partes interesadas para brindar valor en cada sprint.",
-    "item2Highlight3": "Trabajó con nuestros socios comerciales y proveedores para integrar soluciones SAAS con el entorno de Lowe's mientras se adhería a las políticas de gestión de cambios.",
-    "item2Highlight4": "Liderar el esfuerzo del equipo para identificar áreas de mejora para la gestión, establecer elementos de acción anuales y organizar reuniones mensuales con el liderazgo para realizar un seguimiento del progreso y recopilar comentarios.",
-    "item2Highlight5": "Aplicaciones y sistemas completamente documentados para permitir que los expertos en aplicaciones no especializadas realicen procedimientos operativos estándar e incorporen nuevos ingenieros a las aplicaciones de una manera más eficiente.",
-    "item2Highlight6": "Se probaron nuevas funciones de manera pesimista mediante una combinación de desarrollo impulsado por el comportamiento y desarrollo impulsado por pruebas. Los marcos utilizados para probar aplicaciones incluyeron Cypress, Jest, Mocha, Enzyme, JUnit, Mockito y Cucumber.",
-    "item2Highlight7": "Me reuní periódicamente con un subconjunto de miembros del equipo para planificar salidas trimestrales del equipo.",
-    "item2Highlight8": "Trabajé con un equipo con distintas zonas horarias, desde la Costa Oeste hasta Bangalore, India.",
     "item3Timeframe": "2017 - Present",
     "item3Position": "Ingeniero de software",
     "item3Company": "Trabajadores por cuenta propia",
@@ -85,7 +71,22 @@
     "item3Highlight2": "Migraciones y modernización de CMS.",
     "item3Highlight3": "Consultoría de arquitectura.",
     "year2024": "2024",
-    "year2023": "2023"
+    "year2023": "2023",
+    "staffPromotionHighlight1": "Lideró un equipo de expertos para lanzar Opendorse Team Builder en 6 semanas, logrando un ROI positivo en 1 mes (las estimaciones iniciales proyectaban 3+ meses)",
+    "staffPromotionHighlight2": "Desarrolló el sistema de diseño Opendorse, un paquete npm privado compartido con tokens y componentes de diseño, acelerando el desarrollo de funciones y al mismo tiempo garantizando la consistencia.",
+    "staffPromotionHighlight3": "Creó Opendorse Client Utils, un paquete npm privado con funciones de utilidad reutilizables para React y React Native, lo que reduce la duplicación de código y la deuda técnica.",
+    "staffPromotionHighlight4": "Facilitó el liderazgo del gremio, alineando equipos y resolviendo obstáculos para mejorar la colaboración.",
+    "staffPromotionHighlight5": "Lideró la experimentación del flujo de trabajo, impulsando mejoras en la velocidad del equipo y la calidad del código.",
+    "seniorPromotionHighlight1": "Se entregaron 91 puntos de historia en el cuarto trimestre de 2023, superando el promedio del equipo de 47,9, manteniendo al mismo tiempo una alta calidad del código.",
+    "seniorPromotionHighlight2": "Colaboró con Diseño, Producto e Ingeniería para perfeccionar características y epopeyas antes de una implementación más amplia del equipo.",
+    "seniorPromotionHighlight3": "Lideró iniciativas de gremios móviles y coordinó la resolución de la deuda tecnológica entre los equipos de React Native.",
+    "lowesHighlight1": "Desarrollé y mantuve aplicaciones utilizando JavaScript, React, Material UI, Redux, Node.js, Express, Java, Spring, MongoDB y Postgres.",
+    "lowesHighlight2": "Colaboró con Scrum Master, Product Manager y las partes interesadas para ofrecer características de alto impacto en cada sprint.",
+    "lowesHighlight3": "Soluciones SaaS integradas en el entorno de Lowe's garantizando al mismo tiempo el cumplimiento de las políticas de gestión de cambios.",
+    "lowesHighlight4": "Documentación optimizada para pymes de incorporación y no técnicas, reduciendo el tiempo de capacitación y mejorando la eficiencia.",
+    "lowesHighlight5": "Implementé estrategias de pruebas integrales (BDD y TDD) utilizando Cypress, Jest, Mocha, Enzyme, JUnit, Mockito y Cucumber, mejorando la cobertura de pruebas y la confiabilidad del sistema.",
+    "lowesHighlight6": "Trabajó eficazmente en diferentes zonas horarias, aprovechando herramientas de colaboración asincrónica para garantizar una comunicación fluida.",
+    "item3Highlight4": "Mejoras de SEO y accesibilidad: se implementaron las mejores prácticas de SEO y a11y para mejorar la capacidad de descubrimiento y la inclusión web."
   },
   "PersonalInterests": {
     "title": "Intereses personales",
@@ -117,11 +118,29 @@
     "ormTitle": "ORM",
     "ormDescription": "Hay un lugar para los ORM frente a los sproc, pero creo que los ORM son el camino a seguir para la mayoría de las aplicaciones. Disfruto de la vida inicial de crear funciones rápidamente, no tanto de quitarle x ms a este punto final para ahorrar tiempo de procesamiento. Puedo hacer ambas cosas, pero estoy más contento con la primera.",
     "cloudTitle": "Nube",
-    "cloudDescription": "He trabajado con AWS, Azure y GCP. Cada uno tiene sus propias peculiaridades. Lo que no me gusta es trabajar en entornos locales. Me gusta la idea y tiene sentido a gran escala, pero la experiencia de los desarrolladores en entornos locales suele ser muy inferior a la de la nube."
+    "cloudDescription": "He trabajado con AWS, Azure y GCP. Cada uno tiene sus propias peculiaridades. Lo que no me gusta es trabajar en entornos locales. Me gusta la idea y tiene sentido a gran escala, pero la experiencia de los desarrolladores en entornos locales suele ser muy inferior a la de la nube.",
+    "angularTitle": "Angular",
+    "angularDescription": "A medida que mi carrera ha avanzado, me he visto atraído por frameworks con fuerte base teórica como Angular. Su enfoque estructurado, la inyección de dependencias y la gestión de estados integrada lo convierten en una opción sólida para aplicaciones empresariales.",
+    "dotnetCoreTitle": ".NET Core",
+    "dotnetCoreDescription": ".NET Core es una herramienta clave para el desarrollo backend. Su rendimiento, flexibilidad y sólido ecosistema de C# lo convierten en una de mis opciones preferidas para crear API escalables y fáciles de mantener. Las mejoras modernas de Microsoft han hecho que .NET sea más fácil de usar que nunca para los desarrolladores."
   },
   "Referrals": {
     "title": "Testimonios",
-    "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto."
+    "subtitle": "Lea lo que mis antiguos colegas y mentores dicen sobre trabajar conmigo: descubra cómo aporto dedicación, creatividad y colaboración a cada proyecto.",
+    "ethanTitle": "Analista sénior de productos y comercializador de crecimiento",
+    "ethanReferral1": "He tenido el privilegio de trabajar con Bobby y puedo afirmar con seguridad que es uno de los mejores compañeros de equipo que he tenido. Su compromiso con la excelencia es inigualable. Se responsabiliza plenamente de cada proyecto que aborda, garantizando no solo el éxito, sino también la mejora continua.",
+    "ethanReferral2": "Bobby logra el equilibrio perfecto entre trabajar duro y disfrutar del trabajo. Es uno de los ingenieros más productivos con los que he trabajado, y además aporta una energía que hace que la colaboración sea agradable. Más allá de sus habilidades técnicas, Bobby se preocupa genuinamente por su trabajo y sus compañeros, y siempre busca maneras de apoyar al equipo.",
+    "ethanReferral3": "También explora constantemente nuevas tecnologías para mejorar la eficiencia y optimizar nuestro producto. Su curiosidad y dinamismo lo convierten en un activo invaluable para cualquier equipo.",
+    "adamTitle": "Ingeniero de garantía de calidad de software",
+    "adamReferral1": "Bobby es un ingeniero de software excepcional, y aprendí muchísimo de su experiencia y capacidad para resolver problemas. Como ingeniero de control de calidad de su equipo, a menudo colaboraba estrechamente con él para solucionar problemas.",
+    "adamReferral2": "Desde el primer día, las habilidades técnicas de Bobby fueron evidentes. No solo desarrolló sistemas complejos, sino que también se dedicó a garantizar que estos sistemas se construyeran teniendo en cuenta la escalabilidad, el rendimiento y la facilidad de mantenimiento. Su atención al detalle y su capacidad para escribir código limpio y eficiente lo convirtieron en un activo invaluable para nuestro equipo.",
+    "adamReferral3": "Lo que realmente destacaba de Bobby era su carácter colaborativo. Siempre estaba abierto a recibir comentarios, resolvía mis dudas con rapidez y era increíblemente paciente al ayudarme a comprender las complejidades técnicas de las funciones que probábamos. Su capacidad para comunicar conceptos técnicos complejos de forma clara y accesible hacía que fuera un placer trabajar con él, especialmente al depurar o ajustar el código.",
+    "adamReferral4": "Además de su perspicacia técnica, la actitud positiva y el profesionalismo de Bobby eran contagiosos. Contribuyó constantemente a una dinámica de equipo positiva y trabajó incansablemente para cumplir con los plazos, manteniendo altos estándares de calidad. Su liderazgo y su capacidad para guiar a los ingenieros jóvenes también fueron notables, ya que guió al equipo con conocimientos técnicos y una actitud de apoyo.",
+    "adamReferral5": "No tengo ninguna duda de que Bobby seguirá destacando en su carrera en Opendorse, y lo recomiendo ampliamente a cualquiera que busque un ingeniero de software competente, confiable e innovador. Fue un verdadero privilegio trabajar con él y espero ver todo lo que logre en el futuro.",
+    "santiTitle": "Director de Ingeniería",
+    "santiReferral1": "Bobby es una rara combinación de talento, trabajo duro y ganas de crecer.",
+    "santiReferral2": "Abordó problemas difíciles y complejos para nuestro equipo, produjo una gran cantidad de trabajo en cada sprint sin sacrificar la calidad y se desafió a sí mismo para crecer dentro y fuera del trabajo aprendiendo nuevas tecnologías y trabajando en proyectos personales.",
+    "santiReferral3": "Bobby prosperará en un entorno con altas expectativas donde estará continuamente desafiado a crecer."
   },
   "TechISpeak": {
     "title": "Hablo tecnicamente",
@@ -134,9 +153,14 @@
     "cloudTitle": "Plataformas en la nube y alojamiento",
     "devOpsTitle": "DevOps y CI/CD",
     "monitoringTitle": "Monitoreo y análisis",
-    "communicationTitle": "Comunicación",
     "testingTitle": "Pruebas y control de calidad",
-    "buildTitle": "Construcción y herramientas"
+    "buildTitle": "Construcción y herramientas",
+    "mediaHandlingTitle": "Manejo y procesamiento de medios",
+    "paymentsAndSigningTitle": "Pagos y firmas",
+    "awsTitle": "AWS",
+    "azureTitle": "Azur",
+    "gcpTitle": "GCP",
+    "communicationAndPaymentsTitle": "Comunicación y pagos"
   },
   "Contact": {
     "title": "Vamos a conectarnos",
@@ -170,5 +194,37 @@
   "LanguageSwitcher": {
     "english": "Inglés",
     "spanish": "Español"
+  },
+  "BlogHome": {
+    "title": "Blog",
+    "subtitle": "Reflexiones, tutoriales y conocimientos sobre ingeniería de software."
+  },
+  "Projects": {
+    "title": "Proyectos destacados",
+    "subtitle": "Explora mi portafolio de proyectos que muestran mis habilidades y creatividad.",
+    "theAgilePokerTitle": "El póquer ágil",
+    "theAgilePokerDescription": "Como equipo ágil, nuestro Scrum Master continuó usando diferentes aplicaciones de póker ágil con pruebas gratuitas. Agile Poker se creó inicialmente para beneficiar al equipo al contar con una herramienta consistente, pero también como una forma de experimentar con NestJS y Socket IO. Está disponible en theagilepoker.com.",
+    "chronicommWebDescription": "Chronicomm es una aplicación web que permite a los usuarios conectar con otros pacientes con enfermedades crónicas. La app permite compartir experiencias, hacer preguntas y brindarse apoyo mutuo. También incluye un directorio de ensayos clínicos para ayudar a las personas a realizar un mejor seguimiento de los posibles tratamientos disponibles. Tuve una experiencia difícil con la COVID persistente. Existen comunidades en Slack y Discord, pero usarlas era bastante limitado. Quería contribuir a la comunidad y ayudar a quienes luchan con enfermedades crónicas. Creé esta app para facilitar esas conexiones y brindar un espacio donde las personas compartan sus experiencias y se apoyen mutuamente.",
+    "chronicommMobileDescription": "Chronicomm mobile es la aplicación móvil complementaria de Chronicomm Web.",
+    "aicodegenDescription": "aicodegen fue una noche de hacking donde desarrollé una herramienta CLI para generar código de prueba para proyectos de JavaScript y TypeScript. Puede que sea independiente del lenguaje, pero no se ha probado. La premisa es que instalas el paquete, estableces tu clave openai, configuras tus configuraciones de prueba y archivos de contexto, y ejecutas el comando. Generará código de prueba automáticamente basado en tus archivos de contexto y configuraciones. Me encantaría integrarlo mejor con AST para crear y actualizar archivos de prueba, pero ese es un objetivo futuro.",
+    "reactNativeFullscreenAnimationsDescription": "Una biblioteca sencilla de animaciones de pantalla completa para React Native.",
+    "terraOSDescription": "En 2024, decidí que necesitaba dedicarme más al cuidado del césped. Obtuve mi licencia de aplicador de pesticidas y comencé a realizar tratamientos de césped en mi tiempo libre. Creé la versión básica de Terra OS para gestionar a mis clientes, programar tratamientos y gestionar el cumplimiento de la EPA y otros organismos reguladores. Me di cuenta de que básicamente había creado un producto SaaS y lo había migrado de una solución para un solo inquilino a una multiusuario con funciones adicionales basadas en los comentarios de los propietarios de jardines. Terra OS se lanzará en abril de 2025. Contiene muchísimas funciones excelentes y estoy emocionado de compartirlo con el mundo.",
+    "opendorsePlatformDescription": "Este sitio alberga los productos estrella de Opendorse. Es una aplicación web que facilita la transferencia de dinero entre atletas, marcas, colectivos e instituciones.",
+    "opendorseMobileDescription": "Opendorse ofrece una aplicación móvil para que los atletas gestionen sus oportunidades NIL.",
+    "opendorseTeamBuilderDescription": "Lidero el desarrollo del producto Opendorse Team Builder. Se trata de una aplicación web que permite a los departamentos deportivos planificar los compromisos de gasto en diferentes deportes y posiciones. Ofrece una experiencia de baja latencia, similar a la de una hoja de cálculo, para usuarios avanzados y se integra con nuestro almacén de datos Snowflake para proporcionar información de datos propios en tiempo real sobre la competitividad de sus ofertas, basándose en el rendimiento percibido de los atletas.",
+    "lowesManifestDescription": "Un proveedor con el que trabajamos canceló inesperadamente un producto que usaba nuestro Equipo de Protección de Activos. Se trataba básicamente de una aplicación de almacenamiento de documentos relacionada con manifiestos de residuos y evaluaciones de impacto ambiental. Creé una aplicación React/Express/MongoDB que imitaba la funcionalidad de la aplicación anterior y añadía algunas funciones adicionales. Fue un proyecto de 3 meses y el más rápido que ha tardado un proyecto desde su inicio hasta su producción en el departamento de Servicios Compartidos. Lideré el desarrollo de este proyecto.",
+    "lowesAPFacialRecognitionDescription": "No recuerdo mucho sobre esto, pero la premisa era integrar el reconocimiento facial en el sistema de cámaras de seguridad existente de nuestro equipo de Protección de Activos. Esto afectó a más de 100,000 cámaras en más de 1,700 tiendas. Esto generó un valor significativo para nuestro equipo de Protección de Activos, lo que resultó en una recuperación de activos estimada en $1.2 millones al año.",
+    "chronicommWebTitle": "Web de Chronicomm",
+    "chronicommMobileTitle": "Chronicomm Móvil",
+    "terraOSTitle": "Sistema operativo Terra",
+    "opendorsePlatformTitle": "Plataforma Opendorse",
+    "opendorseMobileTitle": "Opendorse Móvil",
+    "opendorseTeamBuilderTitle": "Creador de equipos Opendorse",
+    "lowesManifestTitle": "Manifiesto de Lowe",
+    "lowesAPFacialRecognitionTitle": "Reconocimiento facial AP de Lowe's"
+  },
+  "Components": {
+    "viewMore": "Ver más",
+    "viewLess": "Ver menos"
   }
 }

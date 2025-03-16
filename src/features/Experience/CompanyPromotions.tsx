@@ -3,11 +3,12 @@
 import Stack from '@mui/material/Stack';
 import { Box, Divider, styled, Typography } from '@mui/material';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import { CompanyHighlights } from '@Features/Experience/CompanyHighlights';
 
 export interface Promotion {
   title: string;
   year: string;
-  highlights: string;
+  highlights: string[];
 }
 
 interface CompanyPromotionsProps {
@@ -26,9 +27,7 @@ export const CompanyPromotions = ({ promotions }: CompanyPromotionsProps) => {
 
               <Typography variant="h6">{`Promoted to ${promotion.title} (${promotion.year})`}</Typography>
             </Stack>
-            <StyledPromotionText variant="subtitle2" color="textSecondary">
-              {promotion.highlights}
-            </StyledPromotionText>
+            <CompanyHighlights highlights={promotion.highlights} />
           </Stack>
         </StyledContainer>
       ))}
@@ -44,8 +43,4 @@ const StyledContainer = styled(Box)(({ theme }) => ({
 
 const StyledDivider = styled(Divider)(() => ({
   borderRightWidth: '2px',
-}));
-
-const StyledPromotionText = styled(Typography)(({ theme }) => ({
-  paddingLeft: theme.spacing(0.5),
 }));

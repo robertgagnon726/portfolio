@@ -14,11 +14,12 @@ import SchemaRoundedIcon from '@mui/icons-material/SchemaRounded';
 import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
 import RecordVoiceOverRoundedIcon from '@mui/icons-material/RecordVoiceOverRounded';
 import Diversity3RoundedIcon from '@mui/icons-material/Diversity3Rounded';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
+import { useTranslations } from 'next-intl';
+import { InViewFadeTransition } from '@Components/InViewTransition';
 
 export default function EngineeringPhilosophy() {
-  const t = useTypedTranslations('EngineeringPhilosophy');
+  const t = useTranslations('EngineeringPhilosophy');
 
   const items = [
     {
@@ -68,15 +69,17 @@ export default function EngineeringPhilosophy() {
       <Grid container spacing={2}>
         {items.map((item, index) => (
           <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-            <StyledStack direction="column" component={Card} spacing={1} useFlexGap>
-              <StyledIconContainer>{item.icon}</StyledIconContainer>
-              <div>
-                <Typography gutterBottom fontWeight={500}>
-                  {item.title}
-                </Typography>
-                <StyledItemDescription variant="body2">{item.description}</StyledItemDescription>
-              </div>
-            </StyledStack>
+            <InViewFadeTransition threshold={0.5}>
+              <StyledStack direction="column" component={Card} spacing={1} useFlexGap>
+                <StyledIconContainer>{item.icon}</StyledIconContainer>
+                <div>
+                  <Typography gutterBottom fontWeight={500}>
+                    {item.title}
+                  </Typography>
+                  <StyledItemDescription variant="body2">{item.description}</StyledItemDescription>
+                </div>
+              </StyledStack>
+            </InViewFadeTransition>
           </Grid>
         ))}
       </Grid>

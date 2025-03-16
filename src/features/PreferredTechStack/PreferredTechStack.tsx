@@ -1,7 +1,6 @@
 'use client';
 
 import { Card, CardContent, Grid2, Stack, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { ReactLogo } from '@Src/icons/ReactLogo';
 import { NextjsLogo } from '@Src/icons/NextjsLogo';
@@ -9,9 +8,12 @@ import { NestJSLogo } from '@Src/icons/NestJSLogo';
 import { TypeScriptLogo } from '@Src/icons/TypeScriptLogo';
 import { ORMLogo } from '@Src/icons/ORMLogo';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
+import { useTranslations } from 'next-intl';
+import { DotnetCoreLogo } from '@Src/icons/DotnetCoreLogo';
+import { AngularLogo } from '@Src/icons/AngularLogo';
 
 export default function PreferredTechStack() {
-  const t = useTypedTranslations('PreferredTechStack');
+  const t = useTranslations('PreferredTechStack');
 
   const techs = [
     {
@@ -25,9 +27,19 @@ export default function PreferredTechStack() {
       icon: <NextjsLogo />,
     },
     {
+      title: t('angularTitle'),
+      description: t('angularDescription'),
+      icon: <AngularLogo />,
+    },
+    {
       title: t('nestjsTitle'),
       description: t('nestjsDescription'),
       icon: <NestJSLogo />,
+    },
+    {
+      title: t('dotnetCoreTitle'),
+      description: t('dotnetCoreDescription'),
+      icon: <DotnetCoreLogo />,
     },
     {
       title: t('typescriptTitle'),

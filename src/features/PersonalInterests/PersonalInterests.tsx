@@ -1,12 +1,13 @@
 'use client';
 
 import { Card, CardContent, Grid2, Stack, styled, Typography } from '@mui/material';
-import { useTypedTranslations } from '@I18n/useTypedTranslations';
 import { Section } from '@Components/Section';
 import { GamesOutlined, GolfCourse, Movie, Pool, RvHookup, TheaterComedy } from '@mui/icons-material';
+import { useTranslations } from 'next-intl';
+import { InViewFadeTransition } from '@Components/InViewTransition';
 
 export default function PersonalInterests() {
-  const t = useTypedTranslations('PersonalInterests');
+  const t = useTranslations('PersonalInterests');
 
   const interests = [
     {
@@ -46,17 +47,19 @@ export default function PersonalInterests() {
       <StyledContainer container spacing={2}>
         {interests.map((interest) => (
           <StyledCardContainer size={{ xs: 12, sm: 6, md: 4 }} key={interest.title}>
-            <StyledCard>
-              <StyledCardContent>
-                <Stack direction="row" spacing={2}>
-                  {interest.icon}
-                  <Typography variant="h5">{interest.title}</Typography>
-                </Stack>
-                <StyledDescription variant="subtitle2" color="textSecondary">
-                  {interest.description}
-                </StyledDescription>
-              </StyledCardContent>
-            </StyledCard>
+            <InViewFadeTransition threshold={0.5}>
+              <StyledCard>
+                <StyledCardContent>
+                  <Stack direction="row" spacing={2}>
+                    {interest.icon}
+                    <Typography variant="h5">{interest.title}</Typography>
+                  </Stack>
+                  <StyledDescription variant="subtitle2" color="textSecondary">
+                    {interest.description}
+                  </StyledDescription>
+                </StyledCardContent>
+              </StyledCard>
+            </InViewFadeTransition>
           </StyledCardContainer>
         ))}
       </StyledContainer>

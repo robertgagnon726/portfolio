@@ -1,3 +1,4 @@
+/* eslint-disable max-lines */
 // AUTO-GENERATED FILE – DO NOT EDIT DIRECTLY
 
 export interface AlertMessages {
@@ -15,6 +16,11 @@ export interface AwardsMessages {
   award3Description: string;
 }
 
+export interface BlogHomeMessages {
+  title: string;
+  subtitle: string;
+}
+
 export interface CommonMessages {
   philosophy: string;
   referrals: string;
@@ -28,6 +34,12 @@ export interface CommonMessages {
   techISpeak: string;
   contact: string;
   menuButton: string;
+  projects: string;
+}
+
+export interface ComponentsMessages {
+  viewMore: string;
+  viewLess: string;
 }
 
 export interface ContactMessages {
@@ -91,38 +103,37 @@ export interface ExperienceMessages {
   item1Highlight3: string;
   item1Highlight4: string;
   item1Highlight5: string;
-  item1Highlight6: string;
   year2024: string;
   year2023: string;
   seniorSoftwareEngineer: string;
-  item1Promotion1Highlight: string;
-  item1Promotion2Highlight: string;
+  staffPromotionHighlight1: string;
+  staffPromotionHighlight2: string;
+  staffPromotionHighlight3: string;
+  staffPromotionHighlight4: string;
+  staffPromotionHighlight5: string;
+  seniorPromotionHighlight1: string;
+  seniorPromotionHighlight2: string;
+  seniorPromotionHighlight3: string;
   item2Timeframe: string;
   item2Position: string;
-  item2Highlight1: string;
-  item2Highlight2: string;
-  item2Highlight3: string;
-  item2Highlight4: string;
-  item2Highlight5: string;
-  item2Highlight6: string;
-  item2Highlight7: string;
-  item2Highlight8: string;
+  lowesHighlight1: string;
+  lowesHighlight2: string;
+  lowesHighlight3: string;
+  lowesHighlight4: string;
+  lowesHighlight5: string;
+  lowesHighlight6: string;
   item3Timeframe: string;
   item3Position: string;
   item3Company: string;
   item3Highlight1: string;
   item3Highlight2: string;
   item3Highlight3: string;
+  item3Highlight4: string;
 }
 
 export interface HeroMessages {
   subtitle: string;
   connect: string;
-}
-
-export interface HomePageMessages {
-  title: string;
-  about: string;
 }
 
 export interface LanguageSwitcherMessages {
@@ -154,8 +165,12 @@ export interface PreferredTechStackMessages {
   reactDescription: string;
   nextjsTitle: string;
   nextjsDescription: string;
+  angularTitle: string;
+  angularDescription: string;
   nestjsTitle: string;
   nestjsDescription: string;
+  dotnetCoreTitle: string;
+  dotnetCoreDescription: string;
   typescriptTitle: string;
   typescriptDescription: string;
   ormTitle: string;
@@ -164,9 +179,48 @@ export interface PreferredTechStackMessages {
   cloudDescription: string;
 }
 
+export interface ProjectsMessages {
+  title: string;
+  subtitle: string;
+  theAgilePokerTitle: string;
+  theAgilePokerDescription: string;
+  chronicommWebTitle: string;
+  chronicommWebDescription: string;
+  chronicommMobileTitle: string;
+  chronicommMobileDescription: string;
+  aicodegenDescription: string;
+  reactNativeFullscreenAnimationsDescription: string;
+  terraOSTitle: string;
+  terraOSDescription: string;
+  opendorsePlatformTitle: string;
+  opendorsePlatformDescription: string;
+  opendorseMobileTitle: string;
+  opendorseMobileDescription: string;
+  opendorseTeamBuilderTitle: string;
+  opendorseTeamBuilderDescription: string;
+  lowesManifestTitle: string;
+  lowesManifestDescription: string;
+  lowesAPFacialRecognitionTitle: string;
+  lowesAPFacialRecognitionDescription: string;
+}
+
 export interface ReferralsMessages {
   title: string;
   subtitle: string;
+  ethanTitle: string;
+  ethanReferral1: string;
+  ethanReferral2: string;
+  ethanReferral3: string;
+  adamTitle: string;
+  adamReferral1: string;
+  adamReferral2: string;
+  adamReferral3: string;
+  adamReferral4: string;
+  adamReferral5: string;
+  santiTitle: string;
+  santiReferral1: string;
+  santiReferral2: string;
+  santiReferral3: string;
 }
 
 export interface TechISpeakMessages {
@@ -180,13 +234,17 @@ export interface TechISpeakMessages {
   cloudTitle: string;
   devOpsTitle: string;
   monitoringTitle: string;
-  communicationTitle: string;
+  communicationAndPaymentsTitle: string;
   testingTitle: string;
   buildTitle: string;
+  paymentsAndSigningTitle: string;
+  mediaHandlingTitle: string;
+  awsTitle: string;
+  azureTitle: string;
+  gcpTitle: string;
 }
 
 export interface TranslationMessages {
-  HomePage: HomePageMessages;
   Referrals: ReferralsMessages;
   Hero: HeroMessages;
   Awards: AwardsMessages;
@@ -196,7 +254,10 @@ export interface TranslationMessages {
   PreferredTechStack: PreferredTechStackMessages;
   TechISpeak: TechISpeakMessages;
   Contact: ContactMessages;
+  BlogHome: BlogHomeMessages;
+  Projects: ProjectsMessages;
   Alert: AlertMessages;
   LanguageSwitcher: LanguageSwitcherMessages;
+  Components: ComponentsMessages;
   Common: CommonMessages;
 }
