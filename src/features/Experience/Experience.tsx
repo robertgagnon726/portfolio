@@ -28,7 +28,7 @@ export default function Experience() {
                   <StyledDivider orientation="vertical" />
                   <StyledCard>
                     <StyledCardContent>
-                      <Stack direction="row" justifyContent={'space-between'}>
+                      <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent={'space-between'}>
                         <Stack direction="row" alignItems="center" flexGrow={1} gap={2}>
                           <StyledIconCard>{item.compnanyIcon}</StyledIconCard>
                           <Stack>

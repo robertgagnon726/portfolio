@@ -1,6 +1,6 @@
 'use client';
 
-import { InViewFadeTransition } from '@Components/InViewTransition';
+import { InViewSlideTransition } from '@Components/InViewSlideTransition';
 import Box from '@mui/material/Box';
 import Button, { ButtonProps } from '@mui/material/Button';
 import Container from '@mui/material/Container';
@@ -29,26 +29,14 @@ export default function Hero() {
     >
       <StyledContainer>
         <StyledContainerStack spacing={2} useFlexGap>
-          <InViewFadeTransition
+          <InViewSlideTransition
             threshold={0.1}
+            transitionProps={{ timeout: 500, direction: 'right' }}
             slotProps={{
-              container: {
-                sx: {
-                  width: '100%',
-                  height: '100%',
-                },
-              },
-              innerContainer: {
-                sx: {
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  width: '100%',
-                },
-              },
+              innerContainer: { sx: { display: 'flex', flexDirection: 'row', justifyContent: 'center' } },
             }}
-            transitionProps={{ timeout: 500 }}
           >
-            <StyledTitle variant="h1">
+            <Typography variant="h1">
               {`Hello, I'm Bobby`}&nbsp;
               <Typography
                 component="span"
@@ -64,22 +52,26 @@ export default function Hero() {
                 Gagnon
               </Typography>
               .
-            </StyledTitle>
-          </InViewFadeTransition>
-          <StyledTitle variant="h2">{`I'm a full-stack software engineer.`}</StyledTitle>
-          <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
+            </Typography>
+          </InViewSlideTransition>
+          <InViewSlideTransition threshold={0.1} transitionProps={{ timeout: 500, direction: 'left' }}>
+            <Typography variant="h2">{`I'm a full-stack software engineer.`}</Typography>
+          </InViewSlideTransition>
+          <InViewSlideTransition
+            slotProps={{
+              innerContainer: { sx: { justifyContent: 'center' } },
+            }}
+            threshold={0.1}
+            transitionProps={{ timeout: 500, direction: 'right' }}
+          >
+            <StyledSubtitle color="textSecondary">{t('subtitle')}</StyledSubtitle>
+          </InViewSlideTransition>
           <StyledCTAStack direction={{ xs: 'column', sm: 'row' }} spacing={1} useFlexGap>
-            <StyledContactButton
-              variant="contained"
-              color="primary"
-              size="small"
-              component="a"
-              href="#contact"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {tCommon('contact')}
-            </StyledContactButton>
+            <InViewSlideTransition threshold={0.1} transitionProps={{ timeout: 500, direction: 'left' }}>
+              <StyledContactButton variant="contained" color="primary" size="small" component="a" href="#contact">
+                {tCommon('contact')}
+              </StyledContactButton>
+            </InViewSlideTransition>
           </StyledCTAStack>
         </StyledContainerStack>
       </StyledContainer>
@@ -101,22 +93,13 @@ const StyledContainer = styled(Container)(({ theme }) => ({
   },
 }));
 
-const StyledTitle = styled(Typography)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-
-  [theme.breakpoints.up('sm')]: {
-    flexDirection: 'row',
-  },
-}));
-
 const StyledSubtitle = styled(Typography)(({ theme }) => ({
-  textAlign: 'center',
+  textAlign: 'left',
   width: '100%',
 
   [theme.breakpoints.up('md')]: {
     width: '80%',
+    textAlign: 'center',
   },
 }));
 
