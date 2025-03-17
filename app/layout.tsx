@@ -16,6 +16,28 @@ export async function generateMetadata(): Promise<Metadata> {
     icons: {
       icon: '/favicon.svg',
     },
+    openGraph: {
+      title: 'Bobby | Crafting SaaS, Startups, & Scalable Software',
+      description:
+        "Building SaaS products, scaling startups, and solving complex software challenges. Let's turn ideas into impact with well-crafted, high-performance software.",
+      url: 'https://bobbygagnon.com',
+      type: 'website',
+      images: [
+        {
+          url: 'https://bobbygagnon.com/images/portfolio-preview-1200x630.png',
+          width: 1200,
+          height: 630,
+          alt: "Preview image of Bobby's SaaS and software expertise",
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Bobby | Crafting SaaS, Startups, & Scalable Software',
+      description:
+        "Building SaaS products, scaling startups, and solving complex software challenges. Let's turn ideas into impact with well-crafted, high-performance software.",
+      images: ['https://bobbygagnon.com/images/portfolio-preview.png'],
+    },
   };
 }
 
