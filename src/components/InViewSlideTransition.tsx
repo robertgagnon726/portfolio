@@ -1,8 +1,8 @@
 import React, { PropsWithChildren } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Box, BoxProps, Fade, FadeProps, styled, useMediaQuery, useTheme } from '@mui/material';
+import { Box, BoxProps, Slide, SlideProps, styled } from '@mui/material';
 
-interface InViewFadeTransitionProps {
+interface InViewSlideTransitionProps {
   threshold?: number;
   triggerOnce?: boolean;
   slotProps?: {
@@ -10,31 +10,26 @@ interface InViewFadeTransitionProps {
     innerContainer?: BoxProps;
   };
 
-  transitionProps?: Omit<FadeProps, 'children'>;
+  transitionProps?: Omit<SlideProps, 'children'>;
 }
 
-export const InViewFadeTransition: React.FC<PropsWithChildren<InViewFadeTransitionProps>> = ({
+export const InViewSlideTransition: React.FC<PropsWithChildren<InViewSlideTransitionProps>> = ({
   children,
   threshold = 0.2,
   triggerOnce = true,
   transitionProps,
   slotProps,
 }) => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-  const adjustedThreshold = isMobile && threshold > 0.2 ? threshold / 2 : threshold;
-
   const { ref, inView } = useInView({
-    threshold: adjustedThreshold,
+    threshold,
     triggerOnce,
   });
 
   return (
     <StyledContainer ref={ref} {...slotProps?.container}>
-      <Fade in={inView} {...transitionProps}>
+      <Slide in={inView} {...transitionProps}>
         <StyledInnerContainer {...slotProps?.innerContainer}>{children}</StyledInnerContainer>
-      </Fade>
+      </Slide>
     </StyledContainer>
   );
 };

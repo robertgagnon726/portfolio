@@ -68,7 +68,7 @@ export default function BGAppBar() {
             </StyledNavItemsContainer>
             <StyledCTAContainer>
               <LanguageSwitcher />
-              <Button color="primary" variant="contained" size="small">
+              <Button color="primary" variant="contained" size="small" component="a" href="#contact">
                 {t('contact')}
               </Button>
               <ColorSchemeIconDropdown />
@@ -103,7 +103,7 @@ export default function BGAppBar() {
                   <StyledDivider />
                   <LanguageSwitcher />
                   <MenuItem>
-                    <Button color="primary" variant="contained" fullWidth>
+                    <Button color="primary" variant="contained" fullWidth component="a" href="#contact">
                       {t('contact')}
                     </Button>
                   </MenuItem>
