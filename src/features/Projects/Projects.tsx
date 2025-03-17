@@ -40,7 +40,13 @@ export default function Projects() {
           }}
           transitionProps={{ timeout: 500 }}
         >
-          <Tabs value={value} onChange={handleChange}>
+          <Tabs
+            value={value}
+            onChange={handleChange}
+            variant="scrollable"
+            scrollButtons="auto"
+            allowScrollButtonsMobile
+          >
             <Tab label="Passion Projects" />
             <Tab label="Open Source" />
             <Tab label="Revenue Projects" />

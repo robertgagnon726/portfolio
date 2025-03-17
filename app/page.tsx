@@ -1,3 +1,4 @@
+import { SectionRouting } from '@Components/SectionRouting';
 import { Layout } from '@Connected-components/Layout/Layout';
 import Awards from '@Features/Awards/Awards';
 import Contact from '@Features/Contact/Contact';
@@ -14,6 +15,7 @@ import { Divider } from '@mui/material';
 function AppHome() {
   return (
     <Layout>
+      <SectionRouting />
       <Hero />
       <Divider />
       <EngineeringPhilosophy />
