@@ -44,6 +44,16 @@ export const getReferrals = (t: UseTranslations<'Referrals'>) => [
       url: 'https://medalogix.com/',
     },
   },
+  {
+    avatar: <Avatar alt="Steve Zinn" src="/images/steve-zinn.jpeg" />,
+    name: 'Steve Zinn',
+    occupation: t('steveTitle'),
+    paragraphs: [t('steveReferral1'), t('steveReferral2'), t('steveReferral3')],
+    company: {
+      name: 'Hudl',
+      url: 'https://www.hudl.com/',
+    },
+  },
 ];
 
 export default function Referrals() {
