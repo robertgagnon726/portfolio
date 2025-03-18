@@ -18,7 +18,12 @@
     "santiTitle": "Director of Engineering",
     "santiReferral1": "Bobby is the rare combination of talent, hard work, and a desire to grow.",
     "santiReferral2": "He tackled hard and complex problems for our team, produced a high amount of work every single sprint without sacrificing quality, and challenged himself to grow in and out of work by learning new technologies and working on personal projects.",
-    "santiReferral3": "Bobby will thrive in an environment with high expectations where he will be continuously challenged to to grow."
+    "santiReferral3": "Bobby will thrive in an environment with high expectations where he will be continuously challenged to to grow.",
+
+    "steveTitle": "Engineering Manager",
+    "steveReferral1": "I was Bobby's manager for three years at Opendorse. I could share for hours all the things about Bobby that I admire but I'll do my best to highlight the most important characteristics here. Bobby is outright just a fun guy to work with and be around. He has a great sense of humor that is paired with a hard work ethic.",
+    "steveReferral2": "Bobby was always my leader for getting a ton work done, on time and at a high quality. He set the standard for our coding teams often completing his sprint work early and looking for side projects to push the team forward. One example that comes to mind is introducing our React developers to TypeScript and leading the charge to modernize our front-end languages. On top of that, he is great mentor and teacher for junior engineers. He prioritized their development as engineers just as much as his own and I always appreciated that about Bobby. ",
+    "steveReferral3": "What sets Bobby apart from other engineers is how he finds joy in the moment. He has a great sense of humor and positivity that he relies on as a North Star when work gets hard. I can recount a number of meetings where he had us all rolling on the floor laughing instead of us being anxious over tight deadlines. This attitude is critical for successful teams and its something you'll get when you work with Bobby."
   },
   "Hero": {
     "subtitle": "Driving innovation by removing roadblocks, optimizing efficiency, and fostering collaboration to deliver lasting, maintainable solutions.",

@@ -140,7 +140,11 @@
     "santiTitle": "Director de Ingeniería",
     "santiReferral1": "Bobby es una rara combinación de talento, trabajo duro y ganas de crecer.",
     "santiReferral2": "Abordó problemas difíciles y complejos para nuestro equipo, produjo una gran cantidad de trabajo en cada sprint sin sacrificar la calidad y se desafió a sí mismo para crecer dentro y fuera del trabajo aprendiendo nuevas tecnologías y trabajando en proyectos personales.",
-    "santiReferral3": "Bobby prosperará en un entorno con altas expectativas donde estará continuamente desafiado a crecer."
+    "santiReferral3": "Bobby prosperará en un entorno con altas expectativas donde estará continuamente desafiado a crecer.",
+    "steveTitle": "Gerente de Ingeniería",
+    "steveReferral1": "Fui mánager de Bobby durante tres años en Opendorse. Podría hablar durante horas de todo lo que admiro de Bobby, pero haré todo lo posible por destacar las características más importantes. Bobby es, sin duda, un tipo con el que es muy divertido trabajar y estar cerca. Tiene un gran sentido del humor, acompañado de una gran ética de trabajo.",
+    "steveReferral2": "Bobby siempre fue mi líder, asegurándome de que el trabajo se completara a tiempo y con la mejor calidad. Marcó la pauta para nuestros equipos de programación, ya que a menudo completaba su trabajo de sprint antes de tiempo y buscaba proyectos paralelos que impulsaran al equipo. Un ejemplo que me viene a la mente es la introducción de TypeScript a nuestros desarrolladores de React y el liderazgo en la modernización de nuestros lenguajes frontend. Además, es un gran mentor y profesor para los ingenieros júnior. Priorizaba su desarrollo como ingenieros tanto como el suyo propio, y siempre aprecié eso de Bobby. ",
+    "steveReferral3": "Lo que distingue a Bobby de otros ingenieros es cómo encuentra alegría en el momento. Tiene un gran sentido del humor y una actitud positiva que le sirve de guía cuando el trabajo se pone difícil. Recuerdo varias reuniones en las que nos hacía reír a carcajadas en lugar de angustiarnos por los plazos ajustados. Esta actitud es fundamental para el éxito de los equipos y es algo que se consigue trabajando con Bobby."
   },
   "TechISpeak": {
     "title": "Hablo tecnicamente",

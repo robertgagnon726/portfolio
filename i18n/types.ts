@@ -221,6 +221,10 @@ export interface ReferralsMessages {
   santiReferral1: string;
   santiReferral2: string;
   santiReferral3: string;
+  steveTitle: string;
+  steveReferral1: string;
+  steveReferral2: string;
+  steveReferral3: string;
 }
 
 export interface TechISpeakMessages {
