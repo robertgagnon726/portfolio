@@ -111,7 +111,6 @@ export interface ExperienceMessages {
   staffPromotionHighlight3: string;
   staffPromotionHighlight4: string;
   staffPromotionHighlight5: string;
-  seniorPromotionHighlight1: string;
   seniorPromotionHighlight2: string;
   seniorPromotionHighlight3: string;
   item2Timeframe: string;
