@@ -9,8 +9,6 @@ import { TypeScriptLogo } from '@Src/icons/TypeScriptLogo';
 import { ORMLogo } from '@Src/icons/ORMLogo';
 import CloudQueueIcon from '@mui/icons-material/CloudQueue';
 import { useTranslations } from 'next-intl';
-import { DotnetCoreLogo } from '@Src/icons/DotnetCoreLogo';
-import { AngularLogo } from '@Src/icons/AngularLogo';
 
 export default function PreferredTechStack() {
   const t = useTranslations('PreferredTechStack');
@@ -27,19 +25,9 @@ export default function PreferredTechStack() {
       icon: <NextjsLogo />,
     },
     {
-      title: t('angularTitle'),
-      description: t('angularDescription'),
-      icon: <AngularLogo />,
-    },
-    {
       title: t('nestjsTitle'),
       description: t('nestjsDescription'),
       icon: <NestJSLogo />,
-    },
-    {
-      title: t('dotnetCoreTitle'),
-      description: t('dotnetCoreDescription'),
-      icon: <DotnetCoreLogo />,
     },
     {
       title: t('typescriptTitle'),

@@ -152,7 +152,7 @@
     "angularDescription": "As my career has progressed, I've found myself gravitating toward opinionated frameworks like Angular. Its structured approach, dependency injection, and built-in state management make it a solid choice for enterprise-grade applications.",
 
     "nestjsTitle": "NestJS",
-    "nestjsDescription": "I've used Express, Java/Spring, and C#/Dotnet, and NestJS really stands out. It bridges the Inversion of Control (IoC) gap while keeping everything in TypeScript, making full-stack development seamless.",
+    "nestjsDescription": "I've used Express, Java/Spring, and C#/Dotnet, and NestJS really stands out. It bridges the Inversion of Control (IoC) gap while keeping everything in TypeScript, making full-stack development seamless. Having everything in the same language also allows for super low latency with shared libraries instead of having to default to lightweight microservices.",
 
     "dotnetCoreTitle": ".NET Core",
     "dotnetCoreDescription": ".NET Core is a powerhouse for backend development. Its performance, flexibility, and strong C# ecosystem make it one of my go-to choices for building scalable, maintainable APIs. Microsoft's modern improvements have made .NET more developer-friendly than ever.",
@@ -161,10 +161,10 @@
     "typescriptDescription": "Once you use TypeScript, it's hard to go back. It provides strong typing without getting in the way, making large codebases more maintainable and reducing runtime errors.",
 
     "ormTitle": "ORMs",
-    "ormDescription": "I see the ORM vs. sprocs debate, but for most applications, ORMs are the way to go. I enjoy the fast-paced world of feature development more than shaving microseconds off queries. That said, I can work with both approaches.",
+    "ormDescription": "I see the ORM vs. sprocs debate, but for most applications, I prefer ORMs. I enjoy the fast-paced world of feature development more than shaving microseconds off queries. I'm also a fan of `Database as Code`. I can work with both approaches.",
 
     "cloudTitle": "Cloud",
-    "cloudDescription": "I’ve worked with AWS, Azure, and GCP—each has its quirks. What I don't enjoy? On-prem. While it makes sense at scale, the developer experience is usually far worse than working in the cloud."
+    "cloudDescription": "What really grinds my gears? On-prem. It makes financial sense at scale, but it usually sacrifices developer experience. I prefer cloud. I'm 'fluent' in both AWS and Azure. I've also worked with GCP, but it's been a minute."
   },
   "TechISpeak": {
     "title": "Tech I Speak",
