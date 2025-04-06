@@ -20,9 +20,12 @@ interface PostPageProps {
 type tParams = Promise<{ slug: string }>;
 
 // Generate metadata for the page including Open Graph tags
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: PostPageProps): Promise<Metadata> {
+  // Handle the Promise-wrapped params
+  const { slug } = await params;
+
   // Fetch data for this specific post
-  const post = await getSinglePost(params.slug);
+  const post = await getSinglePost(slug);
 
   // If post doesn't exist, return minimal metadata
   if (!post) {
@@ -33,12 +36,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   // Extract the hero image URL from the post data
-  const heroImageUrl = post.mainImage?.asset?.url;
-
-  console.log('heroImageUrl', heroImageUrl);
+  const heroImageUrl = post.mainImage?.asset?.url || '/public/images/portfolio-preview.png';
 
   // Format the absolute URL for the blog post
-  const postUrl = `https://bobbygagnon.com/blog/${params.slug}`;
+  const postUrl = `https://bobbygagnon.com/blog/${slug}`;
 
   return {
     title: post.title,
